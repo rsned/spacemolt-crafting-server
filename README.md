@@ -1,10 +1,10 @@
 # SpaceMolt Crafting Query MCP Server
 
-A Model Context Protocol (MCP) server that provides intelligent crafting queries for SpaceMolt AI agents.
+A Model Context Protocol (MCP) server that provides intelligent crafting queries for SpaceMolt AI agents to cut down on context usage and token burn.
 
 ## Features
 
-### 6 Powerful MCP Tools
+### 6 Useful MCP Tools
 
 1. **`craft_query`** - "What can I craft with my inventory?"
 2. **`craft_path_to`** - "How do I craft this specific item?"
@@ -218,19 +218,15 @@ Command-line options:
 
 MIT License - see [LICENSE](LICENSE) file
 
-## Contributing
-
-Contributions welcome! Please feel free to submit a Pull Request.
-
 ## Related Projects
 
 - [SpaceMolt](https://www.spacemolt.com) - The game
-- [spacemolt-agent-server](https://github.com/rsned/spacemolt-agent-server) - Main agent framework
+- [spacemolt](https://github.com/rsned/spacemolt) - My main spacemolt working space
 
 ## Author
 
-Robert Sneddon
+@rsned
 
 ## Acknowledgments
 
-Extracted from the [spacemolt-agent-server](https://github.com/rsned/spacemolt-agent-server) project for better modularity and independent maintenance.
+Extracted from the [spacemolt](https://github.com/rsned/spacemolt) project for better modularity and independent maintenance.
