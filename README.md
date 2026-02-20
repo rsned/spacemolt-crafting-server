@@ -65,6 +65,45 @@ If you prefer to build your own database from scratch, you can import the data m
 ./bin/crafting-server -db crafting.db -import-market market.json
 ```
 
+## Claude Code Integration
+
+To use this MCP server with Claude Code, add it to your Claude Code configuration file.
+
+### Configuration
+
+Edit your Claude Code config file (typically `~/.config/claude/claude_desktop_config.json` on Linux/macOS or `%APPDATA%\Claude\claude_desktop_config.json` on Windows):
+
+```json
+{
+  "mcpServers": {
+    "spacemolt-crafting": {
+      "command": "/path/to/spacemolt-crafting-server/bin/crafting-server",
+      "args": [
+        "-db",
+        "/path/to/spacemolt-crafting-server/database/crafting.db"
+      ]
+    }
+  }
+}
+```
+
+**Important:** Update the paths to match your actual installation directory.
+
+### Restart Claude Code
+
+After updating the configuration, restart Claude Code to load the MCP server. The server will then be available to assist with crafting queries.
+
+### Available Tools
+
+Once configured, you can use these tools in Claude Code:
+
+- **`craft_query`** - Find what you can craft with your current inventory and skills
+- **`craft_path_to`** - Get the crafting path for a specific item
+- **`recipe_lookup`** - Look up details about a specific recipe
+- **`skill_craft_paths`** - Discover which skills unlock new crafting recipes
+- **`component_uses`** - Find all uses for a specific component
+- **`bill_of_materials`** - Calculate total raw materials needed for a recipe
+
 ## Database
 
 The server uses SQLite for fast, efficient recipe and skill queries:
