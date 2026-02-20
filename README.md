@@ -38,7 +38,21 @@ cp bin/crafting-server ~/go/bin/
 ./bin/crafting-server -db crafting.db
 ```
 
-#### Import Recipe Data
+#### Database Snapshot
+
+A pre-built database snapshot is available in the `database/` directory, containing all recipes and skills already imported. You can use it directly:
+
+```bash
+# Copy the pre-built database
+cp database/crafting.db ./
+
+# Or run the server with the snapshot directly
+./bin/crafting-server -db database/crafting.db
+```
+
+#### Import Recipe Data Manually
+
+If you prefer to build your own database from scratch, you can import the data manually:
 
 ```bash
 # Import recipes from SpaceMolt game API
