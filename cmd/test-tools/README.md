@@ -53,8 +53,11 @@ Advanced tests covering edge cases and deeper functionality:
 # Build the test tool
 go build -o bin/test-tools ./cmd/test-tools
 
-# Run tests with default database
+# Run tests with default database (elided output)
 ./bin/test-tools
+
+# Run tests with full output (no eliding)
+./bin/test-tools -v
 
 # Run tests with custom database
 CRAFTING_DB=/path/to/crafting.db ./bin/test-tools
@@ -77,7 +80,11 @@ The tool provides:
 - Detailed summary with pass/fail counts
 - Timing statistics
 
-Example output:
+### Command-Line Flags
+
+- `-v` - Show full results instead of eliding them. By default, JSON output is truncated to 10 lines for readability. With `-v`, the complete JSON response is shown.
+
+Example output (default - elided):
 ```
   ✓ PASS [invalid] craft_query with non-existent items (0s)
   ✓ PASS [simple] craft_query with ore_iron: 10 (1ms)

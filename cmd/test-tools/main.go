@@ -5,6 +5,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"log/slog"
 	"os"
@@ -36,6 +37,9 @@ type TestStats struct {
 }
 
 func main() {
+	verbose := flag.Bool("v", false, "show full results instead of eliding them")
+	flag.Parse()
+
 	log := slog.New(slog.NewTextHandler(os.Stderr, &slog.HandlerOptions{
 		Level: slog.LevelInfo,
 	}))
@@ -71,13 +75,13 @@ func main() {
 	eng := engine.New(database)
 
 	// Run all tests
-	results := runAllTests(ctx, eng, log)
+	results := runAllTests(ctx, eng, log, *verbose)
 
 	// Print summary
 	printSummary(results)
 }
 
-func runAllTests(ctx context.Context, eng *engine.Engine, log *slog.Logger) []TestResult {
+func runAllTests(ctx context.Context, eng *engine.Engine, log *slog.Logger, verbose bool) []TestResult {
 	var results []TestResult
 
 	fmt.Println("\n" + strings.Repeat("=", 80))
@@ -86,27 +90,27 @@ func runAllTests(ctx context.Context, eng *engine.Engine, log *slog.Logger) []Te
 
 	// Test 1: craft_query
 	fmt.Println("Testing: craft_query")
-	results = append(results, testCraftQuery(ctx, eng, log)...)
+	results = append(results, testCraftQuery(ctx, eng, log, verbose)...)
 
 	// Test 2: craft_path_to
 	fmt.Println("\nTesting: craft_path_to")
-	results = append(results, testCraftPathTo(ctx, eng, log)...)
+	results = append(results, testCraftPathTo(ctx, eng, log, verbose)...)
 
 	// Test 3: recipe_lookup
 	fmt.Println("\nTesting: recipe_lookup")
-	results = append(results, testRecipeLookup(ctx, eng, log)...)
+	results = append(results, testRecipeLookup(ctx, eng, log, verbose)...)
 
 	// Test 4: skill_craft_paths
 	fmt.Println("\nTesting: skill_craft_paths")
-	results = append(results, testSkillCraftPaths(ctx, eng, log)...)
+	results = append(results, testSkillCraftPaths(ctx, eng, log, verbose)...)
 
 	// Test 5: component_uses
 	fmt.Println("\nTesting: component_uses")
-	results = append(results, testComponentUses(ctx, eng, log)...)
+	results = append(results, testComponentUses(ctx, eng, log, verbose)...)
 
 	// Test 6: bill_of_materials
 	fmt.Println("\nTesting: bill_of_materials")
-	results = append(results, testBillOfMaterials(ctx, eng, log)...)
+	results = append(results, testBillOfMaterials(ctx, eng, log, verbose)...)
 
 	return results
 }
@@ -115,7 +119,7 @@ func runAllTests(ctx context.Context, eng *engine.Engine, log *slog.Logger) []Te
 // TOOL 1: craft_query
 // ============================================================================
 
-func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []TestResult {
+func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger, verbose bool) []TestResult {
 	var results []TestResult
 
 	baseSkills := map[string]int{"crafting_basic": 1}
@@ -132,7 +136,7 @@ func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []T
 				Skills: baseSkills,
 				Limit:  10,
 			})
-		},
+		}, verbose,
 	))
 
 	// INVALID: Empty components
@@ -143,7 +147,7 @@ func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []T
 				Components: []crafting.Component{},
 				Skills:     baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// INVALID: Negative quantity
@@ -156,7 +160,7 @@ func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []T
 				},
 				Skills: baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Basic iron ore query
@@ -170,7 +174,7 @@ func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []T
 				Skills: baseSkills,
 				Limit:  10,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Multiple components
@@ -185,7 +189,7 @@ func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []T
 				Skills: baseSkills,
 				Limit:  15,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: With optimization strategies
@@ -211,7 +215,7 @@ func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []T
 					IncludePartial:      true,
 					MinMatchRatio:       0.25,
 				})
-			},
+			}, verbose,
 		))
 	}
 
@@ -228,7 +232,7 @@ func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []T
 				CategoryFilter: "Components",
 				Limit:          25,
 			})
-		},
+		}, verbose,
 	))
 
 	return results
@@ -238,7 +242,7 @@ func testCraftQuery(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []T
 // TOOL 2: craft_path_to
 // ============================================================================
 
-func testCraftPathTo(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []TestResult {
+func testCraftPathTo(ctx context.Context, eng *engine.Engine, _ *slog.Logger, verbose bool) []TestResult {
 	var results []TestResult
 
 	baseSkills := map[string]int{"crafting_basic": 1}
@@ -252,7 +256,7 @@ func testCraftPathTo(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []
 				TargetQuantity: 1,
 				Skills:         baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// INVALID: Zero or negative quantity
@@ -264,7 +268,7 @@ func testCraftPathTo(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []
 				TargetQuantity: 0,
 				Skills:         baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Basic component path
@@ -276,7 +280,7 @@ func testCraftPathTo(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []
 				TargetQuantity: 1,
 				Skills:         baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: With inventory
@@ -291,7 +295,7 @@ func testCraftPathTo(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []
 				},
 				Skills: baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: Multi-tier item (quantum_matrix has 3 tiers deep)
@@ -306,7 +310,7 @@ func testCraftPathTo(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []
 				},
 				Skills: baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: Large quantity
@@ -318,7 +322,7 @@ func testCraftPathTo(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []
 				TargetQuantity: 10,
 				Skills:         baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	return results
@@ -328,7 +332,7 @@ func testCraftPathTo(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []
 // TOOL 3: recipe_lookup
 // ============================================================================
 
-func testRecipeLookup(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []TestResult {
+func testRecipeLookup(ctx context.Context, eng *engine.Engine, _ *slog.Logger, verbose bool) []TestResult {
 	var results []TestResult
 
 	baseSkills := map[string]int{"crafting_basic": 1}
@@ -341,7 +345,7 @@ func testRecipeLookup(ctx context.Context, eng *engine.Engine, _ *slog.Logger) [
 				RecipeID: "chicken_pot_pie",
 				Skills:   baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// INVALID: Empty search
@@ -352,7 +356,7 @@ func testRecipeLookup(ctx context.Context, eng *engine.Engine, _ *slog.Logger) [
 				Search: "",
 				Skills: baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Lookup by exact ID
@@ -363,7 +367,7 @@ func testRecipeLookup(ctx context.Context, eng *engine.Engine, _ *slog.Logger) [
 				RecipeID: "craft_engine_core",
 				Skills:   baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Search by name
@@ -374,7 +378,7 @@ func testRecipeLookup(ctx context.Context, eng *engine.Engine, _ *slog.Logger) [
 				Search: "laser",
 				Skills: baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: Search with skill gap analysis
@@ -388,7 +392,7 @@ func testRecipeLookup(ctx context.Context, eng *engine.Engine, _ *slog.Logger) [
 					"shields_basic":  2,
 				},
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: Search for used_in recipes
@@ -399,7 +403,7 @@ func testRecipeLookup(ctx context.Context, eng *engine.Engine, _ *slog.Logger) [
 				RecipeID: "craft_engine_core",
 				Skills:   baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	return results
@@ -409,7 +413,7 @@ func testRecipeLookup(ctx context.Context, eng *engine.Engine, _ *slog.Logger) [
 // TOOL 4: skill_craft_paths
 // ============================================================================
 
-func testSkillCraftPaths(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []TestResult {
+func testSkillCraftPaths(ctx context.Context, eng *engine.Engine, _ *slog.Logger, verbose bool) []TestResult {
 	var results []TestResult
 
 	// INVALID: Non-existent skill
@@ -421,7 +425,7 @@ func testSkillCraftPaths(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 					"dragon_taming": {Level: 5},
 				},
 			})
-		},
+		}, verbose,
 	))
 
 	// INVALID: Empty skills
@@ -431,7 +435,7 @@ func testSkillCraftPaths(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 			return eng.SkillCraftPaths(ctx, crafting.SkillCraftPathsRequest{
 				Skills: map[string]crafting.SkillProgress{},
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Single basic skill
@@ -444,7 +448,7 @@ func testSkillCraftPaths(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				},
 				Limit: 10,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Multiple skills
@@ -459,7 +463,7 @@ func testSkillCraftPaths(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				},
 				Limit: 15,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: With category filter
@@ -475,7 +479,7 @@ func testSkillCraftPaths(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				CategoryFilter: "Combat",
 				Limit:          20,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: High-level skill with many unlocks
@@ -488,7 +492,7 @@ func testSkillCraftPaths(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				},
 				Limit: 50,
 			})
-		},
+		}, verbose,
 	))
 
 	return results
@@ -498,7 +502,7 @@ func testSkillCraftPaths(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 // TOOL 5: component_uses
 // ============================================================================
 
-func testComponentUses(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []TestResult {
+func testComponentUses(ctx context.Context, eng *engine.Engine, _ *slog.Logger, verbose bool) []TestResult {
 	var results []TestResult
 
 	baseSkills := map[string]int{"crafting_basic": 1}
@@ -511,7 +515,7 @@ func testComponentUses(ctx context.Context, eng *engine.Engine, _ *slog.Logger) 
 				ItemID: "chicken_pot_pie",
 				Skills: baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// INVALID: Empty component ID
@@ -522,7 +526,7 @@ func testComponentUses(ctx context.Context, eng *engine.Engine, _ *slog.Logger) 
 				ItemID: "",
 				Skills: baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Basic raw material
@@ -533,7 +537,7 @@ func testComponentUses(ctx context.Context, eng *engine.Engine, _ *slog.Logger) 
 				ItemID: "ore_iron",
 				Skills: baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Intermediate component
@@ -544,7 +548,7 @@ func testComponentUses(ctx context.Context, eng *engine.Engine, _ *slog.Logger) 
 				ItemID: "comp_circuit_board",
 				Skills: baseSkills,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: With optimization strategies
@@ -561,7 +565,7 @@ func testComponentUses(ctx context.Context, eng *engine.Engine, _ *slog.Logger) 
 					IncludeSkillLocked: true,
 					Strategy:           strategy,
 				})
-			},
+			}, verbose,
 		))
 	}
 
@@ -574,7 +578,7 @@ func testComponentUses(ctx context.Context, eng *engine.Engine, _ *slog.Logger) 
 				Skills:             baseSkills,
 				IncludeSkillLocked: true,
 			})
-		},
+		}, verbose,
 	))
 
 	return results
@@ -584,7 +588,7 @@ func testComponentUses(ctx context.Context, eng *engine.Engine, _ *slog.Logger) 
 // TOOL 6: bill_of_materials
 // ============================================================================
 
-func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger) []TestResult {
+func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger, verbose bool) []TestResult {
 	var results []TestResult
 
 	// INVALID: Non-existent recipe
@@ -595,7 +599,7 @@ func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				RecipeID: "chicken_pot_pie",
 				Quantity: 1,
 			})
-		},
+		}, verbose,
 	))
 
 	// INVALID: Zero or negative quantity
@@ -606,7 +610,7 @@ func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				RecipeID: "craft_engine_core",
 				Quantity: 0,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Basic component recipe
@@ -617,7 +621,7 @@ func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				RecipeID: "craft_engine_core",
 				Quantity: 1,
 			})
-		},
+		}, verbose,
 	))
 
 	// SIMPLE: Multiple quantity
@@ -628,7 +632,7 @@ func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				RecipeID: "craft_power_core",
 				Quantity: 5,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: Deep recursive BOM (quantum_matrix - 3+ tiers)
@@ -639,7 +643,7 @@ func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				RecipeID: "assemble_quantum_matrix",
 				Quantity: 1,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: Large quantity of complex item
@@ -650,7 +654,7 @@ func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				RecipeID: "craft_adaptive_shield_1",
 				Quantity: 10,
 			})
-		},
+		}, verbose,
 	))
 
 	// COMPLEX: Multi-tier capital component
@@ -661,7 +665,7 @@ func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 				RecipeID: "craft_capital_armor_plate",
 				Quantity: 1,
 			})
-		},
+		}, verbose,
 	))
 
 	return results
@@ -671,7 +675,7 @@ func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 // TEST UTILITIES
 // ============================================================================
 
-func runTest(_ context.Context, _ *engine.Engine, tool, category, name string, testFunc func() (any, error)) TestResult {
+func runTest(_ context.Context, _ *engine.Engine, tool, category, name string, testFunc func() (any, error), verbose bool) TestResult {
 	start := time.Now()
 	result, err := testFunc()
 	duration := time.Since(start)
@@ -699,7 +703,7 @@ func runTest(_ context.Context, _ *engine.Engine, tool, category, name string, t
 		fmt.Printf("       Error: %v\n", err)
 	} else if shouldShowDetails(category) {
 		// Show a preview of the result for simple/complex tests
-		showResultPreview(result)
+		showResultPreview(result, verbose)
 	}
 
 	return resultObj
@@ -709,24 +713,33 @@ func shouldShowDetails(category string) bool {
 	return category == "simple" || category == "complex"
 }
 
-func showResultPreview(result any) {
+func showResultPreview(result any, verbose bool) {
 	// Convert to JSON for preview
 	jsonData, err := json.MarshalIndent(result, "         ", "  ")
 	if err != nil {
 		return
 	}
 
-	// Show first few lines
+	// If verbose is true, show full output; otherwise show first 10 lines
 	str := string(jsonData)
 	lines := strings.Split(str, "\n")
-	if len(lines) > 10 {
-		lines = append(lines[:10], "         ...")
-	}
-	for _, line := range lines {
-		if len(line) > 100 {
-			line = line[:97] + "..."
+
+	if verbose {
+		// Show all lines when verbose is true
+		for _, line := range lines {
+			fmt.Println(line)
 		}
-		fmt.Println(line)
+	} else {
+		// Show first few lines when not verbose
+		if len(lines) > 10 {
+			lines = append(lines[:10], "         ...")
+		}
+		for _, line := range lines {
+			if len(line) > 100 {
+				line = line[:97] + "..."
+			}
+			fmt.Println(line)
+		}
 	}
 }
 
