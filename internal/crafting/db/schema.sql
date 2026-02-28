@@ -156,3 +156,15 @@ BEGIN
     SELECT RAISE(ABORT, 'Only one row allowed in version table with id=1');
 END;
 
+
+-- ============================================
+-- CATEGORY PRIORITY DATA
+-- ============================================
+
+CREATE TABLE IF NOT EXISTS category_priorities (
+    category TEXT PRIMARY KEY,
+    priority_tier INTEGER NOT NULL CHECK (priority_tier BETWEEN 1 AND 6),
+    updated_at TEXT DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_category_priorities_tier ON category_priorities(priority_tier);
