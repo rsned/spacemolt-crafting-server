@@ -2,6 +2,7 @@ package engine
 
 import (
 	"context"
+	"sort"
 
 	"github.com/rsned/spacemolt-crafting-server/pkg/crafting"
 )
@@ -17,6 +18,17 @@ func (e *Engine) RecipeLookup(ctx context.Context, req crafting.RecipeLookupRequ
 			return nil, err
 		}
 		resp.SearchResults = hits
+		
+		// Sort search results by category tier
+		sort.Slice(resp.SearchResults, func(i, j int) bool {
+			tierI := e.getCategoryTier(resp.SearchResults[i].Category)
+			tierJ := e.getCategoryTier(resp.SearchResults[j].Category)
+			if tierI != tierJ {
+				return tierI < tierJ
+			}
+			// Within tier, sort by name
+			return resp.SearchResults[i].Name < resp.SearchResults[j].Name
+		})
 		
 		// If exactly one result and no recipe_id provided, use it
 		if len(hits) == 1 && req.RecipeID == "" {

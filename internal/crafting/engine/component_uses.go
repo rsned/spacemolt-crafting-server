@@ -13,7 +13,7 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 	if !req.Strategy.IsValid() {
 		req.Strategy = crafting.StrategyUseInventoryFirst
 	}
-	
+
 	resp := &crafting.ComponentUsesResponse{
 		ItemID: req.ItemID,
 	}
@@ -23,9 +23,9 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 	if err != nil {
 		return nil, err
 	}
-	
+
 	var uses []crafting.ComponentUseInfo
-	
+
 	for _, recipeID := range recipeIDs {
 		recipe, err := e.recipes.GetRecipe(ctx, recipeID)
 		if err != nil {
@@ -34,7 +34,7 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 		if recipe == nil {
 			continue
 		}
-		
+
 		// Find how much of this item is needed
 		var quantityNeeded int
 		for _, inp := range recipe.Inputs {
@@ -43,7 +43,7 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 				break
 			}
 		}
-		
+
 		// Check skill requirements
 		var skillReady bool
 		var skillGaps []crafting.SkillGap
@@ -53,7 +53,7 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 			if err != nil {
 				return nil, err
 			}
-			
+
 			// Skip if not including skill-locked recipes
 			if !req.IncludeSkillLocked && !skillReady {
 				continue
@@ -61,7 +61,7 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 		} else {
 			skillReady = true // Assume ready if no skills provided
 		}
-		
+
 		// Calculate profit if station provided
 		var profitAnalysis *crafting.ProfitAnalysis
 		if req.StationID != "" {
@@ -70,7 +70,7 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 				return nil, err
 			}
 		}
-		
+
 		uses = append(uses, crafting.ComponentUseInfo{
 			Recipe:           *recipe,
 			QuantityPerCraft: quantityNeeded,
@@ -79,13 +79,13 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 			ProfitAnalysis:   profitAnalysis,
 		})
 	}
-	
+
 	// Sort based on strategy
-	sortComponentUses(uses, req.Strategy)
-	
+	e.sortComponentUses(uses, req.Strategy)
+
 	resp.UsedIn = uses
 	resp.TotalUses = len(uses)
-	
+
 	// Get market sell price as alternative
 	if req.StationID != "" {
 		sellPrice, err := e.market.GetSellPrice(ctx, req.ItemID, req.StationID)
@@ -94,13 +94,22 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 		}
 		resp.MarketSellPrice = sellPrice
 	}
-	
+
 	return resp, nil
 }
 
 // sortComponentUses sorts component uses based on optimization strategy.
-func sortComponentUses(uses []crafting.ComponentUseInfo, strategy crafting.OptimizationStrategy) {
+// Primary sort: Category tier (1-6), Secondary sort: Strategy.
+func (e *Engine) sortComponentUses(uses []crafting.ComponentUseInfo, strategy crafting.OptimizationStrategy) {
 	sort.Slice(uses, func(i, j int) bool {
+		// Primary sort: category tier
+		tierI := e.getCategoryTier(uses[i].Recipe.Category)
+		tierJ := e.getCategoryTier(uses[j].Recipe.Category)
+		if tierI != tierJ {
+			return tierI < tierJ
+		}
+
+		// Secondary sort: optimization strategy
 		switch strategy {
 		case crafting.StrategyMaximizeProfit:
 			pi := 0
@@ -112,11 +121,11 @@ func sortComponentUses(uses []crafting.ComponentUseInfo, strategy crafting.Optim
 				pj = uses[j].ProfitAnalysis.ProfitPerUnit
 			}
 			return pi > pj
-			
+
 		case crafting.StrategyMaximizeVolume:
 			// Prefer recipes that use less of the component (more recipes possible)
 			return uses[i].QuantityPerCraft < uses[j].QuantityPerCraft
-			
+
 		case crafting.StrategyUseInventoryFirst:
 			// Prefer simpler recipes
 			return len(uses[i].Recipe.Inputs) < len(uses[j].Recipe.Inputs)
