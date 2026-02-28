@@ -169,6 +169,12 @@ func TestStatsCalculator_ChoosePricingMethod(t *testing.T) {
 			expectedMethod: "median",
 		},
 		{
+			name:           "Single order",
+			sampleCount:    1,
+			totalVolume:    100,
+			expectedMethod: "median",
+		},
+		{
 			name:           "No data",
 			sampleCount:    0,
 			totalVolume:    0,

@@ -129,8 +129,9 @@ func (sc *StatsCalculator) ChoosePricingMethod(sampleCount, totalVolume int) str
 	if sampleCount >= 3 {
 		return "second_price"
 	}
-	// Median: Sparse but real data (2+ orders)
-	if sampleCount >= 2 {
+	// Median: Sparse but real data (1+ orders)
+	// Single order will just use that order's price as the median
+	if sampleCount >= 1 {
 		return "median"
 	}
 	// MSRP fallback: No market data

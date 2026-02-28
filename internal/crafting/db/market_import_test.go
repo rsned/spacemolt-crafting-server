@@ -281,6 +281,77 @@ func sumVolumes(orders []any) int {
 	return total
 }
 
+// TestSingleOrderPricing tests that a single order works correctly.
+func TestSingleOrderPricing(t *testing.T) {
+	ctx := context.Background()
+	database, err := Open(":memory:")
+	if err != nil {
+		t.Fatalf("opening database: %v", err)
+	}
+	defer func() { _ = database.Close() }()
+
+	// Initialize schema and migration
+	if err := InitSchema(ctx, database.DB); err != nil {
+		t.Fatalf("initializing schema: %v", err)
+	}
+
+	if err := ApplyMigration005(ctx, database); err != nil {
+		t.Fatalf("applying migration 005: %v", err)
+	}
+
+	// Add test item
+	_, err = database.ExecContext(ctx, `
+		INSERT INTO items (id, name, base_value, category) VALUES
+			('ore_iron', 'Iron Ore', 1, 'ore')
+	`)
+	if err != nil {
+		t.Fatalf("inserting test item: %v", err)
+	}
+
+	market := NewMarketStore(database)
+
+	// Insert a single order
+	_, err = database.ExecContext(ctx, `
+		INSERT INTO market_order_book
+		(batch_id, item_id, station_id, order_type, price_per_unit, volume_available, recorded_at)
+		VALUES ('test_batch', 'ore_iron', 'Test Station', 'sell', 25, 1000, datetime('now'))
+	`)
+	if err != nil {
+		t.Fatalf("inserting test order: %v", err)
+	}
+
+	// Recalculate stats
+	err = market.RecalculatePriceStats(ctx, "ore_iron", "Test Station")
+	if err != nil {
+		t.Fatalf("recalculating stats: %v", err)
+	}
+
+	// Query the stats
+	stats, err := market.GetPriceStats(ctx, "ore_iron", "Test Station", "sell")
+	if err != nil {
+		t.Fatalf("querying stats: %v", err)
+	}
+
+	if stats == nil {
+		t.Fatal("expected stats to exist, got nil")
+	}
+
+	// Should use the order's price (25), not MSRP (1)
+	if stats.RepresentativePrice != 25 {
+		t.Errorf("expected price 25 (from order), got %d", stats.RepresentativePrice)
+	}
+
+	// Should use "median" method (not msrp_only)
+	if stats.StatMethod != "median" {
+		t.Errorf("expected method 'median', got '%s'", stats.StatMethod)
+	}
+
+	// Should have sample count of 1
+	if stats.SampleCount != 1 {
+		t.Errorf("expected sample count 1, got %d", stats.SampleCount)
+	}
+}
+
 // TestMarketOrderRetrieval tests fetching orders back from database
 func TestMarketOrderRetrieval(t *testing.T) {
 	ctx := context.Background()

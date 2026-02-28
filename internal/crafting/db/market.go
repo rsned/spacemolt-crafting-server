@@ -429,3 +429,17 @@ func (s *MarketStore) RecalculatePriceStats(ctx context.Context, itemID, station
 
 	return nil
 }
+
+// PruneOldOrders removes order book records older than the specified number of days.
+// Returns the number of orders deleted.
+func (s *MarketStore) PruneOldOrders(ctx context.Context, olderThanDays int) (int64, error) {
+	result, err := s.db.ExecContext(ctx, `
+		DELETE FROM market_order_book
+		WHERE recorded_at < datetime('now', '-' || ? || ' days')
+	`, olderThanDays)
+	if err != nil {
+		return 0, fmt.Errorf("pruning old orders: %w", err)
+	}
+
+	return result.RowsAffected()
+}
