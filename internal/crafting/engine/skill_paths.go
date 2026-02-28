@@ -105,6 +105,27 @@ func (e *Engine) SkillCraftPaths(ctx context.Context, req crafting.SkillCraftPat
 		return len(paths[i].RecipesUnlocked) > len(paths[j].RecipesUnlocked)
 	})
 	
+	// Sort each skill's unlocked recipes by category tier
+	for i := range paths {
+		sort.Slice(paths[i].RecipesUnlocked, func(j, k int) bool {
+			// Need to look up recipe categories from the recipe store
+			recipeJ, errJ := e.recipes.GetRecipe(ctx, paths[i].RecipesUnlocked[j])
+			recipeK, errK := e.recipes.GetRecipe(ctx, paths[i].RecipesUnlocked[k])
+			if errJ != nil || errK != nil || recipeJ == nil || recipeK == nil {
+				// If we can't get recipe info, compare by recipe ID
+				return paths[i].RecipesUnlocked[j] < paths[i].RecipesUnlocked[k]
+			}
+
+			tierJ := e.getCategoryTier(recipeJ.Category)
+			tierK := e.getCategoryTier(recipeK.Category)
+			if tierJ != tierK {
+				return tierJ < tierK
+			}
+
+			// Within tier, sort by recipe name
+			return recipeJ.Name < recipeK.Name
+		})
+	}
 	// Apply limit
 	if len(paths) > req.Limit {
 		paths = paths[:req.Limit]
