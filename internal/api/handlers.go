@@ -204,6 +204,21 @@ func (s *Server) processMarketSubmission(ctx context.Context, req MarketSubmitRe
 		accepted++
 	}
 
+	// Recalculate market stats for affected items
+	uniqueItems := make(map[string]bool)
+	for _, order := range req.Orders {
+		uniqueItems[order.ItemID] = true
+	}
+
+	for itemID := range uniqueItems {
+		market := db.NewMarketStore(s.db)
+		if err := market.RecalculatePriceStats(ctx, itemID, req.StationID); err != nil {
+			// Log error but don't fail the submission
+			// The orders are already stored, recalc can be retried later
+			errors = append(errors, fmt.Sprintf("warning: failed to recalculate stats for %s: %v", itemID, err))
+		}
+	}
+
 	return &MarketSubmitResponse{
 		BatchID:        batchID,
 		OrdersReceived: len(req.Orders),
@@ -257,20 +272,46 @@ func (s *Server) handleMarketPrice(w http.ResponseWriter, r *http.Request) {
 
 // queryMarketPrice queries market price for an item.
 func (s *Server) queryMarketPrice(ctx context.Context, itemID string) (*MarketPriceResponse, error) {
+	market := db.NewMarketStore(s.db)
+
 	// Get item MSRP
-	var msrp int
-	err := s.db.QueryRowContext(ctx, `SELECT base_value FROM items WHERE id = ?`, itemID).Scan(&msrp)
+	msrp, err := market.GetItemMSRP(ctx, itemID)
 	if err != nil {
 		return nil, fmt.Errorf("querying item MSRP: %w", err)
 	}
 
-	// For now, return MSRP only - will compute real prices in Phase 3
+	// Try to get sell price stats
+	sellStats, err := market.GetPriceStats(ctx, itemID, "Grand Exchange Station", "sell")
+	if err != nil {
+		return nil, fmt.Errorf("querying sell stats: %w", err)
+	}
+
+	// Try to get buy price stats
+	buyStats, err := market.GetPriceStats(ctx, itemID, "Grand Exchange Station", "buy")
+	if err != nil {
+		return nil, fmt.Errorf("querying buy stats: %w", err)
+	}
+
+	// Use stats if available, otherwise fallback to MSRP
+	sellPrice := msrp
+	buyPrice := msrp
+	methodName := "msrp_only"
+
+	if sellStats != nil {
+		sellPrice = sellStats.RepresentativePrice
+		methodName = sellStats.StatMethod
+	}
+
+	if buyStats != nil {
+		buyPrice = buyStats.RepresentativePrice
+	}
+
 	response := &MarketPriceResponse{
 		ItemID:     itemID,
-		SellPrice:  msrp,
-		BuyPrice:   msrp,
+		SellPrice:  sellPrice,
+		BuyPrice:   buyPrice,
 		MSRP:       msrp,
-		MethodName: "msrp_only",
+		MethodName: methodName,
 	}
 
 	return response, nil

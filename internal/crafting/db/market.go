@@ -295,3 +295,137 @@ func (s *MarketStore) GetItemMSRP(ctx context.Context, itemID string) (int, erro
 	}
 	return msrp, nil
 }
+
+// RecalculatePriceStats recalculates market price statistics from the order book.
+// Updates market_price_stats table with new computed values.
+func (s *MarketStore) RecalculatePriceStats(ctx context.Context, itemID, stationID string) error {
+	calc := NewStatsCalculator(s.db)
+
+	// Recalculate for both buy and sell orders
+	for _, orderType := range []string{"buy", "sell"} {
+		// Fetch orders from order book
+		rows, err := s.db.QueryContext(ctx, `
+			SELECT price_per_unit, volume_available
+			FROM market_order_book
+			WHERE item_id = ? AND station_id = ? AND order_type = ?
+			ORDER BY recorded_at DESC
+		`, itemID, stationID, orderType)
+		if err != nil {
+			return fmt.Errorf("fetching orders: %w", err)
+		}
+		defer func() { _ = rows.Close() }()
+
+		// Collect orders
+		var orders []any
+		var totalVolume int
+		for rows.Next() {
+			var price, volume int
+			if err := rows.Scan(&price, &volume); err != nil {
+				return fmt.Errorf("scanning order: %w", err)
+			}
+			orders = append(orders, Order{
+				ItemID:    itemID,
+				Price:     price,
+				Volume:    volume,
+				OrderType: orderType,
+			})
+			totalVolume += volume
+		}
+
+		if err := rows.Err(); err != nil {
+			return fmt.Errorf("iterating orders: %w", err)
+		}
+
+		// Get MSRP for fallback
+		msrp, err := s.GetItemMSRP(ctx, itemID)
+		if err != nil {
+			return fmt.Errorf("getting MSRP: %w", err)
+		}
+
+		// Calculate representative price using hybrid method
+		var representativePrice int
+		var statMethod string
+		var sampleCount int
+		var confidenceScore float64
+
+		if len(orders) == 0 {
+			// No market data, use MSRP
+			representativePrice = msrp
+			statMethod = "msrp_only"
+			sampleCount = 0
+			confidenceScore = 0
+		} else {
+			statMethod = calc.ChoosePricingMethod(len(orders), totalVolume)
+			sampleCount = len(orders)
+
+			switch statMethod {
+			case "volume_weighted":
+				representativePrice = calc.VolumeWeightedAverage(orders)
+				confidenceScore = 0.95 // High confidence with large volume
+			case "second_price":
+				representativePrice = calc.SecondPriceAuction(orders)
+				confidenceScore = 0.75 // Medium confidence
+			case "median":
+				representativePrice = calc.Median(orders)
+				confidenceScore = 0.5 // Lower confidence with sparse data
+			default:
+				representativePrice = msrp
+				statMethod = "msrp_only"
+				confidenceScore = 0
+			}
+		}
+
+		// Calculate min/max/stddev
+		var minPrice, maxPrice = representativePrice, representativePrice
+		var sum, sumSquares float64
+		for _, o := range orders {
+			if order, ok := o.(Order); ok {
+				if order.Price < minPrice {
+					minPrice = order.Price
+				}
+				if order.Price > maxPrice {
+					maxPrice = order.Price
+				}
+				sum += float64(order.Price)
+				sumSquares += float64(order.Price * order.Price)
+			}
+		}
+
+		var stddev *float64
+		if len(orders) > 1 {
+			mean := sum / float64(len(orders))
+			variance := (sumSquares / float64(len(orders))) - (mean * mean)
+			if variance > 0 {
+				s := float64(variance)
+				stddev = &s
+			}
+		}
+
+		// Upsert to market_price_stats
+		_, err = s.db.ExecContext(ctx, `
+			INSERT INTO market_price_stats
+			(item_id, station_id, empire_id, order_type, stat_method,
+			 representative_price, sample_count, total_volume, min_price,
+			 max_price, stddev, confidence_score, last_updated)
+			VALUES (?, ?, NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+			ON CONFLICT(item_id, station_id, empire_id, order_type)
+			DO UPDATE SET
+				stat_method = excluded.stat_method,
+				representative_price = excluded.representative_price,
+				sample_count = excluded.sample_count,
+				total_volume = excluded.total_volume,
+				min_price = excluded.min_price,
+				max_price = excluded.max_price,
+				stddev = excluded.stddev,
+				confidence_score = excluded.confidence_score,
+				last_updated = excluded.last_updated
+		`, itemID, stationID, orderType, statMethod, representativePrice,
+			sampleCount, totalVolume, minPrice, maxPrice, stddev, confidenceScore)
+
+		if err != nil {
+			return fmt.Errorf("upserting price stats: %w", err)
+		}
+	}
+
+	return nil
+}

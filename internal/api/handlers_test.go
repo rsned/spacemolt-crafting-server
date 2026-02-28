@@ -248,4 +248,68 @@ func TestMarketSubmitEndpoint(t *testing.T) {
 			t.Errorf("expected status 404, got %d", resp.StatusCode)
 		}
 	})
+
+	t.Run("auto-recalc stats after order submission", func(t *testing.T) {
+		// Submit orders for an item
+		requestBody := MarketSubmitRequest{
+			StationID: "Grand Exchange Station",
+			Orders: []MarketOrder{
+				{
+					ItemID:         "ore_iron",
+					OrderType:       "sell",
+					PricePerUnit:    25,
+					VolumeAvailable: 1000,
+				},
+				{
+					ItemID:         "ore_iron",
+					OrderType:       "sell",
+					PricePerUnit:    30,
+					VolumeAvailable: 2000,
+				},
+			},
+			SubmittedAt: time.Now().Format(time.RFC3339),
+		}
+
+		body, _ := json.Marshal(requestBody)
+		resp, err := http.Post(server.URL()+"/api/v1/market/submit", "application/json", bytes.NewReader(body))
+		if err != nil {
+			t.Fatalf("POST failed: %v", err)
+		}
+		func() { _ = resp.Body.Close() }()
+
+		if resp.StatusCode != http.StatusOK {
+			t.Fatalf("expected status 200, got %d", resp.StatusCode)
+		}
+
+		// Query the price stats - should have recalculated
+		resp, err = http.Get(server.URL() + "/api/v1/market/price/ore_iron")
+		if err != nil {
+			t.Fatalf("GET request failed: %v", err)
+		}
+		defer func() { _ = resp.Body.Close() }()
+
+		if resp.StatusCode != http.StatusOK {
+			t.Errorf("expected status 200, got %d", resp.StatusCode)
+		}
+
+		var priceResponse struct {
+			ItemID     string `json:"item_id"`
+			SellPrice  int    `json:"sell_price"`
+			BuyPrice   int    `json:"buy_price"`
+			MSRP       int    `json:"msrp"`
+			MethodName string `json:"method_name"`
+		}
+		if err := json.NewDecoder(resp.Body).Decode(&priceResponse); err != nil {
+			t.Fatalf("decoding response: %v", err)
+		}
+
+		// Should use the submitted orders, not just MSRP
+		if priceResponse.MethodName == "msrp_only" {
+			t.Error("expected stats to be recalculated from submitted orders, not msrp_only")
+		}
+
+		if priceResponse.SellPrice == 0 {
+			t.Error("expected non-zero sell price after order submission")
+		}
+	})
 }
