@@ -373,6 +373,31 @@ type ComponentUseInfo struct {
 	ProfitAnalysis   *ProfitAnalysis `json:"profit_analysis,omitempty"`
 }
 
+// RecipeMarketProfit represents a single recipe's market profitability.
+type RecipeMarketProfit struct {
+	RecipeID        string `json:"recipe_id"`
+	RecipeName      string `json:"recipe_name"`
+	Category        string `json:"category"`
+	OutputItemID    string `json:"output_item_id"`
+	OutputQuantity  int    `json:"output_quantity"`
+	OutputSellPrice int    `json:"output_sell_price"`
+	OutputMSRP      int    `json:"output_msrp"`
+	OutputUsesMSRP  bool   `json:"output_uses_msrp"`  // true if output price is MSRP, not market data
+	InputCost       int    `json:"input_cost"`
+	InputUsesMSRP    bool   `json:"input_uses_msrp"`    // true if any input used MSRP
+	Profit          int    `json:"profit"`
+	ProfitMarginPct float64 `json:"profit_margin_pct"`
+}
+
+// RecipeMarketProfitabilityResponse is the output for the recipe_market_profitability tool.
+type RecipeMarketProfitabilityResponse struct {
+	Recipes         []RecipeMarketProfit `json:"recipes"`
+	TotalRecipes    int                  `json:"total_recipes"`
+	StationID       string               `json:"station_id,omitempty"`
+	EmpireID        string               `json:"empire_id,omitempty"`
+	QueryTimestamp  string               `json:"query_timestamp"`
+}
+
 // BillOfMaterialsRequest is the input for the bill_of_materials tool.
 type BillOfMaterialsRequest struct {
 	RecipeID string `json:"recipe_id"`

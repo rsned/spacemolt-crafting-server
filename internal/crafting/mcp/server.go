@@ -265,6 +265,8 @@ func (s *Server) callTool(ctx context.Context, name string, args json.RawMessage
 		return s.toolComponentUses(ctx, args)
 	case "bill_of_materials":
 		return s.toolBillOfMaterials(ctx, args)
+	case "recipe_market_profitability":
+		return s.toolRecipeMarketProfitability(ctx, args)
 	default:
 		return nil, fmt.Errorf("unknown tool: %s", name)
 	}

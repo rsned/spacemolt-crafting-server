@@ -44,6 +44,7 @@ func GetToolDefinitions() []ToolDefinition {
 		skillCraftPathsTool(),
 		componentUsesTool(),
 		billOfMaterialsTool(),
+		recipeMarketProfitabilityTool(),
 	}
 }
 
@@ -337,4 +338,35 @@ func (s *Server) toolBillOfMaterials(ctx context.Context, args json.RawMessage) 
 		return nil, err
 	}
 	return s.engine.BillOfMaterials(ctx, req)
+}
+
+func recipeMarketProfitabilityTool() ToolDefinition {
+	return ToolDefinition{
+		Name: "recipe_market_profitability",
+		Description: "Get market profitability for all recipes. Returns total current market prices, bill of materials costs, and MSRP for every recipe, sorted by absolute profit. Shows which items are most profitable to craft based on current market data.",
+		InputSchema: JSONSchema{
+			Type: "object",
+			Properties: map[string]Property{
+				"station_id": {
+					Type:        "string",
+					Description: "Station ID for market price lookups (optional, uses MSRP if not provided)",
+				},
+				"empire_id": {
+					Type:        "string",
+					Description: "Empire ID for market price filtering (optional)",
+				},
+			},
+		},
+	}
+}
+
+func (s *Server) toolRecipeMarketProfitability(ctx context.Context, args json.RawMessage) (any, error) {
+	var req struct {
+		StationID string `json:"station_id,omitempty"`
+		EmpireID  string `json:"empire_id,omitempty"`
+	}
+	if err := json.Unmarshal(args, &req); err != nil {
+		return nil, err
+	}
+	return s.engine.RecipeMarketProfitability(ctx, req.StationID, req.EmpireID)
 }

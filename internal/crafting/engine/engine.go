@@ -283,3 +283,127 @@ func buildInventoryMap(components []crafting.Component) map[string]int {
 	}
 	return m
 }
+
+// RecipeMarketProfitability calculates market profitability for all recipes.
+// Returns recipes sorted by absolute profit (descending).
+func (e *Engine) RecipeMarketProfitability(ctx context.Context, stationID, empireID string) (*crafting.RecipeMarketProfitabilityResponse, error) {
+	// Get all recipes
+	recipes, err := e.recipes.GetAllRecipes(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	var results []crafting.RecipeMarketProfit
+
+	for _, recipe := range recipes {
+		// Get primary output
+		if len(recipe.Outputs) == 0 {
+			continue
+		}
+		primaryOutput := recipe.Outputs[0]
+
+		// Calculate output price
+		var outputSellPrice, outputMSRP int
+		var outputUsesMSRP bool
+
+		if stationID != "" {
+			outputStats, err := e.market.GetPriceStats(ctx, primaryOutput.ItemID, stationID, "sell")
+			if err != nil {
+				return nil, err
+			}
+
+			outputMSRP, err = e.market.GetItemMSRP(ctx, primaryOutput.ItemID)
+			if err != nil {
+				return nil, err
+			}
+
+			if outputStats != nil {
+				outputSellPrice = outputStats.RepresentativePrice * primaryOutput.Quantity
+				outputUsesMSRP = false
+			} else {
+				outputSellPrice = outputMSRP * primaryOutput.Quantity
+				outputUsesMSRP = true
+			}
+		} else {
+			// No station, use MSRP for all
+			msrp, err := e.market.GetItemMSRP(ctx, primaryOutput.ItemID)
+			if err != nil {
+				return nil, err
+			}
+			outputSellPrice = msrp * primaryOutput.Quantity
+			outputMSRP = msrp
+			outputUsesMSRP = true
+		}
+
+		// Calculate input cost
+		var inputCost int
+		var inputUsesMSRP bool
+
+		for _, inp := range recipe.Inputs {
+			if stationID != "" {
+				inputStats, err := e.market.GetPriceStats(ctx, inp.ItemID, stationID, "buy")
+				if err != nil {
+					return nil, err
+				}
+
+				if inputStats != nil {
+					inputCost += inputStats.RepresentativePrice * inp.Quantity
+				} else {
+					msrp, err := e.market.GetItemMSRP(ctx, inp.ItemID)
+					if err != nil {
+						return nil, err
+					}
+					inputCost += msrp * inp.Quantity
+					inputUsesMSRP = true
+				}
+			} else {
+				msrp, err := e.market.GetItemMSRP(ctx, inp.ItemID)
+				if err != nil {
+					return nil, err
+				}
+				inputCost += msrp * inp.Quantity
+				inputUsesMSRP = true
+			}
+		}
+
+		profit := outputSellPrice - inputCost
+
+		var marginPct float64
+		if inputCost > 0 {
+			marginPct = float64(profit) / float64(inputCost) * 100
+		}
+
+		results = append(results, crafting.RecipeMarketProfit{
+			RecipeID:       recipe.ID,
+			RecipeName:     recipe.Name,
+			Category:       recipe.Category,
+			OutputItemID:   primaryOutput.ItemID,
+			OutputQuantity: primaryOutput.Quantity,
+			OutputSellPrice: outputSellPrice,
+			OutputMSRP:     outputMSRP,
+			OutputUsesMSRP:  outputUsesMSRP,
+			InputCost:      inputCost,
+			InputUsesMSRP:   inputUsesMSRP,
+			Profit:         profit,
+			ProfitMarginPct: marginPct,
+		})
+	}
+
+	// Sort by absolute profit descending
+	for i := 0; i < len(results); i++ {
+		for j := i + 1; j < len(results); j++ {
+			if results[j].Profit > results[i].Profit {
+				results[i], results[j] = results[j], results[i]
+			}
+		}
+	}
+
+	response := &crafting.RecipeMarketProfitabilityResponse{
+		Recipes:      results,
+		TotalRecipes: len(results),
+		StationID:    stationID,
+		EmpireID:     empireID,
+	}
+
+	return response, nil
+}
