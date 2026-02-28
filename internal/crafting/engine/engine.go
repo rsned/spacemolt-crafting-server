@@ -3,6 +3,7 @@ package engine
 
 import (
 	"context"
+	"log"
 
 	"github.com/rsned/spacemolt-crafting-server/internal/crafting/db"
 	"github.com/rsned/spacemolt-crafting-server/pkg/crafting"
@@ -10,18 +11,41 @@ import (
 
 // Engine is the main query engine for crafting operations.
 type Engine struct {
-	recipes *db.RecipeStore
-	skills  *db.SkillStore
-	market  *db.MarketStore
+	recipes   *db.RecipeStore
+	skills    *db.SkillStore
+	market    *db.MarketStore
+	catPri    *db.CategoryPriorityStore
+
+	// Cached priority map for fast lookups
+	categoryPriorities map[string]int
 }
 
 // New creates a new Engine with the given database stores.
 func New(database *db.DB) *Engine {
-	return &Engine{
-		recipes: db.NewRecipeStore(database),
-		skills:  db.NewSkillStore(database),
-		market:  db.NewMarketStore(database),
+	// Load category priorities into memory for fast access
+	priorities, err := database.CategoryPriorities().GetAllCategories(context.Background())
+	if err != nil {
+		// Log warning but continue - will use tier 6 (default) for all
+		log.Printf("WARNING: Failed to load category priorities: %v", err)
+		priorities = make(map[string]int)
 	}
+
+	return &Engine{
+		recipes:            db.NewRecipeStore(database),
+		skills:             db.NewSkillStore(database),
+		market:             db.NewMarketStore(database),
+		catPri:             database.CategoryPriorities(),
+		categoryPriorities: priorities,
+	}
+}
+
+// getCategoryTier returns the priority tier for a category.
+// Returns 6 (lowest) for unlisted categories.
+func (e *Engine) getCategoryTier(category string) int {
+	if tier, ok := e.categoryPriorities[category]; ok {
+		return tier
+	}
+	return 6 // Default to lowest priority
 }
 
 // checkSkillRequirements checks if the given skills meet recipe requirements.
