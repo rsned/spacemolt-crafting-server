@@ -237,3 +237,61 @@ func (s *MarketStore) ClearMarketData(ctx context.Context) error {
 		return nil
 	})
 }
+
+// MarketPriceStats represents detailed market statistics from market_price_stats table.
+type MarketPriceStats struct {
+	ItemID             string
+	StationID          string
+	EmpireID           *string  // Nullable for global stats
+	OrderType          string
+	RepresentativePrice int
+	StatMethod         string
+	SampleCount        int
+	TotalVolume        int
+	MinPrice           int
+	MaxPrice           int
+	StdDev             *float64 // Nullable
+	ConfidenceScore    float64
+	PriceTrend         *string  // Nullable
+}
+
+// GetPriceStats retrieves market price statistics from the new market_price_stats table.
+// Returns nil if not found.
+func (s *MarketStore) GetPriceStats(ctx context.Context, itemID, stationID, orderType string) (*MarketPriceStats, error) {
+	var stats MarketPriceStats
+	err := s.db.QueryRowContext(ctx, `
+		SELECT item_id, station_id, empire_id, order_type,
+		       representative_price, stat_method, sample_count, total_volume,
+		       min_price, max_price, stddev, confidence_score, price_trend
+		FROM market_price_stats
+		WHERE item_id = ? AND station_id = ? AND order_type = ?
+		ORDER BY empire_id NULLS LAST
+		LIMIT 1
+	`, itemID, stationID, orderType).Scan(
+		&stats.ItemID, &stats.StationID, &stats.EmpireID, &stats.OrderType,
+		&stats.RepresentativePrice, &stats.StatMethod, &stats.SampleCount, &stats.TotalVolume,
+		&stats.MinPrice, &stats.MaxPrice, &stats.StdDev, &stats.ConfidenceScore, &stats.PriceTrend,
+	)
+
+	if err == sql.ErrNoRows {
+		return nil, nil
+	}
+	if err != nil {
+		return nil, fmt.Errorf("querying price stats: %w", err)
+	}
+
+	return &stats, nil
+}
+
+// GetItemMSRP retrieves the base value (MSRP) for an item from the items table.
+func (s *MarketStore) GetItemMSRP(ctx context.Context, itemID string) (int, error) {
+	var msrp int
+	err := s.db.QueryRowContext(ctx, `SELECT base_value FROM items WHERE id = ?`, itemID).Scan(&msrp)
+	if err == sql.ErrNoRows {
+		return 0, nil
+	}
+	if err != nil {
+		return 0, fmt.Errorf("querying item MSRP: %w", err)
+	}
+	return msrp, nil
+}

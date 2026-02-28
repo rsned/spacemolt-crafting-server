@@ -148,8 +148,16 @@ type ProfitAnalysis struct {
 	ProfitPerUnit        int     `json:"profit_per_unit"`
 	ProfitMarginPct      float64 `json:"profit_margin_pct"`
 	TotalPotentialProfit int     `json:"total_potential_profit,omitempty"`
-	MarketVolume24h      int     `json:"market_volume_24h,omitempty"`
-	PriceTrend           string  `json:"price_trend,omitempty"`
+
+	// NEW fields from Phase 3: Enhanced Market Data
+	MSRP               int    `json:"msrp,omitempty"`
+	MarketStatus       string `json:"market_status,omitempty"`       // "high_confidence", "low_confidence", "no_market_data"
+	PricingMethod      string `json:"pricing_method,omitempty"`      // "volume_weighted", "second_price", "median", "msrp_only"
+	SampleCount        int    `json:"sample_count,omitempty"`        // Number of orders used in calculation
+
+	// Legacy field - renamed for clarity
+	TotalVolume24h     int    `json:"total_volume_24h,omitempty"`    // Total trading volume in last 24h
+	PriceTrend         string `json:"price_trend,omitempty"`
 }
 
 // MarketPriceSummary contains aggregated price data for an item.

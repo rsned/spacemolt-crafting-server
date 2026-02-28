@@ -165,28 +165,63 @@ func (e *Engine) calculateProfitAnalysis(
 		return nil, nil
 	}
 
+	// Get primary output for stats
+	var primaryOutput crafting.RecipeOutput
+	if len(recipe.Outputs) > 0 {
+		primaryOutput = recipe.Outputs[0]
+	} else {
+		return nil, nil // No outputs
+	}
+
+	// Get market price stats for output
+	outputStats, err := e.market.GetPriceStats(ctx, primaryOutput.ItemID, stationID, "sell")
+	if err != nil {
+		return nil, err
+	}
+
+	// If no market data available, return nil
+	if outputStats == nil {
+		return nil, nil
+	}
+
 	// Calculate total output value from all outputs
 	var totalOutputPrice int
 	for _, output := range recipe.Outputs {
-		outputPrice, err := e.market.GetSellPrice(ctx, output.ItemID, stationID)
-		if err != nil {
-			return nil, err
+		var price int
+		if output.ItemID == primaryOutput.ItemID {
+			price = outputStats.RepresentativePrice
+		} else {
+			// For multi-output recipes, get stats for each output
+			stats, err := e.market.GetPriceStats(ctx, output.ItemID, stationID, "sell")
+			if err != nil {
+				return nil, err
+			}
+			if stats == nil {
+				// No market data for this output, can't calculate profit
+				return nil, nil
+			}
+			price = stats.RepresentativePrice
 		}
-		totalOutputPrice += outputPrice * output.Quantity
+		totalOutputPrice += price * output.Quantity
 	}
 
-	if totalOutputPrice == 0 {
-		return nil, nil // No market data
-	}
-
-	// Calculate input cost
+	// Calculate input cost using market stats
 	var inputCost int
 	for _, inp := range recipe.Inputs {
-		buyPrice, err := e.market.GetBuyPrice(ctx, inp.ItemID, stationID)
+		inputStats, err := e.market.GetPriceStats(ctx, inp.ItemID, stationID, "buy")
 		if err != nil {
 			return nil, err
 		}
-		inputCost += buyPrice * inp.Quantity
+		if inputStats == nil {
+			// No market data for this input, use MSRP
+			msrp, err := e.market.GetItemMSRP(ctx, inp.ItemID)
+			if err != nil {
+				return nil, err
+			}
+			inputCost += msrp * inp.Quantity
+		} else {
+			inputCost += inputStats.RepresentativePrice * inp.Quantity
+		}
 	}
 
 	profitPerUnit := totalOutputPrice - inputCost
@@ -196,20 +231,26 @@ func (e *Engine) calculateProfitAnalysis(
 		marginPct = float64(profitPerUnit) / float64(inputCost) * 100
 	}
 
-	// For multi-output recipes, use the first output as primary for volume/trend
-	var primaryOutput crafting.RecipeOutput
-	if len(recipe.Outputs) > 0 {
-		primaryOutput = recipe.Outputs[0]
-	}
-
-	volume, err := e.market.GetVolume24h(ctx, primaryOutput.ItemID, stationID)
+	// Get MSRP for primary output
+	msrp, err := e.market.GetItemMSRP(ctx, primaryOutput.ItemID)
 	if err != nil {
 		return nil, err
 	}
 
-	trend, err := e.market.GetPriceTrend(ctx, primaryOutput.ItemID, stationID)
-	if err != nil {
-		return nil, err
+	// Determine market status from confidence score
+	marketStatus := "no_market_data"
+	if outputStats.ConfidenceScore >= 0.8 {
+		marketStatus = "high_confidence"
+	} else if outputStats.ConfidenceScore >= 0.5 {
+		marketStatus = "medium_confidence"
+	} else if outputStats.ConfidenceScore > 0 {
+		marketStatus = "low_confidence"
+	}
+
+	// Handle nullable PriceTrend
+	priceTrend := "unknown"
+	if outputStats.PriceTrend != nil {
+		priceTrend = *outputStats.PriceTrend
 	}
 
 	analysis := &crafting.ProfitAnalysis{
@@ -217,8 +258,14 @@ func (e *Engine) calculateProfitAnalysis(
 		InputCost:       inputCost,
 		ProfitPerUnit:   profitPerUnit,
 		ProfitMarginPct: marginPct,
-		MarketVolume24h: volume,
-		PriceTrend:      trend,
+		TotalVolume24h:  outputStats.TotalVolume,
+		PriceTrend:      priceTrend,
+
+		// NEW fields from Phase 3
+		MSRP:          msrp,
+		MarketStatus:  marketStatus,
+		PricingMethod: outputStats.StatMethod,
+		SampleCount:   outputStats.SampleCount,
 	}
 
 	if canCraftQuantity > 0 {
