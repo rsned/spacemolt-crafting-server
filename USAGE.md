@@ -101,7 +101,7 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
   "arguments": {
     "components": [{"id": "ore_iron", "quantity": 100}],
     "skills": {"crafting_basic": 1},
-    "station_id": "jita_iv",
+    "station_id": "Grand Exchange Station",
     "strategy": "MAXIMIZE_PROFIT",
     "limit": 5
   }
@@ -424,7 +424,7 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
   "arguments": {
     "item_id": "ore_iron",
     "skills": {"crafting_basic": 1},
-    "station_id": "jita_iv"
+    "station_id": "Grand Exchange Station"
   }
 }
 ```
@@ -583,8 +583,8 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
   "name": "recipe_market_profitability",
   "arguments": {
     "components": [
-      {"id": "tritanium", "quantity": 1000},
-      {"id": "pyerite", "quantity": 500}
+      {"id": "ore_iron", "quantity": 1000},
+      {"id": "ore_copper", "quantity": 500}
     ]
   }
 }
@@ -621,7 +621,7 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
   "name": "recipe_market_profitability",
   "arguments": {
     "components": [
-      {"id": "tritanium", "quantity": 100}
+      {"id": "ore_iron", "quantity": 100}
     ]
   }
 }
@@ -661,7 +661,7 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
 curl -X POST http://localhost:8080/api/v1/market/submit \
   -H "Content-Type: application/json" \
   -d '{
-    "station_id": "Jita IV",
+    "station_id": "Grand Exchange Station",
     "source": "market_scraper_v1",
     "orders": [
       {
@@ -702,7 +702,7 @@ curl -X POST http://localhost:8080/api/v1/market/submit \
 curl -X POST http://localhost:8080/api/v1/market/submit \
   -H "Content-Type: application/json" \
   -d '{
-    "station_id": "Jita IV",
+    "station_id": "Grand Exchange Station",
     "orders": [
       {
         "item_id": "invalid_item_that_does_not_exist",
@@ -799,7 +799,7 @@ curl -X POST http://localhost:8080/api/v1/admin/market/recalc/comp_steel
 {
   "status": "success",
   "item_id": "comp_steel",
-  "station": "Jita IV",
+  "station": "Grand Exchange Station",
   "orders_processed": 45,
   "previous_price": 120,
   "new_price": 125,
@@ -844,8 +844,8 @@ curl -X POST http://localhost:8080/api/v1/admin/market/recalc/comp_steel
   "name": "recipe_market_profitability",
   "arguments": {
     "components": [
-      {"id": "tritanium", "quantity": 1000},
-      {"id": "pyerite", "quantity": 500}
+      {"id": "ore_iron", "quantity": 1000},
+      {"id": "ore_copper", "quantity": 500}
     ]
   }
 }

@@ -435,7 +435,7 @@ Get market profitability for all recipes, sorted by profit. Shows which items ar
   "params": {
     "name": "recipe_market_profitability",
     "arguments": {
-      "station_id": "jita_iv"
+      "station_id": "Grand Exchange Station"
     }
   }
 }
@@ -451,10 +451,10 @@ Specify items you already have in inventory. The tool will set input costs to 0 
   "params": {
     "name": "recipe_market_profitability",
     "arguments": {
-      "station_id": "jita_iv",
+      "station_id": "Grand Exchange Station",
       "components": [
-        {"id": "tritanium", "quantity": 1000},
-        {"id": "pyerite", "quantity": 500}
+        {"id": "ore_iron", "quantity": 1000},
+        {"id": "ore_copper", "quantity": 500}
       ]
     }
   }
@@ -467,7 +467,7 @@ Specify items you already have in inventory. The tool will set input costs to 0 
 - **Partial inventory:** If you have some but not enough, cost = price × shortfall only
 - **No inventory:** Full price for required quantity
 
-**Example:** A recipe needs 10 tritanium at 5cr each:
+**Example:** A recipe needs 10 ore_iron at 5cr each:
 - With 0 in inventory: input_cost = 50cr
 - With 5 in inventory: input_cost = 25cr (only pay for 5 more)
 - With 10+ in inventory: input_cost = 0cr (you have enough)
