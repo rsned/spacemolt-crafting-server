@@ -10,11 +10,11 @@ A comprehensive server for SpaceMolt crafting queries with **market data integra
 
 ### 7 Useful MCP Tools
 
-1. **`craft_query`** - "What can I craft with my inventory?" (with market-aware profit analysis)
+1. **`craft_query`** - "What can I craft with my inventory?" (optional market pricing with station_id)
 2. **`craft_path_to`** - "How do I craft this specific item?"
-3. **`recipe_lookup`** - "Tell me about this recipe" (with market pricing)
+3. **`recipe_lookup`** - "Tell me about this recipe" (optional market pricing with station_id)
 4. **`skill_craft_paths`** - "Which skills unlock new recipes?"
-5. **`component_uses`** - "What can I do with this item?" (with market prices)
+5. **`component_uses`** - "What can I do with this item?" (optional market pricing with station_id)
 6. **`bill_of_materials`** - "What raw materials do I need?"
 7. **`recipe_market_profitability`** ⭐ - "Show profitability for all recipes" (with inventory support)
 

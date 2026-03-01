@@ -92,7 +92,7 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
 }
 ```
 
-#### Example 1.2: With Profit Maximization Strategy
+#### Example 1.2: With Market Prices (requires station_id)
 
 **Request:**
 ```json
@@ -101,6 +101,7 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
   "arguments": {
     "components": [{"id": "ore_iron", "quantity": 100}],
     "skills": {"crafting_basic": 1},
+    "station_id": "jita_iv",
     "strategy": "MAXIMIZE_PROFIT",
     "limit": 5
   }
@@ -116,7 +117,10 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
         "id": "basic_smelt_iron",
         "name": "Basic Iron Smelting",
         "profit_analysis": {
+          "output_sell_price": 100,
+          "input_cost": 10,
           "profit_per_unit": 90,
+          "profit_margin_pct": 900.0,
           "total_potential_profit": 900
         }
       },
@@ -128,6 +132,8 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
   }
 }
 ```
+
+**Note:** Market prices and profit_analysis are only included when `station_id` is provided. Without station_id, results show only what you can craft, not profitability.
 
 ---
 
@@ -408,6 +414,43 @@ This document provides practical examples for all MCP tools and HTTP API endpoin
   "total_uses": 12
 }
 ```
+
+#### Example 5.2: With Market Prices (requires station_id)
+
+**Request:**
+```json
+{
+  "name": "component_uses",
+  "arguments": {
+    "item_id": "ore_iron",
+    "skills": {"crafting_basic": 1},
+    "station_id": "jita_iv"
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "item_id": "ore_iron",
+  "used_in": [
+    {
+      "recipe_id": "basic_smelt_iron",
+      "recipe_name": "Basic Iron Smelting",
+      "quantity_required": 10,
+      "can_craft": true,
+      "profit_analysis": {
+        "output_sell_price": 100,
+        "input_cost": 10,
+        "profit_per_unit": 90
+      }
+    }
+  ],
+  "total_uses": 8
+}
+```
+
+**Note:** Market prices and profit_analysis are only included when `station_id` is provided.
 
 ---
 
@@ -772,15 +815,15 @@ curl -X POST http://localhost:8080/api/v1/admin/market/recalc/comp_steel
 
 ### MCP Tools Quick Reference
 
-| Tool | Best For | Key Parameters |
-|------|----------|----------------|
-| `craft_query` | What can I make now? | components, skills, limit |
-| `craft_path_to` | How do I make X? | target_recipe_id, current_inventory |
-| `recipe_lookup` | Tell me about recipe X | recipe_id or search |
-| `skill_craft_paths` | What should I train? | skills (with levels) |
-| `component_uses` | What can I do with X? | item_id |
-| `bill_of_materials` | What do I need to make X? | recipe_id, quantity |
-| `recipe_market_profitability` | What's most profitable? | station_id, components |
+| Tool | Best For | Key Parameters | Market Prices? |
+|------|----------|----------------|----------------|
+| `craft_query` | What can I make now? | components, skills, limit | Optional (with station_id) |
+| `craft_path_to` | How do I make X? | target_recipe_id, current_inventory | No |
+| `recipe_lookup` | Tell me about recipe X | recipe_id or search | Optional (with station_id) |
+| `skill_craft_paths` | What should I train? | skills (with levels) | No |
+| `component_uses` | What can I do with X? | item_id | Optional (with station_id) |
+| `bill_of_materials` | What do I need to make X? | recipe_id, quantity | No |
+| `recipe_market_profitability` | What's most profitable? | station_id, components | Yes (primary feature) |
 
 ### HTTP API Quick Reference
 
