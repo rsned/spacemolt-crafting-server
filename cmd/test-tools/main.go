@@ -1,5 +1,5 @@
 // Command test-tools provides comprehensive testing for the MCP crafting server.
-// It tests all 6 tools with invalid/non-existent IDs, simple queries, and complex queries.
+// It tests all 7 tools with invalid/non-existent IDs, simple queries, and complex queries.
 package main
 
 import (
@@ -111,6 +111,10 @@ func runAllTests(ctx context.Context, eng *engine.Engine, log *slog.Logger, verb
 	// Test 6: bill_of_materials
 	fmt.Println("\nTesting: bill_of_materials")
 	results = append(results, testBillOfMaterials(ctx, eng, log, verbose)...)
+
+	// Test 7: recipe_market_profitability
+	fmt.Println("\nTesting: recipe_market_profitability")
+	results = append(results, testRecipeMarketProfitability(ctx, eng, log, verbose)...)
 
 	return results
 }
@@ -664,6 +668,134 @@ func testBillOfMaterials(ctx context.Context, eng *engine.Engine, _ *slog.Logger
 			return eng.BillOfMaterials(ctx, crafting.BillOfMaterialsRequest{
 				RecipeID: "craft_capital_armor_plate",
 				Quantity: 1,
+			})
+		}, verbose,
+	))
+
+	return results
+}
+
+// ============================================================================
+// TOOL 7: recipe_market_profitability
+// ============================================================================
+
+func testRecipeMarketProfitability(ctx context.Context, eng *engine.Engine, _ *slog.Logger, verbose bool) []TestResult {
+	var results []TestResult
+
+	// INVALID: Negative quantity in components
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "invalid",
+		"recipe_market_profitability with negative inventory quantity",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "", "", []crafting.Component{
+				{ID: "ore_iron", Quantity: -10},
+			})
+		}, verbose,
+	))
+
+	// INVALID: Non-existent item in components (should work, just won't match)
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "invalid",
+		"recipe_market_profitability with non-existent inventory item",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "", "", []crafting.Component{
+				{ID: "chicken_pot_pie", Quantity: 100},
+			})
+		}, verbose,
+	))
+
+	// SIMPLE: Basic call with no parameters (MSRP only)
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "simple",
+		"recipe_market_profitability with no parameters (MSRP only)",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "", "", nil)
+		}, verbose,
+	))
+
+	// SIMPLE: With station ID only
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "simple",
+		"recipe_market_profitability with station ID",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "jita_iv", "", nil)
+		}, verbose,
+	))
+
+	// SIMPLE: With inventory components only
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "simple",
+		"recipe_market_profitability with inventory only",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "", "", []crafting.Component{
+				{ID: "tritanium", Quantity: 1000},
+				{ID: "pyerite", Quantity: 500},
+			})
+		}, verbose,
+	))
+
+	// SIMPLE: With both station and inventory
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "simple",
+		"recipe_market_profitability with station and inventory",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "amarr_viii", "", []crafting.Component{
+				{ID: "ore_iron", Quantity: 500},
+				{ID: "comp_steel", Quantity: 50},
+			})
+		}, verbose,
+	))
+
+	// COMPLEX: Full inventory coverage (all materials owned)
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "complex",
+		"recipe_market_profitability with full inventory coverage",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "", "", []crafting.Component{
+				{ID: "ore_iron", Quantity: 10000},
+				{ID: "ore_copper", Quantity: 5000},
+				{ID: "comp_circuit_board", Quantity: 100},
+				{ID: "comp_steel", Quantity: 200},
+			})
+		}, verbose,
+	))
+
+	// COMPLEX: Partial inventory (some materials owned)
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "complex",
+		"recipe_market_profitability with partial inventory",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "jita_iv", "", []crafting.Component{
+				{ID: "tritanium", Quantity: 100},
+				{ID: "pyerite", Quantity: 50},
+			})
+		}, verbose,
+	))
+
+	// COMPLEX: Large inventory list (many different items)
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "complex",
+		"recipe_market_profitability with large inventory list",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "rens_vi", "", []crafting.Component{
+				{ID: "ore_iron", Quantity: 5000},
+				{ID: "ore_copper", Quantity: 3000},
+				{ID: "ore_gold", Quantity: 1000},
+				{ID: "ore_titanium", Quantity: 2000},
+				{ID: "comp_steel", Quantity: 500},
+				{ID: "comp_circuit_board", Quantity: 200},
+				{ID: "comp_optical_sensor", Quantity: 150},
+				{ID: "comp_power_core", Quantity: 100},
+			})
+		}, verbose,
+	))
+
+	// COMPLEX: With empire ID filter
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "complex",
+		"recipe_market_profitability with empire filter",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "jita_iv", "caldari", nil)
+		}, verbose,
+	))
+
+	// COMPLEX: Station + Empire + Full Inventory
+	results = append(results, runTest(ctx, eng, "recipe_market_profitability", "complex",
+		"recipe_market_profitability with station, empire, and inventory",
+		func() (any, error) {
+			return eng.RecipeMarketProfitability(ctx, "dodixie", "gallente", []crafting.Component{
+				{ID: "comp_circuit_board", Quantity: 1000},
+				{ID: "comp_capital_frame", Quantity: 10},
 			})
 		}, verbose,
 	))
