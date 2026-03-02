@@ -793,26 +793,6 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>ECM Burst</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/countermeasure_ecm.png" alt="ECM Burst" width="128"></td></tr>
-<tr><th colspan="2" style="text-align:center;">General</th></tr>
-<tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>1</td></tr>
-<tr><td><b>Stackable</b></td><td>Yes</td></tr>
-<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
-<tr><th colspan="2" style="text-align:center;">Market</th></tr>
-<tr><td><b>Base Value</b></td><td>25 cr</td></tr>
-</table>
-
-> Electronic countermeasure pulse that disrupts targeting.
-
-[View full page](countermeasure_ecm.md)
-
----
-
-## ECM Burst
-
-<table>
-<tr><th colspan="2" style="text-align:center;"><h3>ECM Burst</h3></th></tr>
 <tr><td colspan="2" style="text-align:center;"><img src="../images/ecm_burst.png" alt="ECM Burst" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
@@ -826,6 +806,26 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 > Electronic countermeasure pulse. Disrupts targeting for 3 ticks.
 
 [View full page](ecm_burst.md)
+
+---
+
+## ECM Burst
+
+<table>
+<tr><th colspan="2" style="text-align:center;"><h3>ECM Burst</h3></th></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/countermeasure_ecm.png" alt="ECM Burst" width="128"></td></tr>
+<tr><th colspan="2" style="text-align:center;">General</th></tr>
+<tr><td><b>Rarity</b></td><td>uncommon</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
+<tr><td><b>Stackable</b></td><td>Yes</td></tr>
+<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
+<tr><th colspan="2" style="text-align:center;">Market</th></tr>
+<tr><td><b>Base Value</b></td><td>25 cr</td></tr>
+</table>
+
+> Electronic countermeasure pulse that disrupts targeting.
+
+[View full page](countermeasure_ecm.md)
 
 ---
 

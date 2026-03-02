@@ -861,7 +861,7 @@ blockquote {
 <h1>{{.Name}}</h1>
 <div class="card">
   <div class="item-image">
-    <img src="../images/{{.ID}}.png" alt="{{.Name}}" width="128" height="128">
+    <img src="../images/{{.ID}}.png" alt="{{.Name}}" height="200">
   </div>
   <div class="section-label">General</div>
   <table>
