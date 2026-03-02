@@ -4,9 +4,6 @@ bin/
 # Database backups
 *.db.backup
 
-# Catalog image placeholders (not yet populated)
-catalog/images/
-
 # Editor swap files
 *.swp
 
