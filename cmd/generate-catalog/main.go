@@ -88,9 +88,9 @@ func main() {
 		log.Fatalf("load used-in: %v", err)
 	}
 
-	// Clean and recreate the output directory so stale files from
-	// previously deleted items do not linger across runs.
-	if err := os.RemoveAll(outDir); err != nil {
+	// Clean generated markdown files so stale items don't linger,
+	// but preserve non-generated content (e.g. catalog/images/).
+	if err := cleanGeneratedFiles(outDir); err != nil {
 		log.Fatalf("clean output dir: %v", err)
 	}
 	if err := os.MkdirAll(outDir, 0o755); err != nil {
@@ -335,6 +335,31 @@ func yesno(b bool) string {
 
 func fmtValue(v int) string {
 	return humanize.Comma(int64(v)) + " cr"
+}
+
+// cleanGeneratedFiles removes all .md files and category subdirectories from
+// outDir while preserving non-generated content like the images/ directory.
+func cleanGeneratedFiles(outDir string) error {
+	entries, err := os.ReadDir(outDir)
+	if os.IsNotExist(err) {
+		return nil
+	}
+	if err != nil {
+		return err
+	}
+	for _, e := range entries {
+		path := filepath.Join(outDir, e.Name())
+		if !e.IsDir() && strings.HasSuffix(e.Name(), ".md") {
+			if err := os.Remove(path); err != nil {
+				return err
+			}
+		} else if e.IsDir() && e.Name() != "images" {
+			if err := os.RemoveAll(path); err != nil {
+				return err
+			}
+		}
+	}
+	return nil
 }
 
 // slug converts a name to a GitHub-compatible anchor: lowercase, spaces to hyphens.
