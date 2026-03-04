@@ -22,10 +22,10 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Drain Fuel Reserves | 5 | [Fuel Cell](../consumable/fuel_cell.md) |
-| Salvager's Repair Kit | 4 | [Repair Kit](../consumable/repair_kit.md) |
+| Rebuild Power Cells | 3 | [Power Cell](../component/power_cell.md) |
+| Reclaim Circuit Boards | 5 | [Circuit Board](../refined/circuit_board.md) |
+| Recover Heat Sinks | 4 | [Heat Sink](../component/heat_sink.md) |
+| Reforge Hull Plating | 2 | [Hull Plating](../component/hull_plating.md) |
 | Reprogrammed Repair Nanites | 6 | [Repair Nanites](../consumable/repair_nanites.md) |
-| Reclaim Circuit Boards | 5 | [Circuit Board](../refined/refined_circuits.md) |
-| Recover Heat Sinks | 4 | [Heat Sink](../component/comp_heat_sink.md) |
-| Reforge Hull Plating | 2 | [Hull Plating](../component/comp_hull_plate.md) |
-| Rebuild Power Cells | 3 | [Power Cell](../component/comp_power_cell.md) |
-| Strip Wiring from Components | 3 | [Wiring Harness](../component/comp_wiring_harness.md) |
+| Salvager's Repair Kit | 4 | [Repair Kit](../consumable/repair_kit.md) |
+| Strip Wiring from Components | 3 | [Wiring Harness](../component/wiring_harness.md) |

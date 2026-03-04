@@ -29,8 +29,8 @@
 |--------|-----|----------|
 | Build Jump Drive Core | 4 | [Jump Drive Core](../component/jump_drive_core.md) |
 | Build Overcharge Cell | 1 | [Overcharge Cell](../consumable/overcharge_cell.md) |
-| Build Phase Drive | 3 | [Phase Drive](../component/comp_phase_drive.md) |
+| Build Phase Drive | 3 | [Phase Drive](../component/phase_drive.md) |
 | Build Quantum Entanglement Shield | 4 | [Quantum Entanglement Shield](../defense/quantum_entanglement_shield.md) |
 | Build Void Laser | 3 | [Void Laser](../weapon/void_laser.md) |
-| Synthesize Neutronium | 2 | [Neutronium Ingot](../refined/refined_neutronium.md) |
-| Generate Antimatter | 3 | [Contained Antimatter](../refined/refined_antimatter.md) |
+| Generate Antimatter | 3 | [Contained Antimatter](../refined/contained_antimatter.md) |
+| Synthesize Neutronium | 2 | [Neutronium Ingot](../refined/neutronium_ingot.md) |

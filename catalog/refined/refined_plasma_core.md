@@ -27,12 +27,12 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
-| Assemble Plasma Mines | 1 | [Plasma Mines](../consumable/mines_plasma.md) |
+| Assemble Plasma Mines | 1 | [Plasma Mines](../consumable/plasma_mines.md) |
+| Assemble Plasma Torpedoes | 1 | [Plasma Torpedoes](../consumable/plasma_torpedoes.md) |
 | Build Overcharge Cell | 1 | [Overcharge Cell](../consumable/overcharge_cell.md) |
-| Manufacture Plasma Cells | 1 | [Plasma Cell Pack](../consumable/plasma_standard.md) |
-| Manufacture Focused Plasma Cells | 2 | [Focused Plasma Cell Pack](../consumable/plasma_focused.md) |
-| Build Plasma Injector | 1 | [Plasma Injector](../component/comp_plasma_injector.md) |
-| Manufacture Overcharged Plasma Cells | 2 | [Overcharged Plasma Cell Pack](../consumable/plasma_overcharged.md) |
-| Manufacture Incendiary Rounds | 1 | [Incendiary Rounds Box](../consumable/rounds_incendiary.md) |
-| Assemble Plasma Torpedoes | 1 | [Plasma Torpedoes](../consumable/torpedoes_plasma.md) |
-| Build Weapon Overload Capacitor | 1 | [Weapon Overload Capacitor](../consumable/weapon_overload.md) |
+| Build Plasma Injector | 1 | [Plasma Injector](../component/plasma_injector.md) |
+| Build Weapon Overload Capacitor | 1 | [Weapon Overload Capacitor](../consumable/weapon_overload_capacitor.md) |
+| Manufacture Focused Plasma Cells | 2 | [Focused Plasma Cell Pack](../consumable/focused_plasma_cell_pack.md) |
+| Manufacture Incendiary Rounds | 1 | [Incendiary Rounds Box](../consumable/incendiary_rounds_box.md) |
+| Manufacture Overcharged Plasma Cells | 2 | [Overcharged Plasma Cell Pack](../consumable/overcharged_plasma_cell_pack.md) |
+| Manufacture Plasma Cells | 1 | [Plasma Cell Pack](../consumable/plasma_cell_pack.md) |

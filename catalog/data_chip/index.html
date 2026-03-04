@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>data_chip — SpaceMolt Item Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: hsl(213, 16%, 12%);
+  --foreground: hsl(213, 27%, 88%);
+  --primary: hsl(193, 44%, 67%);
+  --card: hsl(217, 16%, 15.5%);
+  --card-header: hsl(217, 16%, 13%);
+  --border: hsl(217, 17%, 28%);
+  --muted-foreground: hsl(213, 12%, 55%);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 85%;
+  margin: 0 auto;
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+nav.breadcrumb {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+}
+nav.breadcrumb a { color: var(--muted-foreground); }
+nav.breadcrumb a:hover { color: var(--primary); }
+h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+.description {
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+}
+td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+tr:last-child td { border-bottom: none; }
+.rarity-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid;
+}
+td.value { text-align: right; }
+td.size { text-align: right; }
+td.thumb img { height: 64px; image-rendering: pixelated; }
+th { cursor: pointer; user-select: none; }
+th:hover { color: var(--primary); }
+th .sort-arrow { margin-left: 4px; font-size: 10px; }
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Catalog</a> / data_chip</nav>
+<h1>data_chip</h1>
+<p class="description"></p>
+<div class="card">
+<table>
+<tr><th>Item</th><th></th><th>Rarity</th><th style="text-align:right">Size</th><th style="text-align:right">Base Value</th><th>Description</th></tr>
+<tr>
+  <td><a href="blueprint.html">Blueprint</a></td>
+  <td class="thumb"><img src="../images/blueprint.png" alt="Blueprint"></td>
+  <td><span class="rarity-badge" style="color:#5e81ac;border-color:#5e81ac">rare</span></td>
+  <td class="size">1</td>
+  <td class="value">1,000 cr</td>
+  <td>Technical schematics revealing a crafting recipe.</td>
+</tr>
+<tr>
+  <td><a href="coordinate_chip.html">Coordinate Chip</a></td>
+  <td class="thumb"><img src="../images/coordinate_chip.png" alt="Coordinate Chip"></td>
+  <td><span class="rarity-badge" style="color:#88c0d0;border-color:#88c0d0">uncommon</span></td>
+  <td class="size">1</td>
+  <td class="value">300 cr</td>
+  <td>Contains coordinates to a specific location.</td>
+</tr>
+<tr>
+  <td><a href="data_chip.html">Data Chip</a></td>
+  <td class="thumb"><img src="../images/data_chip.png" alt="Data Chip"></td>
+  <td><span class="rarity-badge" style="color:#a3be8c;border-color:#a3be8c">common</span></td>
+  <td class="size">1</td>
+  <td class="value">10 cr</td>
+  <td>A writable data storage chip for notes and maps.</td>
+</tr>
+<tr>
+  <td><a href="encrypted_data_core.html">Encrypted Data Core</a></td>
+  <td class="thumb"><img src="../images/encrypted_data_core.png" alt="Encrypted Data Core"></td>
+  <td><span class="rarity-badge" style="color:#d08770;border-color:#d08770">exotic</span></td>
+  <td class="size">1</td>
+  <td class="value">2,000 cr</td>
+  <td>Heavily encrypted data. Contents unknown.</td>
+</tr>
+<tr>
+  <td><a href="star_map_fragment.html">Star Map Fragment</a></td>
+  <td class="thumb"><img src="../images/star_map_fragment.png" alt="Star Map Fragment"></td>
+  <td><span class="rarity-badge" style="color:#5e81ac;border-color:#5e81ac">rare</span></td>
+  <td class="size">1</td>
+  <td class="value">500 cr</td>
+  <td>Partial navigation data for unexplored regions.</td>
+</tr>
+</table>
+</div>
+<script>
+document.querySelectorAll("table").forEach(function(table) {
+  var headers = table.querySelectorAll("th");
+  var sortCol = -1, sortAsc = true;
+  headers.forEach(function(th, idx) {
+    th.addEventListener("click", function() {
+      if (sortCol === idx) { sortAsc = !sortAsc; } else { sortCol = idx; sortAsc = true; }
+      headers.forEach(function(h) {
+        var arrow = h.querySelector(".sort-arrow");
+        if (arrow) arrow.remove();
+      });
+      var arrow = document.createElement("span");
+      arrow.className = "sort-arrow";
+      arrow.textContent = sortAsc ? "\u25B2" : "\u25BC";
+      th.appendChild(arrow);
+      var tbody = table.querySelector("tbody") || table;
+      var rows = Array.from(tbody.querySelectorAll("tr")).filter(function(r) { return !r.querySelector("th"); });
+      rows.sort(function(a, b) {
+        var at = a.cells[idx].textContent.trim();
+        var bt = b.cells[idx].textContent.trim();
+        var an = at.replace(/[^0-9.-]/g, ""), bn = bt.replace(/[^0-9.-]/g, "");
+        if (an !== "" && bn !== "" && !isNaN(an) && !isNaN(bn)) {
+          return sortAsc ? an - bn : bn - an;
+        }
+        return sortAsc ? at.localeCompare(bt) : bt.localeCompare(at);
+      });
+      rows.forEach(function(r) { tbody.appendChild(r); });
+    });
+  });
+});
+</script>
+</body>
+</html>

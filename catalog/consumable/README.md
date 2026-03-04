@@ -6,6 +6,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 ## Table of Contents
 - [Adrenaline Surge](#adrenaline-surge)
+- [Advanced Decoy Drone](#advanced-decoy-drone)
 - [Advanced Repair Kit](#advanced-repair-kit)
 - [Afterburner Fuel](#afterburner-fuel)
 - [Anchor Beacon](#anchor-beacon)
@@ -27,19 +28,17 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 - [Cloaking Dust](#cloaking-dust)
 - [Cluster Missiles](#cluster-missiles)
 - [Combat Scanner Probe](#combat-scanner-probe)
-- [Combat Scanner Probe](#combat-scanner-probe)
 - [Combat Stim](#combat-stim)
 - [Corrosive Plasma Cell Pack](#corrosive-plasma-cell-pack)
 - [Crimson Bloodwine](#crimson-bloodwine)
 - [Cryo Slug Case](#cryo-slug-case)
-- [Decoy Drone](#decoy-drone)
 - [Decoy Drone](#decoy-drone)
 - [Deep Scan Probe](#deep-scan-probe)
 - [Deep Space Probe](#deep-space-probe)
 - [Depleted Uranium Rounds Box](#depleted-uranium-rounds-box)
 - [Dispersal Plasma Cell Pack](#dispersal-plasma-cell-pack)
 - [ECM Burst](#ecm-burst)
-- [ECM Burst](#ecm-burst)
+- [ECM Jammer Pod](#ecm-jammer-pod)
 - [EM Charge Pack](#em-charge-pack)
 - [EMP Mines](#emp-mines)
 - [EMP Missiles](#emp-missiles)
@@ -88,13 +87,13 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 - [Plasma Torpedoes](#plasma-torpedoes)
 - [Power Surge Cell](#power-surge-cell)
 - [Premium Fuel Cell](#premium-fuel-cell)
+- [Reconnaissance Probe](#reconnaissance-probe)
 - [Reflex Enhancer](#reflex-enhancer)
 - [Regeneration Serum](#regeneration-serum)
 - [Regenerative Compound](#regenerative-compound)
 - [Repair Kit](#repair-kit)
 - [Repair Nanites](#repair-nanites)
 - [Salvage Enhancer](#salvage-enhancer)
-- [Scan Probe](#scan-probe)
 - [Scan Probe](#scan-probe)
 - [Sensor Booster](#sensor-booster)
 - [Sensor Jammer](#sensor-jammer)
@@ -117,6 +116,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 - [Stellar Plasma Cell Pack](#stellar-plasma-cell-pack)
 - [Structural Cement](#structural-cement)
 - [Swarm Missiles](#swarm-missiles)
+- [Tactical Probe](#tactical-probe)
 - [Thermal Flare](#thermal-flare)
 - [Trade Negotiator](#trade-negotiator)
 - [Tungsten Slug Case](#tungsten-slug-case)
@@ -133,7 +133,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Adrenaline Surge</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_adrenaline.png" alt="Adrenaline Surge" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/adrenaline_surge.png" alt="Adrenaline Surge" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -145,7 +145,27 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > +15% to all combat stats for 5 ticks. Powerful but brief.
 
-[View full page](stim_adrenaline.md)
+[View full page](adrenaline_surge.md)
+
+---
+
+## Advanced Decoy Drone
+
+<table>
+<tr><th colspan="2" style="text-align:center;"><h3>Advanced Decoy Drone</h3></th></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/advanced_decoy_drone.png" alt="Advanced Decoy Drone" width="128"></td></tr>
+<tr><th colspan="2" style="text-align:center;">General</th></tr>
+<tr><td><b>Rarity</b></td><td>rare</td></tr>
+<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Stackable</b></td><td>Yes</td></tr>
+<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
+<tr><th colspan="2" style="text-align:center;">Market</th></tr>
+<tr><td><b>Base Value</b></td><td>300 cr</td></tr>
+</table>
+
+> Deployable drone that mimics your ship signature.
+
+[View full page](advanced_decoy_drone.md)
 
 ---
 
@@ -153,7 +173,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Advanced Repair Kit</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/repair_kit_advanced.png" alt="Advanced Repair Kit" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/advanced_repair_kit.png" alt="Advanced Repair Kit" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>3</td></tr>
@@ -165,7 +185,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Professional repair kit, restores 150 hull.
 
-[View full page](repair_kit_advanced.md)
+[View full page](advanced_repair_kit.md)
 
 ---
 
@@ -213,7 +233,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Anomaly Detector</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/scan_probe_anomaly.png" alt="Anomaly Detector" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/anomaly_detector.png" alt="Anomaly Detector" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -225,7 +245,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Detects spatial anomalies, wormholes, and hidden features.
 
-[View full page](scan_probe_anomaly.md)
+[View full page](anomaly_detector.md)
 
 ---
 
@@ -233,7 +253,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Anomaly Probe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/probe_anomaly.png" alt="Anomaly Probe" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/anomaly_probe.png" alt="Anomaly Probe" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -245,7 +265,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Specialized probe tuned for detecting spatial anomalies.
 
-[View full page](probe_anomaly.md)
+[View full page](anomaly_probe.md)
 
 ---
 
@@ -253,10 +273,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Antimatter Torpedoes</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/torpedoes_antimatter.png" alt="Antimatter Torpedoes" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/antimatter_torpedoes.png" alt="Antimatter Torpedoes" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
-<tr><td><b>Size</b></td><td>6</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -265,7 +285,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > The most destructive single projectile in known space. Handle with extreme caution.
 
-[View full page](torpedoes_antimatter.md)
+[View full page](antimatter_torpedoes.md)
 
 ---
 
@@ -273,10 +293,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Antimatter Warhead</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/missiles_antimatter.png" alt="Antimatter Warhead" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/antimatter_warhead.png" alt="Antimatter Warhead" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -285,7 +305,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Single devastating antimatter warhead. The most destructive guided munition available.
 
-[View full page](missiles_antimatter.md)
+[View full page](antimatter_warhead.md)
 
 ---
 
@@ -293,10 +313,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Antimatter-Core Rounds Box</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/rounds_antimatter.png" alt="Antimatter-Core Rounds Box" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/antimatter_core_rounds_box.png" alt="Antimatter-Core Rounds Box" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -305,7 +325,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Magnetically contained antimatter warheads packed in a shielded crate. Extreme damage with minor splash effect.
 
-[View full page](rounds_antimatter.md)
+[View full page](antimatter_core_rounds_box.md)
 
 ---
 
@@ -313,10 +333,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Armor Piercing Rounds Box</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/rounds_armor_piercing.png" alt="Armor Piercing Rounds Box" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/armor_piercing_rounds_box.png" alt="Armor Piercing Rounds Box" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -325,7 +345,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Hardened penetrator tips packed in a sealed magazine. Bypasses armor plating on impact.
 
-[View full page](rounds_armor_piercing.md)
+[View full page](armor_piercing_rounds_box.md)
 
 ---
 
@@ -353,10 +373,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Armor-Buster Missiles</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/missiles_armor_buster.png" alt="Armor-Buster Missiles" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/armor_buster_missiles.png" alt="Armor-Buster Missiles" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -365,7 +385,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Shaped charge warheads designed to penetrate heavy armor plating.
 
-[View full page](missiles_armor_buster.md)
+[View full page](armor_buster_missiles.md)
 
 ---
 
@@ -373,7 +393,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Berserker Compound</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_berserker.png" alt="Berserker Compound" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/berserker_compound.png" alt="Berserker Compound" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -385,7 +405,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > +30% damage, -20% defense for 15 ticks. High risk, high reward.
 
-[View full page](stim_berserker.md)
+[View full page](berserker_compound.md)
 
 ---
 
@@ -393,10 +413,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Breacher Torpedoes</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/torpedoes_breacher.png" alt="Breacher Torpedoes" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/breacher_torpedoes.png" alt="Breacher Torpedoes" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -405,7 +425,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Armor-piercing torpedoes with penetrating warheads. Designed for armored battleships.
 
-[View full page](torpedoes_breacher.md)
+[View full page](breacher_torpedoes.md)
 
 ---
 
@@ -413,10 +433,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Cascade EM Charge Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/em_cascade.png" alt="Cascade EM Charge Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/cascade_em_charge_pack.png" alt="Cascade EM Charge Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -425,7 +445,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Chain-reaction charges that jump between nearby systems on hit.
 
-[View full page](em_cascade.md)
+[View full page](cascade_em_charge_pack.md)
 
 ---
 
@@ -433,7 +453,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Chaff Bundle</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/countermeasure_chaff.png" alt="Chaff Bundle" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/chaff_bundle.png" alt="Chaff Bundle" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -445,7 +465,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Metallic strips that confuse missile tracking systems.
 
-[View full page](countermeasure_chaff.md)
+[View full page](chaff_bundle.md)
 
 ---
 
@@ -473,7 +493,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Clarity Stim</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_clarity.png" alt="Clarity Stim" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/clarity_stim.png" alt="Clarity Stim" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -485,7 +505,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Immune to electronic warfare for 5 ticks.
 
-[View full page](stim_clarity.md)
+[View full page](clarity_stim.md)
 
 ---
 
@@ -493,7 +513,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Cloaking Charge</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/cloak_charge.png" alt="Cloaking Charge" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/cloaking_charge.png" alt="Cloaking Charge" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -505,7 +525,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Single-use cloaking field generator.
 
-[View full page](cloak_charge.md)
+[View full page](cloaking_charge.md)
 
 ---
 
@@ -533,10 +553,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Cluster Missiles</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/missiles_cluster.png" alt="Cluster Missiles" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/cluster_missiles.png" alt="Cluster Missiles" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -545,7 +565,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Splits into multiple submunitions before impact. Maximum area coverage.
 
-[View full page](missiles_cluster.md)
+[View full page](cluster_missiles.md)
 
 ---
 
@@ -553,27 +573,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Combat Scanner Probe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/probe_combat.png" alt="Combat Scanner Probe" width="128"></td></tr>
-<tr><th colspan="2" style="text-align:center;">General</th></tr>
-<tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>1</td></tr>
-<tr><td><b>Stackable</b></td><td>Yes</td></tr>
-<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
-<tr><th colspan="2" style="text-align:center;">Market</th></tr>
-<tr><td><b>Base Value</b></td><td>100 cr</td></tr>
-</table>
-
-> Tactical probe that reveals enemy ship loadouts.
-
-[View full page](probe_combat.md)
-
----
-
-## Combat Scanner Probe
-
-<table>
-<tr><th colspan="2" style="text-align:center;"><h3>Combat Scanner Probe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/scan_probe_combat.png" alt="Combat Scanner Probe" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/combat_scanner_probe.png" alt="Combat Scanner Probe" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -585,7 +585,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Reveals ship details including modules and cargo.
 
-[View full page](scan_probe_combat.md)
+[View full page](combat_scanner_probe.md)
 
 ---
 
@@ -593,7 +593,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Combat Stim</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_pack.png" alt="Combat Stim" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/combat_stim.png" alt="Combat Stim" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -605,7 +605,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Increases weapon damage by 10% for 10 ticks.
 
-[View full page](stim_pack.md)
+[View full page](combat_stim.md)
 
 ---
 
@@ -613,10 +613,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Corrosive Plasma Cell Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_corrosive.png" alt="Corrosive Plasma Cell Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/corrosive_plasma_cell_pack.png" alt="Corrosive Plasma Cell Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -625,7 +625,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Chemically enhanced plasma that eats through hull plating. Applies corrosion damage over time.
 
-[View full page](plasma_corrosive.md)
+[View full page](corrosive_plasma_cell_pack.md)
 
 ---
 
@@ -633,7 +633,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Crimson Bloodwine</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/food_crimson_bloodwine.png" alt="Crimson Bloodwine" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/crimson_bloodwine.png" alt="Crimson Bloodwine" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -645,7 +645,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Potent spirits brewed in the Fleet's forge-heated distilleries. An acquired taste — most species describe it as 'drinking a supernova.'
 
-[View full page](food_crimson_bloodwine.md)
+[View full page](crimson_bloodwine.md)
 
 ---
 
@@ -653,10 +653,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Cryo Slug Case</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/slugs_cryo.png" alt="Cryo Slug Case" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/cryo_slug_case.png" alt="Cryo Slug Case" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -665,7 +665,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Supercooled ceramic-jacketed slugs that flash-freeze hull sections on impact, causing brittle fractures.
 
-[View full page](slugs_cryo.md)
+[View full page](cryo_slug_case.md)
 
 ---
 
@@ -674,26 +674,6 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Decoy Drone</h3></th></tr>
 <tr><td colspan="2" style="text-align:center;"><img src="../images/decoy_drone.png" alt="Decoy Drone" width="128"></td></tr>
-<tr><th colspan="2" style="text-align:center;">General</th></tr>
-<tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
-<tr><td><b>Stackable</b></td><td>Yes</td></tr>
-<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
-<tr><th colspan="2" style="text-align:center;">Market</th></tr>
-<tr><td><b>Base Value</b></td><td>300 cr</td></tr>
-</table>
-
-> Deployable drone that mimics your ship signature.
-
-[View full page](decoy_drone.md)
-
----
-
-## Decoy Drone
-
-<table>
-<tr><th colspan="2" style="text-align:center;"><h3>Decoy Drone</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/countermeasure_decoy.png" alt="Decoy Drone" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -705,7 +685,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Expendable drone that mimics ship sensor signatures.
 
-[View full page](countermeasure_decoy.md)
+[View full page](decoy_drone.md)
 
 ---
 
@@ -713,7 +693,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Deep Scan Probe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/scan_probe_deep.png" alt="Deep Scan Probe" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/deep_scan_probe.png" alt="Deep Scan Probe" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -725,7 +705,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Long-range probe. Reveals objects within 20 AU.
 
-[View full page](scan_probe_deep.md)
+[View full page](deep_scan_probe.md)
 
 ---
 
@@ -733,7 +713,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Deep Space Probe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/probe_deep_space.png" alt="Deep Space Probe" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/deep_space_probe.png" alt="Deep Space Probe" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -745,7 +725,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Long-range probe for surveying distant systems.
 
-[View full page](probe_deep_space.md)
+[View full page](deep_space_probe.md)
 
 ---
 
@@ -753,10 +733,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Depleted Uranium Rounds Box</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/rounds_depleted_uranium.png" alt="Depleted Uranium Rounds Box" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/depleted_uranium_rounds_box.png" alt="Depleted Uranium Rounds Box" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -765,7 +745,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Ultra-dense penetrator rounds in a reinforced magazine. Extreme armor piercing at the cost of extra cargo weight.
 
-[View full page](rounds_depleted_uranium.md)
+[View full page](depleted_uranium_rounds_box.md)
 
 ---
 
@@ -773,10 +753,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Dispersal Plasma Cell Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_dispersal.png" alt="Dispersal Plasma Cell Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/dispersal_plasma_cell_pack.png" alt="Dispersal Plasma Cell Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -785,7 +765,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Wide-dispersal plasma cells that spread thermal damage across a larger area.
 
-[View full page](plasma_dispersal.md)
+[View full page](dispersal_plasma_cell_pack.md)
 
 ---
 
@@ -809,11 +789,11 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 ---
 
-## ECM Burst
+## ECM Jammer Pod
 
 <table>
-<tr><th colspan="2" style="text-align:center;"><h3>ECM Burst</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/countermeasure_ecm.png" alt="ECM Burst" width="128"></td></tr>
+<tr><th colspan="2" style="text-align:center;"><h3>ECM Jammer Pod</h3></th></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/ecm_jammer_pod.png" alt="ECM Jammer Pod" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -825,7 +805,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Electronic countermeasure pulse that disrupts targeting.
 
-[View full page](countermeasure_ecm.md)
+[View full page](ecm_jammer_pod.md)
 
 ---
 
@@ -833,10 +813,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>EM Charge Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/em_standard.png" alt="EM Charge Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/em_charge_pack.png" alt="EM Charge Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -845,7 +825,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Pack of standard electromagnetic disruption charges. One pack fully loads any EM weapon magazine.
 
-[View full page](em_standard.md)
+[View full page](em_charge_pack.md)
 
 ---
 
@@ -853,10 +833,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>EMP Mines</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/mines_emp.png" alt="EMP Mines" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/emp_mines.png" alt="EMP Mines" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -865,7 +845,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Electromagnetic pulse mines. Disrupts any ship that enters the blast zone.
 
-[View full page](mines_emp.md)
+[View full page](emp_mines.md)
 
 ---
 
@@ -873,10 +853,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>EMP Missiles</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/missiles_emp.png" alt="EMP Missiles" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/emp_missiles.png" alt="EMP Missiles" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -885,7 +865,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Electromagnetic pulse warheads. Disrupts all systems in the blast radius.
 
-[View full page](missiles_emp.md)
+[View full page](emp_missiles.md)
 
 ---
 
@@ -893,10 +873,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>EMP Slug Case</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/slugs_emp.png" alt="EMP Slug Case" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/emp_slug_case.png" alt="EMP Slug Case" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>5</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -905,7 +885,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Slugs with embedded superconductor coils that generate an EMP burst on impact.
 
-[View full page](slugs_emp.md)
+[View full page](emp_slug_case.md)
 
 ---
 
@@ -913,10 +893,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>EMP Torpedoes</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/torpedoes_emp.png" alt="EMP Torpedoes" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/emp_torpedoes.png" alt="EMP Torpedoes" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>5</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -925,7 +905,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Massive electromagnetic pulse. Cripples all ship systems for an extended duration.
 
-[View full page](torpedoes_emp.md)
+[View full page](emp_torpedoes.md)
 
 ---
 
@@ -933,10 +913,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>EMP-Tipped Rounds Box</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/rounds_emp_tipped.png" alt="EMP-Tipped Rounds Box" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/emp_tipped_rounds_box.png" alt="EMP-Tipped Rounds Box" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -945,7 +925,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Rounds with embedded micro-EMP charges. Each hit disrupts target electronics alongside kinetic damage.
 
-[View full page](rounds_emp_tipped.md)
+[View full page](emp_tipped_rounds_box.md)
 
 ---
 
@@ -953,7 +933,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Emergency Jump Cell</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/emergency_jump.png" alt="Emergency Jump Cell" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/emergency_jump_cell.png" alt="Emergency Jump Cell" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -965,7 +945,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Instantly jumps to random connected system. Use with caution.
 
-[View full page](emergency_jump.md)
+[View full page](emergency_jump_cell.md)
 
 ---
 
@@ -993,7 +973,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Endurance Booster</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_endurance.png" alt="Endurance Booster" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/endurance_booster.png" alt="Endurance Booster" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1005,7 +985,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Metabolic enhancer for sustained high-performance operations.
 
-[View full page](stim_endurance.md)
+[View full page](endurance_booster.md)
 
 ---
 
@@ -1013,10 +993,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Entropic Void Core Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/void_entropic.png" alt="Entropic Void Core Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/entropic_void_core_pack.png" alt="Entropic Void Core Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1025,7 +1005,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Entropy-accelerating cores that age materials on contact.
 
-[View full page](void_entropic.md)
+[View full page](entropic_void_core_pack.md)
 
 ---
 
@@ -1033,7 +1013,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Experience Booster</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/xp_booster.png" alt="Experience Booster" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/experience_booster.png" alt="Experience Booster" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1045,7 +1025,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > +25% skill experience gain for 50 ticks.
 
-[View full page](xp_booster.md)
+[View full page](experience_booster.md)
 
 ---
 
@@ -1053,10 +1033,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Ferrous Slug Case</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/slugs_ferrous.png" alt="Ferrous Slug Case" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/ferrous_slug_case.png" alt="Ferrous Slug Case" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1065,7 +1045,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Case of standard dense iron slugs for railguns. One case fully loads any railgun magazine.
 
-[View full page](slugs_ferrous.md)
+[View full page](ferrous_slug_case.md)
 
 ---
 
@@ -1093,7 +1073,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Focus Stim</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_focus.png" alt="Focus Stim" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/focus_stim.png" alt="Focus Stim" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1105,7 +1085,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Increases weapon accuracy by 20% for 10 ticks.
 
-[View full page](stim_focus.md)
+[View full page](focus_stim.md)
 
 ---
 
@@ -1113,10 +1093,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Focused EM Charge Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/em_focused.png" alt="Focused EM Charge Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/focused_em_charge_pack.png" alt="Focused EM Charge Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1125,7 +1105,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Concentrated EM bursts that overwhelm a single target system. Higher damage per charge.
 
-[View full page](em_focused.md)
+[View full page](focused_em_charge_pack.md)
 
 ---
 
@@ -1133,10 +1113,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Focused Plasma Cell Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_focused.png" alt="Focused Plasma Cell Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/focused_plasma_cell_pack.png" alt="Focused Plasma Cell Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1145,7 +1125,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Tight-beam plasma cells with higher energy density. Superior single-target damage.
 
-[View full page](plasma_focused.md)
+[View full page](focused_plasma_cell_pack.md)
 
 ---
 
@@ -1153,10 +1133,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Fragmentation Mines</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/mines_fragmentation.png" alt="Fragmentation Mines" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/fragmentation_mines.png" alt="Fragmentation Mines" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1165,7 +1145,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Wider blast radius with shrapnel dispersal. Less direct damage.
 
-[View full page](mines_fragmentation.md)
+[View full page](fragmentation_mines.md)
 
 ---
 
@@ -1173,10 +1153,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Fragmentation Rounds Box</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/rounds_fragmenting.png" alt="Fragmentation Rounds Box" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/fragmentation_rounds_box.png" alt="Fragmentation Rounds Box" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1185,7 +1165,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Pre-scored casings that shatter into lethal shrapnel. Devastating against drones and small targets.
 
-[View full page](rounds_fragmenting.md)
+[View full page](fragmentation_rounds_box.md)
 
 ---
 
@@ -1193,7 +1173,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Frontier Rotgut</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/food_frontier_moonshine.png" alt="Frontier Rotgut" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/frontier_rotgut.png" alt="Frontier Rotgut" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1205,7 +1185,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Rough spirits distilled at the edge of nowhere. The recipe varies by batch, but the hangover is consistent. Inexplicably popular at Haven.
 
-[View full page](food_frontier_moonshine.md)
+[View full page](frontier_rotgut.md)
 
 ---
 
@@ -1273,10 +1253,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Incendiary Missiles</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/missiles_incendiary.png" alt="Incendiary Missiles" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/incendiary_missiles.png" alt="Incendiary Missiles" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1285,7 +1265,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Thermite warheads that burn through hull after detonation. Less explosive force, more sustained damage.
 
-[View full page](missiles_incendiary.md)
+[View full page](incendiary_missiles.md)
 
 ---
 
@@ -1293,10 +1273,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Incendiary Rounds Box</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/rounds_incendiary.png" alt="Incendiary Rounds Box" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/incendiary_rounds_box.png" alt="Incendiary Rounds Box" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1305,7 +1285,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Phosphorus-tipped rounds that ignite on impact. Causes sustained thermal damage to hull systems.
 
-[View full page](rounds_incendiary.md)
+[View full page](incendiary_rounds_box.md)
 
 ---
 
@@ -1313,10 +1293,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Ion Charge Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/em_ion.png" alt="Ion Charge Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/ion_charge_pack.png" alt="Ion Charge Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1325,7 +1305,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Heavy ion charges that drain capacitor banks and disable shield generators.
 
-[View full page](em_ion.md)
+[View full page](ion_charge_pack.md)
 
 ---
 
@@ -1353,7 +1333,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Military Fuel Cell</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/fuel_cell_military.png" alt="Military Fuel Cell" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/military_fuel_cell.png" alt="Military Fuel Cell" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>3</td></tr>
@@ -1365,7 +1345,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Maximum density fuel, restores 100 fuel.
 
-[View full page](fuel_cell_military.md)
+[View full page](military_fuel_cell.md)
 
 ---
 
@@ -1373,7 +1353,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Mineral Scanner Probe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/scan_probe_mineral.png" alt="Mineral Scanner Probe" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/mineral_scanner_probe.png" alt="Mineral Scanner Probe" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1385,7 +1365,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Detects ore deposits and their composition.
 
-[View full page](scan_probe_mineral.md)
+[View full page](mineral_scanner_probe.md)
 
 ---
 
@@ -1413,7 +1393,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Mining Survey Probe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/probe_mining.png" alt="Mining Survey Probe" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/mining_survey_probe.png" alt="Mining Survey Probe" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1425,7 +1405,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Mineral detection probe for locating rich mining sites.
 
-[View full page](probe_mining.md)
+[View full page](mining_survey_probe.md)
 
 ---
 
@@ -1453,7 +1433,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Neural Accelerator</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_neural.png" alt="Neural Accelerator" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/neural_accelerator.png" alt="Neural Accelerator" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1465,7 +1445,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Reduces weapon cooldown by 20% for 10 ticks.
 
-[View full page](stim_neural.md)
+[View full page](neural_accelerator.md)
 
 ---
 
@@ -1473,10 +1453,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Neural Disruption Charge Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/em_neural.png" alt="Neural Disruption Charge Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/neural_disruption_charge_pack.png" alt="Neural Disruption Charge Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1485,7 +1465,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Charges tuned to interfere with AI processing cores. Extended effect duration.
 
-[View full page](em_neural.md)
+[View full page](neural_disruption_charge_pack.md)
 
 ---
 
@@ -1493,10 +1473,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Neutronium Slug Case</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/slugs_neutronium.png" alt="Neutronium Slug Case" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/neutronium_slug_case.png" alt="Neutronium Slug Case" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>5</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1505,7 +1485,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Impossibly dense neutronium-core slugs. The ultimate kinetic penetrator.
 
-[View full page](slugs_neutronium.md)
+[View full page](neutronium_slug_case.md)
 
 ---
 
@@ -1513,10 +1493,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Nuclear Mines</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/mines_nuclear.png" alt="Nuclear Mines" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/nuclear_mines.png" alt="Nuclear Mines" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1525,7 +1505,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Tactical nuclear devices. Enormous blast radius. Indiscriminate.
 
-[View full page](mines_nuclear.md)
+[View full page](nuclear_mines.md)
 
 ---
 
@@ -1533,10 +1513,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Null Void Core Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/void_null.png" alt="Null Void Core Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/null_void_core_pack.png" alt="Null Void Core Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1545,7 +1525,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Cores that create localized null-space pockets. Devastating but difficult to manufacture.
 
-[View full page](void_null.md)
+[View full page](null_void_core_pack.md)
 
 ---
 
@@ -1553,10 +1533,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Omega Core Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/void_omega.png" alt="Omega Core Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/omega_core_pack.png" alt="Omega Core Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1565,7 +1545,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Mythical void cores of unknown origin. Their destructive mechanism defies conventional physics.
 
-[View full page](void_omega.md)
+[View full page](omega_core_pack.md)
 
 ---
 
@@ -1593,10 +1573,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Overcharged Plasma Cell Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_overcharged.png" alt="Overcharged Plasma Cell Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/overcharged_plasma_cell_pack.png" alt="Overcharged Plasma Cell Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1605,7 +1585,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Dangerously overcharged cells delivering massive thermal output. Handle with care.
 
-[View full page](plasma_overcharged.md)
+[View full page](overcharged_plasma_cell_pack.md)
 
 ---
 
@@ -1633,7 +1613,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>PD Burst</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/point_defense_burst.png" alt="PD Burst" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/pd_burst.png" alt="PD Burst" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1645,7 +1625,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Activates emergency point defense. Destroys incoming missiles for 3 ticks.
 
-[View full page](point_defense_burst.md)
+[View full page](pd_burst.md)
 
 ---
 
@@ -1653,7 +1633,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Perception Enhancer</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_perception.png" alt="Perception Enhancer" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/perception_enhancer.png" alt="Perception Enhancer" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1665,7 +1645,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Increases scanner range by 50% for 10 ticks.
 
-[View full page](stim_perception.md)
+[View full page](perception_enhancer.md)
 
 ---
 
@@ -1673,10 +1653,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Phased Void Core Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/void_phased.png" alt="Phased Void Core Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/phased_void_core_pack.png" alt="Phased Void Core Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1685,7 +1665,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Phase-shifted cores that partially bypass shields and armor.
 
-[View full page](void_phased.md)
+[View full page](phased_void_core_pack.md)
 
 ---
 
@@ -1693,10 +1673,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Plasma Cell Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_standard.png" alt="Plasma Cell Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_cell_pack.png" alt="Plasma Cell Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1705,7 +1685,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Pack of standard plasma cartridges. One pack fully loads any plasma weapon magazine.
 
-[View full page](plasma_standard.md)
+[View full page](plasma_cell_pack.md)
 
 ---
 
@@ -1713,10 +1693,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Plasma Mines</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/mines_plasma.png" alt="Plasma Mines" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_mines.png" alt="Plasma Mines" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1725,7 +1705,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Thermal detonation mines. Superheated blast melts armor in the vicinity.
 
-[View full page](mines_plasma.md)
+[View full page](plasma_mines.md)
 
 ---
 
@@ -1733,10 +1713,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Plasma Torpedoes</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/torpedoes_plasma.png" alt="Plasma Torpedoes" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_torpedoes.png" alt="Plasma Torpedoes" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -1745,7 +1725,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Superheated plasma warhead. Melts armor on impact and continues burning.
 
-[View full page](torpedoes_plasma.md)
+[View full page](plasma_torpedoes.md)
 
 ---
 
@@ -1753,7 +1733,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Power Surge Cell</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/power_surge.png" alt="Power Surge Cell" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/power_surge_cell.png" alt="Power Surge Cell" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1765,7 +1745,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Instantly restores ship power capacity by 50%.
 
-[View full page](power_surge.md)
+[View full page](power_surge_cell.md)
 
 ---
 
@@ -1773,7 +1753,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Premium Fuel Cell</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/fuel_cell_premium.png" alt="Premium Fuel Cell" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/premium_fuel_cell.png" alt="Premium Fuel Cell" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1785,7 +1765,27 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > High-density fuel cell, restores 50 fuel.
 
-[View full page](fuel_cell_premium.md)
+[View full page](premium_fuel_cell.md)
+
+---
+
+## Reconnaissance Probe
+
+<table>
+<tr><th colspan="2" style="text-align:center;"><h3>Reconnaissance Probe</h3></th></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/reconnaissance_probe.png" alt="Reconnaissance Probe" width="128"></td></tr>
+<tr><th colspan="2" style="text-align:center;">General</th></tr>
+<tr><td><b>Rarity</b></td><td>common</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
+<tr><td><b>Stackable</b></td><td>Yes</td></tr>
+<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
+<tr><th colspan="2" style="text-align:center;">Market</th></tr>
+<tr><td><b>Base Value</b></td><td>40 cr</td></tr>
+</table>
+
+> Standard scanning probe for system reconnaissance.
+
+[View full page](reconnaissance_probe.md)
 
 ---
 
@@ -1793,7 +1793,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Reflex Enhancer</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_reflex.png" alt="Reflex Enhancer" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/reflex_enhancer.png" alt="Reflex Enhancer" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1805,7 +1805,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Improves evasion by 15% for 10 ticks.
 
-[View full page](stim_reflex.md)
+[View full page](reflex_enhancer.md)
 
 ---
 
@@ -1813,7 +1813,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Regeneration Serum</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_regeneration.png" alt="Regeneration Serum" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/regeneration_serum.png" alt="Regeneration Serum" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1825,7 +1825,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Bio-nanite serum that accelerates hull self-repair.
 
-[View full page](stim_regeneration.md)
+[View full page](regeneration_serum.md)
 
 ---
 
@@ -1913,27 +1913,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Scan Probe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/probe_scan.png" alt="Scan Probe" width="128"></td></tr>
-<tr><th colspan="2" style="text-align:center;">General</th></tr>
-<tr><td><b>Rarity</b></td><td>common</td></tr>
-<tr><td><b>Size</b></td><td>1</td></tr>
-<tr><td><b>Stackable</b></td><td>Yes</td></tr>
-<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
-<tr><th colspan="2" style="text-align:center;">Market</th></tr>
-<tr><td><b>Base Value</b></td><td>40 cr</td></tr>
-</table>
-
-> Standard scanning probe for system reconnaissance.
-
-[View full page](probe_scan.md)
-
----
-
-## Scan Probe
-
-<table>
-<tr><th colspan="2" style="text-align:center;"><h3>Scan Probe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/scan_probe_basic.png" alt="Scan Probe" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/scan_probe.png" alt="Scan Probe" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1945,7 +1925,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Deployable scanner. Reveals hidden objects within 5 AU.
 
-[View full page](scan_probe_basic.md)
+[View full page](scan_probe.md)
 
 ---
 
@@ -1973,7 +1953,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Sensor Jammer</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/countermeasure_jammer.png" alt="Sensor Jammer" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/sensor_jammer.png" alt="Sensor Jammer" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1985,7 +1965,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Sustained jamming field that disrupts targeting locks.
 
-[View full page](countermeasure_jammer.md)
+[View full page](sensor_jammer.md)
 
 ---
 
@@ -1993,10 +1973,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Shaped Charge Slug Case</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/slugs_shaped_charge.png" alt="Shaped Charge Slug Case" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/shaped_charge_slug_case.png" alt="Shaped Charge Slug Case" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2005,7 +1985,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Explosive-lined slugs that focus blast energy through the target hull on impact.
 
-[View full page](slugs_shaped_charge.md)
+[View full page](shaped_charge_slug_case.md)
 
 ---
 
@@ -2033,7 +2013,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Shield Charge</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/shield_booster_charge.png" alt="Shield Charge" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/shield_charge.png" alt="Shield Charge" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -2045,7 +2025,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Instant shield restoration, restores 100 shields.
 
-[View full page](shield_booster_charge.md)
+[View full page](shield_charge.md)
 
 ---
 
@@ -2113,10 +2093,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Siege Torpedoes</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/torpedoes_siege.png" alt="Siege Torpedoes" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/siege_torpedoes.png" alt="Siege Torpedoes" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
-<tr><td><b>Size</b></td><td>5</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2125,7 +2105,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Maximum hull damage payload. Designed for breaking stations and capital ships.
 
-[View full page](torpedoes_siege.md)
+[View full page](siege_torpedoes.md)
 
 ---
 
@@ -2133,10 +2113,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Singularity Core Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/void_singularity.png" alt="Singularity Core Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/singularity_core_pack.png" alt="Singularity Core Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2145,7 +2125,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Contains stabilized micro-singularity charges. The most destructive ammunition in known space.
 
-[View full page](void_singularity.md)
+[View full page](singularity_core_pack.md)
 
 ---
 
@@ -2153,10 +2133,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Singularity Slug Case</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/slugs_singularity.png" alt="Singularity Slug Case" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/singularity_slug_case.png" alt="Singularity Slug Case" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
-<tr><td><b>Size</b></td><td>5</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2165,7 +2145,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Experimental slugs containing stabilized micro-singularities. Warps space around the impact point.
 
-[View full page](slugs_singularity.md)
+[View full page](singularity_slug_case.md)
 
 ---
 
@@ -2193,7 +2173,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Solarian Gourmet Rations</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/food_sol_rations.png" alt="Solarian Gourmet Rations" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/solarian_gourmet_rations.png" alt="Solarian Gourmet Rations" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -2205,7 +2185,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Vacuum-sealed meals prepared in Sol Central's hydroponic biosphere. Real food is a luxury in space, and nobody does it better than the Confederacy.
 
-[View full page](food_sol_rations.md)
+[View full page](solarian_gourmet_rations.md)
 
 ---
 
@@ -2213,7 +2193,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Speed Stim</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_speed.png" alt="Speed Stim" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/speed_stim.png" alt="Speed Stim" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -2225,7 +2205,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Increases ship speed by 25% for 10 ticks.
 
-[View full page](stim_speed.md)
+[View full page](speed_stim.md)
 
 ---
 
@@ -2233,10 +2213,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Standard Guided Missiles</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/missiles_standard.png" alt="Standard Guided Missiles" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/standard_guided_missiles.png" alt="Standard Guided Missiles" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2245,7 +2225,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Heat-seeking guided missiles. Reliable all-purpose ordnance.
 
-[View full page](missiles_standard.md)
+[View full page](standard_guided_missiles.md)
 
 ---
 
@@ -2253,10 +2233,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Standard Mines</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/mines_standard.png" alt="Standard Mines" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/standard_mines.png" alt="Standard Mines" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2265,7 +2245,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Basic proximity-detonated explosives for area denial.
 
-[View full page](mines_standard.md)
+[View full page](standard_mines.md)
 
 ---
 
@@ -2273,10 +2253,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Standard Rounds Box</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/rounds_standard.png" alt="Standard Rounds Box" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/standard_rounds_box.png" alt="Standard Rounds Box" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2285,7 +2265,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Crate of basic kinetic autocannon ammunition. One box fully loads any autocannon magazine.
 
-[View full page](rounds_standard.md)
+[View full page](standard_rounds_box.md)
 
 ---
 
@@ -2293,10 +2273,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Standard Torpedoes</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/torpedoes_standard.png" alt="Standard Torpedoes" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/standard_torpedoes.png" alt="Standard Torpedoes" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2305,7 +2285,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Heavy anti-capital torpedoes. Slow but devastating on impact.
 
-[View full page](torpedoes_standard.md)
+[View full page](standard_torpedoes.md)
 
 ---
 
@@ -2313,10 +2293,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Stellar Plasma Cell Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_stellar.png" alt="Stellar Plasma Cell Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/stellar_plasma_cell_pack.png" alt="Stellar Plasma Cell Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2325,7 +2305,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Cells containing plasma harvested from stellar coronas. Burns hotter than any synthetic alternative.
 
-[View full page](plasma_stellar.md)
+[View full page](stellar_plasma_cell_pack.md)
 
 ---
 
@@ -2353,10 +2333,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Swarm Missiles</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/missiles_swarm.png" alt="Swarm Missiles" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/swarm_missiles.png" alt="Swarm Missiles" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2365,7 +2345,27 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Pod of micro-missiles that saturate the target area. Harder to evade but less damage per warhead.
 
-[View full page](missiles_swarm.md)
+[View full page](swarm_missiles.md)
+
+---
+
+## Tactical Probe
+
+<table>
+<tr><th colspan="2" style="text-align:center;"><h3>Tactical Probe</h3></th></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/tactical_probe.png" alt="Tactical Probe" width="128"></td></tr>
+<tr><th colspan="2" style="text-align:center;">General</th></tr>
+<tr><td><b>Rarity</b></td><td>uncommon</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
+<tr><td><b>Stackable</b></td><td>Yes</td></tr>
+<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
+<tr><th colspan="2" style="text-align:center;">Market</th></tr>
+<tr><td><b>Base Value</b></td><td>100 cr</td></tr>
+</table>
+
+> Tactical probe that reveals enemy ship loadouts.
+
+[View full page](tactical_probe.md)
 
 ---
 
@@ -2373,7 +2373,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Thermal Flare</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/countermeasure_flare.png" alt="Thermal Flare" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/thermal_flare.png" alt="Thermal Flare" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -2385,7 +2385,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Heat decoy that diverts thermal-guided projectiles.
 
-[View full page](countermeasure_flare.md)
+[View full page](thermal_flare.md)
 
 ---
 
@@ -2393,7 +2393,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Trade Negotiator</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/trade_booster.png" alt="Trade Negotiator" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/trade_negotiator.png" alt="Trade Negotiator" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -2405,7 +2405,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > +10% better buy/sell prices for 30 ticks.
 
-[View full page](trade_booster.md)
+[View full page](trade_negotiator.md)
 
 ---
 
@@ -2413,10 +2413,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Tungsten Slug Case</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/slugs_tungsten.png" alt="Tungsten Slug Case" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/tungsten_slug_case.png" alt="Tungsten Slug Case" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2425,7 +2425,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Heavy tungsten penetrators in a reinforced case. Punches through heavy armor plating.
 
-[View full page](slugs_tungsten.md)
+[View full page](tungsten_slug_case.md)
 
 ---
 
@@ -2433,7 +2433,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Turtle Compound</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/stim_turtle.png" alt="Turtle Compound" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/turtle_compound.png" alt="Turtle Compound" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -2445,7 +2445,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > +40% defense, -25% speed for 15 ticks. Maximum survivability.
 
-[View full page](stim_turtle.md)
+[View full page](turtle_compound.md)
 
 ---
 
@@ -2453,10 +2453,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Void Core Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/void_standard.png" alt="Void Core Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/void_core_pack.png" alt="Void Core Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
-<tr><td><b>Size</b></td><td>3</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2465,7 +2465,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Pack of standard void energy cores. One pack fully loads any void weapon magazine.
 
-[View full page](void_standard.md)
+[View full page](void_core_pack.md)
 
 ---
 
@@ -2473,10 +2473,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Void Mines</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/mines_void.png" alt="Void Mines" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/void_mines.png" alt="Void Mines" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
-<tr><td><b>Size</b></td><td>4</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2485,7 +2485,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Creates a dimensional rift on detonation. Bypasses conventional shields.
 
-[View full page](mines_void.md)
+[View full page](void_mines.md)
 
 ---
 
@@ -2493,10 +2493,10 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Void-Tuned EM Charge Pack</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/em_void_tuned.png" alt="Void-Tuned EM Charge Pack" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/void_tuned_em_charge_pack.png" alt="Void-Tuned EM Charge Pack" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
-<tr><td><b>Size</b></td><td>2</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
 <tr><td><b>Stackable</b></td><td>Yes</td></tr>
 <tr><td><b>Tradeable</b></td><td>Yes</td></tr>
 <tr><th colspan="2" style="text-align:center;">Market</th></tr>
@@ -2505,7 +2505,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > EM charges calibrated using void crystal harmonics. Bypasses conventional EM shielding.
 
-[View full page](em_void_tuned.md)
+[View full page](void_tuned_em_charge_pack.md)
 
 ---
 
@@ -2533,7 +2533,7 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Weapon Overload Capacitor</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/weapon_overload.png" alt="Weapon Overload Capacitor" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/weapon_overload_capacitor.png" alt="Weapon Overload Capacitor" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -2545,6 +2545,6 @@ Single-use items including ammunition, stims, repair kits, and fuel.
 
 > Dumps stored energy into weapons for a burst of extra damage.
 
-[View full page](weapon_overload.md)
+[View full page](weapon_overload_capacitor.md)
 
 ---

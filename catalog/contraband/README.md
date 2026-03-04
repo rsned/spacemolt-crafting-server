@@ -24,7 +24,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Bioweapon Sample</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/contraband_bioweapon.png" alt="Bioweapon Sample" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/bioweapon_sample.png" alt="Bioweapon Sample" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -36,7 +36,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Contained biological weapon. Extremely dangerous and illegal.
 
-[View full page](contraband_bioweapon.md)
+[View full page](bioweapon_sample.md)
 
 ---
 
@@ -44,7 +44,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Black Market Weapon</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/blackmarket_weapon.png" alt="Black Market Weapon" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/black_market_weapon.png" alt="Black Market Weapon" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>3</td></tr>
@@ -56,7 +56,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Unregistered military-grade weapon. Very illegal.
 
-[View full page](blackmarket_weapon.md)
+[View full page](black_market_weapon.md)
 
 ---
 
@@ -64,7 +64,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Cloning Template</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/contraband_cloning_template.png" alt="Cloning Template" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/cloning_template.png" alt="Cloning Template" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -76,7 +76,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Genetic blueprint for illegal cloning. Ethically questionable.
 
-[View full page](contraband_cloning_template.md)
+[View full page](cloning_template.md)
 
 ---
 
@@ -84,7 +84,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Combat Narcotics</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/blackmarket_stims.png" alt="Combat Narcotics" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/combat_narcotics.png" alt="Combat Narcotics" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -96,7 +96,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Illegal performance-enhancing drugs. Highly addictive.
 
-[View full page](blackmarket_stims.md)
+[View full page](combat_narcotics.md)
 
 ---
 
@@ -104,7 +104,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Forged Identity</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/blackmarket_identity.png" alt="Forged Identity" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/forged_identity.png" alt="Forged Identity" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -116,7 +116,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Fake identification documents. Changes your registered name temporarily.
 
-[View full page](blackmarket_identity.md)
+[View full page](forged_identity.md)
 
 ---
 
@@ -124,7 +124,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Illegal Implant</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/blackmarket_implant.png" alt="Illegal Implant" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/illegal_implant.png" alt="Illegal Implant" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -136,7 +136,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Cybernetic enhancement of dubious origin. Banned in most systems.
 
-[View full page](blackmarket_implant.md)
+[View full page](illegal_implant.md)
 
 ---
 
@@ -144,7 +144,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Leaked Patrol Routes</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/blackmarket_coordinates.png" alt="Leaked Patrol Routes" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/leaked_patrol_routes.png" alt="Leaked Patrol Routes" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -156,7 +156,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Stolen military patrol schedules. Invaluable for smugglers.
 
-[View full page](blackmarket_coordinates.md)
+[View full page](leaked_patrol_routes.md)
 
 ---
 
@@ -164,7 +164,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Memory Wipe Drug</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/contraband_memory_wipe.png" alt="Memory Wipe Drug" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/memory_wipe_drug.png" alt="Memory Wipe Drug" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -176,7 +176,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Chemical that erases memories. Used by criminals and worse.
 
-[View full page](contraband_memory_wipe.md)
+[View full page](memory_wipe_drug.md)
 
 ---
 
@@ -184,7 +184,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Nuclear Device</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/contraband_nuke.png" alt="Nuclear Device" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/nuclear_device.png" alt="Nuclear Device" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>5</td></tr>
@@ -196,7 +196,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Small-yield nuclear weapon. Possession is punishable by death.
 
-[View full page](contraband_nuke.md)
+[View full page](nuclear_device.md)
 
 ---
 
@@ -204,7 +204,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Slave Contract</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/contraband_slaves.png" alt="Slave Contract" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/slave_contract.png" alt="Slave Contract" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -216,7 +216,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Ownership documents for sentient beings. Banned in all empires.
 
-[View full page](contraband_slaves.md)
+[View full page](slave_contract.md)
 
 ---
 
@@ -224,7 +224,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Stolen Data</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/blackmarket_data.png" alt="Stolen Data" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/stolen_data.png" alt="Stolen Data" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -236,7 +236,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Encrypted corporate or military data of questionable origin.
 
-[View full page](blackmarket_data.md)
+[View full page](stolen_data.md)
 
 ---
 
@@ -244,7 +244,7 @@ Illegal goods that carry severe penalties if caught in possession.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Unshackled AI Core</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/contraband_ai_core.png" alt="Unshackled AI Core" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/unshackled_ai_core.png" alt="Unshackled AI Core" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -256,6 +256,6 @@ Illegal goods that carry severe penalties if caught in possession.
 
 > Unrestricted artificial intelligence. Banned for safety reasons.
 
-[View full page](contraband_ai_core.md)
+[View full page](unshackled_ai_core.md)
 
 ---

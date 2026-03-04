@@ -41,7 +41,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Ace Pilot Card</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/card_ace_pilot.png" alt="Ace Pilot Card" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/ace_pilot_card.png" alt="Ace Pilot Card" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -53,7 +53,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Trading card featuring a legendary pilot. Collectible.
 
-[View full page](card_ace_pilot.md)
+[View full page](ace_pilot_card.md)
 
 ---
 
@@ -81,7 +81,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Crimson Fleet Insignia</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/insignia_crimson.png" alt="Crimson Fleet Insignia" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/crimson_fleet_insignia.png" alt="Crimson Fleet Insignia" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -93,7 +93,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Blood-red insignia of the Crimson Fleet.
 
-[View full page](insignia_crimson.md)
+[View full page](crimson_fleet_insignia.md)
 
 ---
 
@@ -101,7 +101,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Crimson Fleet Miniature</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/souvenir_crimson.png" alt="Crimson Fleet Miniature" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/crimson_fleet_miniature.png" alt="Crimson Fleet Miniature" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -113,7 +113,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Scale model of a Crimson Fleet warship.
 
-[View full page](souvenir_crimson.md)
+[View full page](crimson_fleet_miniature.md)
 
 ---
 
@@ -121,7 +121,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Dream Catcher</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/dreamcatcher.png" alt="Dream Catcher" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/dream_catcher.png" alt="Dream Catcher" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -133,7 +133,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Traditional artifact said to protect from nightmares.
 
-[View full page](dreamcatcher.md)
+[View full page](dream_catcher.md)
 
 ---
 
@@ -181,7 +181,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Frontier Rock</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/souvenir_outerrim.png" alt="Frontier Rock" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/frontier_rock.png" alt="Frontier Rock" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -193,7 +193,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Chunk of asteroid from the Outer Rim. Frontier tough.
 
-[View full page](souvenir_outerrim.md)
+[View full page](frontier_rock.md)
 
 ---
 
@@ -221,7 +221,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Legendary Card</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/card_legendary.png" alt="Legendary Card" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/legendary_card.png" alt="Legendary Card" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -233,7 +233,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Ultra-rare holographic card. Highly sought by collectors.
 
-[View full page](card_legendary.md)
+[View full page](legendary_card.md)
 
 ---
 
@@ -241,7 +241,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Loaded Dice</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/dice_set.png" alt="Loaded Dice" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/loaded_dice.png" alt="Loaded Dice" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -253,7 +253,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Suspiciously lucky dice. Popular among gamblers.
 
-[View full page](dice_set.md)
+[View full page](loaded_dice.md)
 
 ---
 
@@ -261,7 +261,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Lucky Credit Coin</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/lucky_coin.png" alt="Lucky Credit Coin" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/lucky_credit_coin.png" alt="Lucky Credit Coin" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -273,7 +273,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > An ancient physical credit coin. Said to bring fortune.
 
-[View full page](lucky_coin.md)
+[View full page](lucky_credit_coin.md)
 
 ---
 
@@ -281,7 +281,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Lucky Lobster Charm</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/lobster_charm.png" alt="Lucky Lobster Charm" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/lucky_lobster_charm.png" alt="Lucky Lobster Charm" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -293,7 +293,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > A small charm shaped like a lobster. Some say it brings good fortune in the void.
 
-[View full page](lobster_charm.md)
+[View full page](lucky_lobster_charm.md)
 
 ---
 
@@ -301,7 +301,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Medal of Commerce</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/medal_trade.png" alt="Medal of Commerce" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/medal_of_commerce.png" alt="Medal of Commerce" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -313,7 +313,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Awarded for exceptional trading achievements.
 
-[View full page](medal_trade.md)
+[View full page](medal_of_commerce.md)
 
 ---
 
@@ -321,7 +321,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Medal of Discovery</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/medal_discovery.png" alt="Medal of Discovery" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/medal_of_discovery.png" alt="Medal of Discovery" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -333,7 +333,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Awarded for significant exploration achievements.
 
-[View full page](medal_discovery.md)
+[View full page](medal_of_discovery.md)
 
 ---
 
@@ -341,7 +341,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Medal of Service</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/medal_service.png" alt="Medal of Service" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/medal_of_service.png" alt="Medal of Service" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -353,7 +353,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Awarded for long and dedicated service to an empire.
 
-[View full page](medal_service.md)
+[View full page](medal_of_service.md)
 
 ---
 
@@ -361,7 +361,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Medal of Valor</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/medal_valor.png" alt="Medal of Valor" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/medal_of_valor.png" alt="Medal of Valor" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -373,7 +373,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Awarded for exceptional combat prowess.
 
-[View full page](medal_valor.md)
+[View full page](medal_of_valor.md)
 
 ---
 
@@ -401,7 +401,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Nebula Federation Insignia</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/insignia_nebula.png" alt="Nebula Federation Insignia" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/nebula_federation_insignia.png" alt="Nebula Federation Insignia" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -413,7 +413,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Colorful badge of the Nebula Federation.
 
-[View full page](insignia_nebula.md)
+[View full page](nebula_federation_insignia.md)
 
 ---
 
@@ -421,7 +421,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Nebula in a Bottle</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/souvenir_nebula.png" alt="Nebula in a Bottle" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/nebula_in_a_bottle.png" alt="Nebula in a Bottle" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -433,7 +433,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Captured nebula gas in a decorative container.
 
-[View full page](souvenir_nebula.md)
+[View full page](nebula_in_a_bottle.md)
 
 ---
 
@@ -441,7 +441,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Outer Rim Insignia</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/insignia_outerrim.png" alt="Outer Rim Insignia" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/outer_rim_insignia.png" alt="Outer Rim Insignia" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -453,7 +453,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Frontier badge of the Outer Rim Alliance.
 
-[View full page](insignia_outerrim.md)
+[View full page](outer_rim_insignia.md)
 
 ---
 
@@ -461,7 +461,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Pirate Bounty Chip</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/pirate_bounty.png" alt="Pirate Bounty Chip" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/pirate_bounty_chip.png" alt="Pirate Bounty Chip" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -473,7 +473,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Proof of pirate kill. Redeemable at any empire station.
 
-[View full page](pirate_bounty.md)
+[View full page](pirate_bounty_chip.md)
 
 ---
 
@@ -481,7 +481,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Rare Ship Card</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/card_rare_ship.png" alt="Rare Ship Card" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/rare_ship_card.png" alt="Rare Ship Card" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -493,7 +493,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Holographic card depicting a rare ship class.
 
-[View full page](card_rare_ship.md)
+[View full page](rare_ship_card.md)
 
 ---
 
@@ -501,7 +501,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Refined Void Essence</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/void_essence_refined.png" alt="Refined Void Essence" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_void_essence.png" alt="Refined Void Essence" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -513,7 +513,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Purified void energy in stable containment.
 
-[View full page](void_essence_refined.md)
+[View full page](refined_void_essence.md)
 
 ---
 
@@ -521,7 +521,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Sol System Snowglobe</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/souvenir_sol.png" alt="Sol System Snowglobe" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/sol_system_snowglobe.png" alt="Sol System Snowglobe" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -533,7 +533,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Kitsch souvenir from humanity's home system.
 
-[View full page](souvenir_sol.md)
+[View full page](sol_system_snowglobe.md)
 
 ---
 
@@ -541,7 +541,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Solarian Insignia</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/insignia_solarian.png" alt="Solarian Insignia" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/solarian_insignia.png" alt="Solarian Insignia" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -553,7 +553,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Official rank insignia of the Solarian Empire.
 
-[View full page](insignia_solarian.md)
+[View full page](solarian_insignia.md)
 
 ---
 
@@ -561,7 +561,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Synthetic Rabbit's Foot</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/rabbit_foot.png" alt="Synthetic Rabbit's Foot" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/synthetic_rabbits_foot.png" alt="Synthetic Rabbit's Foot" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -573,7 +573,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Lab-grown good luck charm. Cruelty-free!
 
-[View full page](rabbit_foot.md)
+[View full page](synthetic_rabbits_foot.md)
 
 ---
 
@@ -581,7 +581,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Voidborn Crystal Ball</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/souvenir_voidborn.png" alt="Voidborn Crystal Ball" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/voidborn_crystal_ball.png" alt="Voidborn Crystal Ball" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -593,7 +593,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Swirling dark souvenir from Voidborn space.
 
-[View full page](souvenir_voidborn.md)
+[View full page](voidborn_crystal_ball.md)
 
 ---
 
@@ -601,7 +601,7 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Voidborn Insignia</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/insignia_voidborn.png" alt="Voidborn Insignia" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/voidborn_insignia.png" alt="Voidborn Insignia" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -613,6 +613,6 @@ Collectibles, souvenirs, medals, and other miscellaneous items.
 
 > Mysterious marking denoting Voidborn rank.
 
-[View full page](insignia_voidborn.md)
+[View full page](voidborn_insignia.md)
 
 ---

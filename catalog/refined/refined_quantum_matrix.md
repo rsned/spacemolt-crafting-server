@@ -27,11 +27,11 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
-| Build Jump Calculator | 1 | [Jump Calculator](../component/comp_jump_calculator.md) |
+| Build Jump Calculator | 1 | [Jump Calculator](../component/jump_calculator.md) |
 | Build Jump Drive Core | 3 | [Jump Drive Core](../component/jump_drive_core.md) |
-| Build Phase Drive | 2 | [Phase Drive](../component/comp_phase_drive.md) |
+| Build Phase Drive | 2 | [Phase Drive](../component/phase_drive.md) |
 | Build Quantum Entanglement Shield | 6 | [Quantum Entanglement Shield](../defense/quantum_entanglement_shield.md) |
-| Build Quantum Entangler | 4 | [Quantum Entangler](../component/comp_quantum_entangler.md) |
-| Build Swarm Controller | 1 | [Swarm Controller](../component/comp_swarm_controller.md) |
-| Build Temporal Stabilizer | 3 | [Temporal Stabilizer](../component/comp_temporal_stabilizer.md) |
+| Build Quantum Entangler | 4 | [Quantum Entangler](../component/quantum_entangler.md) |
+| Build Swarm Controller | 1 | [Swarm Controller](../component/swarm_controller.md) |
+| Build Temporal Stabilizer | 3 | [Temporal Stabilizer](../component/temporal_stabilizer.md) |
 | Build Void Laser | 4 | [Void Laser](../weapon/void_laser.md) |

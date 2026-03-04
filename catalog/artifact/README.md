@@ -47,7 +47,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Dravani Idol</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_dravani_idol.png" alt="Dravani Idol" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/dravani_idol.png" alt="Dravani Idol" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>3</td></tr>
@@ -59,7 +59,7 @@ Rare relics and ancient objects from lost civilizations.
 
 > Religious artifact from the warrior Dravani. Radiates aggression.
 
-[View full page](artifact_dravani_idol.md)
+[View full page](dravani_idol.md)
 
 ---
 
@@ -67,7 +67,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Eldar Memory Crystal</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_eldar_crystal.png" alt="Eldar Memory Crystal" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/eldar_memory_crystal.png" alt="Eldar Memory Crystal" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -79,7 +79,7 @@ Rare relics and ancient objects from lost civilizations.
 
 > Psionic storage device from the Eldar, an ancient race of telepaths.
 
-[View full page](artifact_eldar_crystal.md)
+[View full page](eldar_memory_crystal.md)
 
 ---
 
@@ -87,7 +87,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Gravity Lens</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_gravity_lens.png" alt="Gravity Lens" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/gravity_lens.png" alt="Gravity Lens" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -99,7 +99,7 @@ Rare relics and ancient objects from lost civilizations.
 
 > Ancient optic that bends light and gravity alike.
 
-[View full page](artifact_gravity_lens.md)
+[View full page](gravity_lens.md)
 
 ---
 
@@ -107,7 +107,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Mechanus Cogwheel</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_mechanus_gear.png" alt="Mechanus Cogwheel" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/mechanus_cogwheel.png" alt="Mechanus Cogwheel" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -119,7 +119,7 @@ Rare relics and ancient objects from lost civilizations.
 
 > Precision-engineered component from the machine civilization Mechanus.
 
-[View full page](artifact_mechanus_gear.md)
+[View full page](mechanus_cogwheel.md)
 
 ---
 
@@ -127,7 +127,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Precursor Beacon</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_precursor_beacon.png" alt="Precursor Beacon" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/precursor_beacon.png" alt="Precursor Beacon" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>3</td></tr>
@@ -139,7 +139,7 @@ Rare relics and ancient objects from lost civilizations.
 
 > Still-active beacon from an unknown precursor race. Transmits on unknown frequencies.
 
-[View full page](artifact_precursor_beacon.md)
+[View full page](precursor_beacon.md)
 
 ---
 
@@ -167,7 +167,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Quantum Anchor</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_quantum_anchor.png" alt="Quantum Anchor" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/quantum_anchor.png" alt="Quantum Anchor" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -179,7 +179,7 @@ Rare relics and ancient objects from lost civilizations.
 
 > Device that locks objects in place across multiple dimensions simultaneously.
 
-[View full page](artifact_quantum_anchor.md)
+[View full page](quantum_anchor.md)
 
 ---
 
@@ -187,7 +187,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Silicate Lifeform Fossil</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_silicate_fossil.png" alt="Silicate Lifeform Fossil" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/silicate_lifeform_fossil.png" alt="Silicate Lifeform Fossil" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>4</td></tr>
@@ -199,7 +199,7 @@ Rare relics and ancient objects from lost civilizations.
 
 > Petrified remains of silicon-based life. Billions of years old.
 
-[View full page](artifact_silicate_fossil.md)
+[View full page](silicate_lifeform_fossil.md)
 
 ---
 
@@ -227,7 +227,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Stellar Heart</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_stellar_heart.png" alt="Stellar Heart" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/stellar_heart.png" alt="Stellar Heart" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>3</td></tr>
@@ -239,7 +239,7 @@ Rare relics and ancient objects from lost civilizations.
 
 > Crystallized core from an extinct star. Still warm.
 
-[View full page](artifact_stellar_heart.md)
+[View full page](stellar_heart.md)
 
 ---
 
@@ -287,7 +287,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Void Tomb Key</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_void_tomb.png" alt="Void Tomb Key" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/void_tomb_key.png" alt="Void Tomb Key" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -299,7 +299,7 @@ Rare relics and ancient objects from lost civilizations.
 
 > Key to an unknown Void Tomb. What lies within is anyone's guess.
 
-[View full page](artifact_void_tomb.md)
+[View full page](void_tomb_key.md)
 
 ---
 
@@ -307,7 +307,7 @@ Rare relics and ancient objects from lost civilizations.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Xenthari Sphere</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/artifact_xenthari_orb.png" alt="Xenthari Sphere" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/xenthari_sphere.png" alt="Xenthari Sphere" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -319,6 +319,6 @@ Rare relics and ancient objects from lost civilizations.
 
 > Containment orb from the Xenthari, masters of dimensional manipulation.
 
-[View full page](artifact_xenthari_orb.md)
+[View full page](xenthari_sphere.md)
 
 ---

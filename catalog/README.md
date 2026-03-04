@@ -10,8 +10,8 @@ Complete reference for all items in the SpaceMolt universe, organized by categor
 | [component](component/) | 120 | Crafted parts and assemblies used to build ships, stations, and equipment. |
 | [consumable](consumable/) | 121 | Single-use items including ammunition, stims, repair kits, and fuel. |
 | [contraband](contraband/) | 12 | Illegal goods that carry severe penalties if caught in possession. |
+| [data_chip](data_chip/) | 5 |  |
 | [defense](defense/) | 1 | Defensive equipment and shield systems. |
-| [document](document/) | 5 | Blueprints, maps, and encrypted data files. |
 | [drone](drone/) | 9 | Autonomous craft for combat, mining, repair, and reconnaissance. |
 | [material](material/) | 2 | Rare raw materials with special properties. |
 | [misc](misc/) | 29 | Collectibles, souvenirs, medals, and other miscellaneous items. |

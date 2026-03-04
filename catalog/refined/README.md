@@ -50,7 +50,6 @@ Processed materials refined from raw ores and gases.
 - [Neural Interface Gel](#neural-interface-gel)
 - [Neutronium Ingot](#neutronium-ingot)
 - [Optical Fiber Bundle](#optical-fiber-bundle)
-- [Organic Compound](#organic-compound)
 - [Osmium Armor Plate](#osmium-armor-plate)
 - [Phase Matrix](#phase-matrix)
 - [Plasma Cell](#plasma-cell)
@@ -73,6 +72,7 @@ Processed materials refined from raw ores and gases.
 - [Stabilized Exotic](#stabilized-exotic)
 - [Steel Plate](#steel-plate)
 - [Superconductor](#superconductor)
+- [Synthetic Compound](#synthetic-compound)
 - [Synthetic Diamond](#synthetic-diamond)
 - [Thermal Ceramic](#thermal-ceramic)
 - [Titanium Alloy](#titanium-alloy)
@@ -89,7 +89,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Adamantite Bar</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_adamantite.png" alt="Adamantite Bar" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/adamantite_bar.png" alt="Adamantite Bar" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -101,7 +101,7 @@ Processed materials refined from raw ores and gases.
 
 > Legendary alloy of unmatched hardness. Nearly indestructible.
 
-[View full page](refined_adamantite.md)
+[View full page](adamantite_bar.md)
 
 ---
 
@@ -109,7 +109,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Aluminum Sheet</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_aluminum_sheet.png" alt="Aluminum Sheet" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/aluminum_sheet.png" alt="Aluminum Sheet" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -121,7 +121,7 @@ Processed materials refined from raw ores and gases.
 
 > Lightweight structural panels for basic construction.
 
-[View full page](refined_aluminum_sheet.md)
+[View full page](aluminum_sheet.md)
 
 ---
 
@@ -129,7 +129,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Antimatter Capsule</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_antimatter_capsule.png" alt="Antimatter Capsule" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/antimatter_capsule.png" alt="Antimatter Capsule" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -141,7 +141,7 @@ Processed materials refined from raw ores and gases.
 
 > Safely contained antimatter for ultimate power generation.
 
-[View full page](refined_antimatter_capsule.md)
+[View full page](antimatter_capsule.md)
 
 ---
 
@@ -149,7 +149,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Bioactive Compound</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_biocompound.png" alt="Bioactive Compound" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/bioactive_compound.png" alt="Bioactive Compound" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -161,7 +161,7 @@ Processed materials refined from raw ores and gases.
 
 > Processed xenobiological extract for advanced synthesis.
 
-[View full page](refined_biocompound.md)
+[View full page](bioactive_compound.md)
 
 ---
 
@@ -169,7 +169,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Biofiber Mesh</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_biofiber.png" alt="Biofiber Mesh" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/biofiber_mesh.png" alt="Biofiber Mesh" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -181,7 +181,7 @@ Processed materials refined from raw ores and gases.
 
 > Living synthetic material that grows to repair damage.
 
-[View full page](refined_biofiber.md)
+[View full page](biofiber_mesh.md)
 
 ---
 
@@ -189,7 +189,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Bioluminescent Culture</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_biolume_culture.png" alt="Bioluminescent Culture" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/bioluminescent_culture.png" alt="Bioluminescent Culture" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -201,7 +201,7 @@ Processed materials refined from raw ores and gases.
 
 > Cultivated light-producing organisms for sensor technology.
 
-[View full page](refined_biolume_culture.md)
+[View full page](bioluminescent_culture.md)
 
 ---
 
@@ -209,7 +209,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Carbon Fiber Weave</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_carbon_fiber.png" alt="Carbon Fiber Weave" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/carbon_fiber_weave.png" alt="Carbon Fiber Weave" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -221,7 +221,7 @@ Processed materials refined from raw ores and gases.
 
 > Strong, lightweight composite for hull reinforcement.
 
-[View full page](refined_carbon_fiber.md)
+[View full page](carbon_fiber_weave.md)
 
 ---
 
@@ -229,7 +229,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Ceramite Plating</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_ceramite.png" alt="Ceramite Plating" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/ceramite_plating.png" alt="Ceramite Plating" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -241,7 +241,7 @@ Processed materials refined from raw ores and gases.
 
 > Heat-resistant ceramic-metal composite for plasma containment.
 
-[View full page](refined_ceramite.md)
+[View full page](ceramite_plating.md)
 
 ---
 
@@ -249,7 +249,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Chlorine Compound</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_chlorine_compound.png" alt="Chlorine Compound" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/chlorine_compound.png" alt="Chlorine Compound" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -261,7 +261,7 @@ Processed materials refined from raw ores and gases.
 
 > Stabilized chlorine reagent for chemical synthesis and surface etching. Handle with extreme care.
 
-[View full page](refined_chlorine_compound.md)
+[View full page](chlorine_compound.md)
 
 ---
 
@@ -269,7 +269,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Chromium Plate</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_chromium_plate.png" alt="Chromium Plate" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/chromium_plate.png" alt="Chromium Plate" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -281,7 +281,7 @@ Processed materials refined from raw ores and gases.
 
 > Corrosion-resistant plating for harsh environments.
 
-[View full page](refined_chromium_plate.md)
+[View full page](chromium_plate.md)
 
 ---
 
@@ -289,7 +289,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Circuit Board</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_circuits.png" alt="Circuit Board" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/circuit_board.png" alt="Circuit Board" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -301,7 +301,7 @@ Processed materials refined from raw ores and gases.
 
 > Integrated electronic processing boards.
 
-[View full page](refined_circuits.md)
+[View full page](circuit_board.md)
 
 ---
 
@@ -309,7 +309,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Condensed Dark Matter</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_outerrim_dark_matter.png" alt="Condensed Dark Matter" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/condensed_dark_matter.png" alt="Condensed Dark Matter" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>3</td></tr>
@@ -321,7 +321,7 @@ Processed materials refined from raw ores and gases.
 
 > Stabilized dark matter for exotic drive systems.
 
-[View full page](refined_outerrim_dark_matter.md)
+[View full page](condensed_dark_matter.md)
 
 ---
 
@@ -329,7 +329,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Contained Antimatter</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_antimatter.png" alt="Contained Antimatter" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/contained_antimatter.png" alt="Contained Antimatter" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -341,7 +341,7 @@ Processed materials refined from raw ores and gases.
 
 > Magnetically confined antimatter for extreme energy applications.
 
-[View full page](refined_antimatter.md)
+[View full page](contained_antimatter.md)
 
 ---
 
@@ -349,7 +349,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Coolant Fluid</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_coolant.png" alt="Coolant Fluid" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/coolant_fluid.png" alt="Coolant Fluid" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -361,7 +361,7 @@ Processed materials refined from raw ores and gases.
 
 > Processed thermal management compound.
 
-[View full page](refined_coolant.md)
+[View full page](coolant_fluid.md)
 
 ---
 
@@ -369,7 +369,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Copper Wiring</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_copper_wire.png" alt="Copper Wiring" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/copper_wiring.png" alt="Copper Wiring" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -381,7 +381,7 @@ Processed materials refined from raw ores and gases.
 
 > Bundled conductive wiring for electrical systems.
 
-[View full page](refined_copper_wire.md)
+[View full page](copper_wiring.md)
 
 ---
 
@@ -389,7 +389,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Crystalline Lattice</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_crystalline_lattice.png" alt="Crystalline Lattice" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/crystalline_lattice.png" alt="Crystalline Lattice" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -401,7 +401,7 @@ Processed materials refined from raw ores and gases.
 
 > Perfectly ordered crystal structure for energy systems.
 
-[View full page](refined_crystalline_lattice.md)
+[View full page](crystalline_lattice.md)
 
 ---
 
@@ -409,7 +409,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Dark Energy Cell</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_dark_energy_cell.png" alt="Dark Energy Cell" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/dark_energy_cell.png" alt="Dark Energy Cell" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>3</td></tr>
@@ -421,7 +421,7 @@ Processed materials refined from raw ores and gases.
 
 > Contained dark energy for exotic propulsion systems.
 
-[View full page](refined_dark_energy_cell.md)
+[View full page](dark_energy_cell.md)
 
 ---
 
@@ -429,7 +429,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Darksteel Plating</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_darksteel.png" alt="Darksteel Plating" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/darksteel_plating.png" alt="Darksteel Plating" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -441,7 +441,7 @@ Processed materials refined from raw ores and gases.
 
 > Processed darksteel for capital ship armor.
 
-[View full page](refined_darksteel.md)
+[View full page](darksteel_plating.md)
 
 ---
 
@@ -449,7 +449,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Deuterium</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_deuterium.png" alt="Deuterium" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/deuterium.png" alt="Deuterium" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -461,7 +461,7 @@ Processed materials refined from raw ores and gases.
 
 > Heavy hydrogen isotope for fusion power generation.
 
-[View full page](refined_deuterium.md)
+[View full page](deuterium.md)
 
 ---
 
@@ -469,7 +469,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Durasteel Plate</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_durasteel.png" alt="Durasteel Plate" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/durasteel_plate.png" alt="Durasteel Plate" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -481,7 +481,7 @@ Processed materials refined from raw ores and gases.
 
 > Military-grade alloy combining steel with exotic elements.
 
-[View full page](refined_durasteel.md)
+[View full page](durasteel_plate.md)
 
 ---
 
@@ -489,7 +489,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Electrum Ingot</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_electrum_ingot.png" alt="Electrum Ingot" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/electrum_ingot.png" alt="Electrum Ingot" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -501,7 +501,7 @@ Processed materials refined from raw ores and gases.
 
 > A gold-silver alloy prized for its balanced conductivity and corrosion resistance.
 
-[View full page](refined_electrum_ingot.md)
+[View full page](electrum_ingot.md)
 
 ---
 
@@ -509,7 +509,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Enriched Uranium Rod</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_uranium_rod.png" alt="Enriched Uranium Rod" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/enriched_uranium_rod.png" alt="Enriched Uranium Rod" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -521,7 +521,7 @@ Processed materials refined from raw ores and gases.
 
 > Processed fissile material for power reactors.
 
-[View full page](refined_uranium_rod.md)
+[View full page](enriched_uranium_rod.md)
 
 ---
 
@@ -529,7 +529,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Flex Polymer</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_polymer.png" alt="Flex Polymer" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/flex_polymer.png" alt="Flex Polymer" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -541,7 +541,7 @@ Processed materials refined from raw ores and gases.
 
 > Flexible synthetic material for seals and cables.
 
-[View full page](refined_polymer.md)
+[View full page](flex_polymer.md)
 
 ---
 
@@ -549,7 +549,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Fluorine Etchant</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_fluorine_acid.png" alt="Fluorine Etchant" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/fluorine_etchant.png" alt="Fluorine Etchant" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -561,7 +561,7 @@ Processed materials refined from raw ores and gases.
 
 > Precisely concentrated hydrofluoric solution for nanoscale circuit etching and advanced material processing.
 
-[View full page](refined_fluorine_acid.md)
+[View full page](fluorine_etchant.md)
 
 ---
 
@@ -569,7 +569,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Focused Crystal</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_crystal.png" alt="Focused Crystal" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/focused_crystal.png" alt="Focused Crystal" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -581,7 +581,7 @@ Processed materials refined from raw ores and gases.
 
 > Precision-cut energy crystals for weapon systems.
 
-[View full page](refined_crystal.md)
+[View full page](focused_crystal.md)
 
 ---
 
@@ -589,7 +589,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Fury Alloy</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_crimson_fury_alloy.png" alt="Fury Alloy" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/fury_alloy.png" alt="Fury Alloy" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -601,7 +601,7 @@ Processed materials refined from raw ores and gases.
 
 > Heat-storing alloy that enhances thermal weapons.
 
-[View full page](refined_crimson_fury_alloy.md)
+[View full page](fury_alloy.md)
 
 ---
 
@@ -609,7 +609,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Fusion Fuel Rod</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_fuel_rod.png" alt="Fusion Fuel Rod" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/fusion_fuel_rod.png" alt="Fusion Fuel Rod" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -621,7 +621,7 @@ Processed materials refined from raw ores and gases.
 
 > Processed deuterium-tritium fuel for reactor cores.
 
-[View full page](refined_fuel_rod.md)
+[View full page](fusion_fuel_rod.md)
 
 ---
 
@@ -629,7 +629,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Gold Wiring</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_gold_wire.png" alt="Gold Wiring" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/gold_wiring.png" alt="Gold Wiring" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -641,7 +641,7 @@ Processed materials refined from raw ores and gases.
 
 > Premium conductive material for sensitive electronics.
 
-[View full page](refined_gold_wire.md)
+[View full page](gold_wiring.md)
 
 ---
 
@@ -649,7 +649,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Graphene Sheet</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_graphene.png" alt="Graphene Sheet" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/graphene_sheet.png" alt="Graphene Sheet" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -661,7 +661,7 @@ Processed materials refined from raw ores and gases.
 
 > Single-atom carbon layer with incredible strength.
 
-[View full page](refined_graphene.md)
+[View full page](graphene_sheet.md)
 
 ---
 
@@ -669,7 +669,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Helium-3</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_helium3.png" alt="Helium-3" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/helium_3.png" alt="Helium-3" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -681,7 +681,7 @@ Processed materials refined from raw ores and gases.
 
 > Rare helium isotope for aneutronic fusion reactors.
 
-[View full page](refined_helium3.md)
+[View full page](helium_3.md)
 
 ---
 
@@ -689,7 +689,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Ion Solution</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_ion_solution.png" alt="Ion Solution" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/ion_solution.png" alt="Ion Solution" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -701,7 +701,7 @@ Processed materials refined from raw ores and gases.
 
 > Dense suspension of charged particles in magnetic containment. Essential for ion propulsion and directed energy systems.
 
-[View full page](refined_ion_solution.md)
+[View full page](ion_solution.md)
 
 ---
 
@@ -709,7 +709,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Ionized Neon</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_neon.png" alt="Ionized Neon" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/ionized_neon.png" alt="Ionized Neon" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -721,7 +721,7 @@ Processed materials refined from raw ores and gases.
 
 > Excited neon gas sealed in containment tubes. Emits characteristic orange-red glow used in sensor calibration and signal amplification.
 
-[View full page](refined_neon.md)
+[View full page](ionized_neon.md)
 
 ---
 
@@ -729,7 +729,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Liquid Hydrogen</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_hydrogen.png" alt="Liquid Hydrogen" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/liquid_hydrogen.png" alt="Liquid Hydrogen" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -741,7 +741,7 @@ Processed materials refined from raw ores and gases.
 
 > Compressed hydrogen fuel for fusion reactors.
 
-[View full page](refined_hydrogen.md)
+[View full page](liquid_hydrogen.md)
 
 ---
 
@@ -749,7 +749,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Liquid Nitrogen</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_nitrogen.png" alt="Liquid Nitrogen" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/liquid_nitrogen.png" alt="Liquid Nitrogen" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -761,7 +761,7 @@ Processed materials refined from raw ores and gases.
 
 > Cryogenic nitrogen for cooling systems and chemical synthesis.
 
-[View full page](refined_nitrogen.md)
+[View full page](liquid_nitrogen.md)
 
 ---
 
@@ -769,7 +769,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Memory Metal Sheet</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_memory_metal.png" alt="Memory Metal Sheet" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/memory_metal_sheet.png" alt="Memory Metal Sheet" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -781,7 +781,7 @@ Processed materials refined from raw ores and gases.
 
 > Shape-memory alloy that returns to its original form after deformation.
 
-[View full page](refined_memory_metal.md)
+[View full page](memory_metal_sheet.md)
 
 ---
 
@@ -789,7 +789,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Metallic Aerogel</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_aerogel.png" alt="Metallic Aerogel" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/metallic_aerogel.png" alt="Metallic Aerogel" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -801,7 +801,7 @@ Processed materials refined from raw ores and gases.
 
 > Ultra-light solid with exceptional insulation properties.
 
-[View full page](refined_aerogel.md)
+[View full page](metallic_aerogel.md)
 
 ---
 
@@ -809,7 +809,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Metamaterial Panel</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_metamaterial.png" alt="Metamaterial Panel" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/metamaterial_panel.png" alt="Metamaterial Panel" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -821,7 +821,7 @@ Processed materials refined from raw ores and gases.
 
 > Artificially structured material with impossible optical properties.
 
-[View full page](refined_metamaterial.md)
+[View full page](metamaterial_panel.md)
 
 ---
 
@@ -829,7 +829,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Nanoplastic Composite</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_nanoplastic.png" alt="Nanoplastic Composite" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/nanoplastic_composite.png" alt="Nanoplastic Composite" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -841,7 +841,7 @@ Processed materials refined from raw ores and gases.
 
 > Self-healing plastic infused with nanomachines.
 
-[View full page](refined_nanoplastic.md)
+[View full page](nanoplastic_composite.md)
 
 ---
 
@@ -849,7 +849,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Nebula Essence</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_nebula_essence.png" alt="Nebula Essence" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/nebula_essence.png" alt="Nebula Essence" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -861,7 +861,7 @@ Processed materials refined from raw ores and gases.
 
 > Concentrated nebular gases with exotic chemical properties.
 
-[View full page](refined_nebula_essence.md)
+[View full page](nebula_essence.md)
 
 ---
 
@@ -869,7 +869,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Nebulium Core</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_nebulium.png" alt="Nebulium Core" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/nebulium_core.png" alt="Nebulium Core" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -881,7 +881,7 @@ Processed materials refined from raw ores and gases.
 
 > Processed nebulium for advanced energy systems.
 
-[View full page](refined_nebulium.md)
+[View full page](nebulium_core.md)
 
 ---
 
@@ -889,7 +889,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Neodymium Magnet</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_magnet.png" alt="Neodymium Magnet" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/neodymium_magnet.png" alt="Neodymium Magnet" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -901,7 +901,7 @@ Processed materials refined from raw ores and gases.
 
 > Powerful permanent magnet for electromagnetic systems.
 
-[View full page](refined_magnet.md)
+[View full page](neodymium_magnet.md)
 
 ---
 
@@ -909,7 +909,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Neural Extract</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_neural_extract.png" alt="Neural Extract" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/neural_extract.png" alt="Neural Extract" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -921,7 +921,7 @@ Processed materials refined from raw ores and gases.
 
 > Concentrated neural compounds for AI cores and stimulant production.
 
-[View full page](refined_neural_extract.md)
+[View full page](neural_extract.md)
 
 ---
 
@@ -929,7 +929,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Neural Interface Gel</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_neural_gel.png" alt="Neural Interface Gel" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/neural_interface_gel.png" alt="Neural Interface Gel" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -941,7 +941,7 @@ Processed materials refined from raw ores and gases.
 
 > Biocompatible medium for brain-computer interfaces.
 
-[View full page](refined_neural_gel.md)
+[View full page](neural_interface_gel.md)
 
 ---
 
@@ -949,7 +949,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Neutronium Ingot</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_neutronium.png" alt="Neutronium Ingot" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/neutronium_ingot.png" alt="Neutronium Ingot" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>3</td></tr>
@@ -961,7 +961,7 @@ Processed materials refined from raw ores and gases.
 
 > Stabilized neutron-degenerate matter. Impossibly dense.
 
-[View full page](refined_neutronium.md)
+[View full page](neutronium_ingot.md)
 
 ---
 
@@ -969,7 +969,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Optical Fiber Bundle</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_optical_fiber.png" alt="Optical Fiber Bundle" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/optical_fiber_bundle.png" alt="Optical Fiber Bundle" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -981,27 +981,7 @@ Processed materials refined from raw ores and gases.
 
 > Ultra-pure glass fibers for high-bandwidth data transfer.
 
-[View full page](refined_optical_fiber.md)
-
----
-
-## Organic Compound
-
-<table>
-<tr><th colspan="2" style="text-align:center;"><h3>Organic Compound</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_compound.png" alt="Organic Compound" width="128"></td></tr>
-<tr><th colspan="2" style="text-align:center;">General</th></tr>
-<tr><td><b>Rarity</b></td><td>common</td></tr>
-<tr><td><b>Size</b></td><td>1</td></tr>
-<tr><td><b>Stackable</b></td><td>Yes</td></tr>
-<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
-<tr><th colspan="2" style="text-align:center;">Market</th></tr>
-<tr><td><b>Base Value</b></td><td>25 cr</td></tr>
-</table>
-
-> Synthetic organic base material for biological processing.
-
-[View full page](refined_compound.md)
+[View full page](optical_fiber_bundle.md)
 
 ---
 
@@ -1009,7 +989,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Osmium Armor Plate</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_osmium_plate.png" alt="Osmium Armor Plate" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/osmium_armor_plate.png" alt="Osmium Armor Plate" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1021,7 +1001,7 @@ Processed materials refined from raw ores and gases.
 
 > Ultra-dense armor plating for maximum protection.
 
-[View full page](refined_osmium_plate.md)
+[View full page](osmium_armor_plate.md)
 
 ---
 
@@ -1029,7 +1009,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Phase Matrix</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_phase.png" alt="Phase Matrix" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/phase_matrix.png" alt="Phase Matrix" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>legendary</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1041,7 +1021,7 @@ Processed materials refined from raw ores and gases.
 
 > Stabilized phase crystal for reality manipulation.
 
-[View full page](refined_phase.md)
+[View full page](phase_matrix.md)
 
 ---
 
@@ -1049,7 +1029,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Plasma Cell</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_plasma_cell.png" alt="Plasma Cell" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/plasma_cell.png" alt="Plasma Cell" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1061,7 +1041,7 @@ Processed materials refined from raw ores and gases.
 
 > Magnetically contained plasma for high-energy applications.
 
-[View full page](refined_plasma_cell.md)
+[View full page](plasma_cell.md)
 
 ---
 
@@ -1069,7 +1049,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Power Battery</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_battery.png" alt="Power Battery" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/power_battery.png" alt="Power Battery" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1081,7 +1061,7 @@ Processed materials refined from raw ores and gases.
 
 > High-density lithium energy storage unit.
 
-[View full page](refined_battery.md)
+[View full page](power_battery.md)
 
 ---
 
@@ -1089,7 +1069,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Prismatic Lens</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_nebula_prism_lens.png" alt="Prismatic Lens" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/prismatic_lens.png" alt="Prismatic Lens" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1101,7 +1081,7 @@ Processed materials refined from raw ores and gases.
 
 > Light-refracting material for advanced targeting systems.
 
-[View full page](refined_nebula_prism_lens.md)
+[View full page](prismatic_lens.md)
 
 ---
 
@@ -1109,7 +1089,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Processed Null Matter</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_voidborn_null_matter.png" alt="Processed Null Matter" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/processed_null_matter.png" alt="Processed Null Matter" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1121,7 +1101,7 @@ Processed materials refined from raw ores and gases.
 
 > Stabilized null matter for stealth technology.
 
-[View full page](refined_voidborn_null_matter.md)
+[View full page](processed_null_matter.md)
 
 ---
 
@@ -1129,7 +1109,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Processed Thorium</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_thorium.png" alt="Processed Thorium" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/processed_thorium.png" alt="Processed Thorium" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1141,7 +1121,7 @@ Processed materials refined from raw ores and gases.
 
 > Refined thorium for molten salt reactors and radiation sources.
 
-[View full page](refined_thorium.md)
+[View full page](processed_thorium.md)
 
 ---
 
@@ -1149,7 +1129,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Purified Argon</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_argon.png" alt="Purified Argon" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/purified_argon.png" alt="Purified Argon" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1161,7 +1141,7 @@ Processed materials refined from raw ores and gases.
 
 > Inert gas for welding, shielding, and controlled atmospheres.
 
-[View full page](refined_argon.md)
+[View full page](purified_argon.md)
 
 ---
 
@@ -1169,7 +1149,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Purified Krypton</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_krypton.png" alt="Purified Krypton" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/purified_krypton.png" alt="Purified Krypton" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1181,7 +1161,7 @@ Processed materials refined from raw ores and gases.
 
 > Ultra-pure krypton gas for precision optical systems and photon absorption cloaking technology.
 
-[View full page](refined_krypton.md)
+[View full page](purified_krypton.md)
 
 ---
 
@@ -1189,7 +1169,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Purified Water</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_water.png" alt="Purified Water" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/purified_water.png" alt="Purified Water" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1201,7 +1181,7 @@ Processed materials refined from raw ores and gases.
 
 > Purified water for life support and chemical processing.
 
-[View full page](refined_water.md)
+[View full page](purified_water.md)
 
 ---
 
@@ -1209,7 +1189,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Purified Xenon</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_xenon.png" alt="Purified Xenon" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/purified_xenon.png" alt="Purified Xenon" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1221,7 +1201,7 @@ Processed materials refined from raw ores and gases.
 
 > Dense noble gas for ion propulsion and high-intensity lighting.
 
-[View full page](refined_xenon.md)
+[View full page](purified_xenon.md)
 
 ---
 
@@ -1229,7 +1209,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Quantum Dot Matrix</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_quantum_dot.png" alt="Quantum Dot Matrix" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/quantum_dot_matrix.png" alt="Quantum Dot Matrix" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1241,7 +1221,7 @@ Processed materials refined from raw ores and gases.
 
 > Nanoscale semiconductors for quantum computing.
 
-[View full page](refined_quantum_dot.md)
+[View full page](quantum_dot_matrix.md)
 
 ---
 
@@ -1289,7 +1269,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Reinforced Glass</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_glass.png" alt="Reinforced Glass" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/reinforced_glass.png" alt="Reinforced Glass" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1301,7 +1281,7 @@ Processed materials refined from raw ores and gases.
 
 > Transparent armor for viewports and sensors.
 
-[View full page](refined_glass.md)
+[View full page](reinforced_glass.md)
 
 ---
 
@@ -1309,7 +1289,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Silicate Composite</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_silicate.png" alt="Silicate Composite" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/silicate_composite.png" alt="Silicate Composite" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1321,7 +1301,7 @@ Processed materials refined from raw ores and gases.
 
 > Advanced semiconductor substrate for computing systems.
 
-[View full page](refined_silicate.md)
+[View full page](silicate_composite.md)
 
 ---
 
@@ -1329,7 +1309,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Silver Wiring</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_silver_wire.png" alt="Silver Wiring" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/silver_wiring.png" alt="Silver Wiring" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1341,7 +1321,7 @@ Processed materials refined from raw ores and gases.
 
 > High-conductivity silver wiring for precision electronics and shield systems.
 
-[View full page](refined_silver_wire.md)
+[View full page](silver_wiring.md)
 
 ---
 
@@ -1349,7 +1329,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Solarian Composite</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_solarian_composite.png" alt="Solarian Composite" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/solarian_composite.png" alt="Solarian Composite" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1361,7 +1341,7 @@ Processed materials refined from raw ores and gases.
 
 > Advanced material developed in Sol system research labs.
 
-[View full page](refined_solarian_composite.md)
+[View full page](solarian_composite.md)
 
 ---
 
@@ -1369,7 +1349,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Solarian Legacy Alloy</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_solarian_legacy_alloy.png" alt="Solarian Legacy Alloy" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/solarian_legacy_alloy.png" alt="Solarian Legacy Alloy" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1381,7 +1361,7 @@ Processed materials refined from raw ores and gases.
 
 > A refined alloy made from ancient Solarian Legacy ore. Its unique crystalline structure makes it exceptionally resistant to energy weapons.
 
-[View full page](refined_solarian_legacy_alloy.md)
+[View full page](solarian_legacy_alloy.md)
 
 ---
 
@@ -1389,7 +1369,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Stabilized Exotic</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_exotic.png" alt="Stabilized Exotic" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/stabilized_exotic.png" alt="Stabilized Exotic" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1401,7 +1381,7 @@ Processed materials refined from raw ores and gases.
 
 > Exotic matter processed into usable form.
 
-[View full page](refined_exotic.md)
+[View full page](stabilized_exotic.md)
 
 ---
 
@@ -1409,7 +1389,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Steel Plate</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_steel.png" alt="Steel Plate" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/steel_plate.png" alt="Steel Plate" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1421,7 +1401,7 @@ Processed materials refined from raw ores and gases.
 
 > Processed steel alloy for structural components.
 
-[View full page](refined_steel.md)
+[View full page](steel_plate.md)
 
 ---
 
@@ -1429,7 +1409,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Superconductor</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_superconductor.png" alt="Superconductor" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/superconductor.png" alt="Superconductor" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1441,7 +1421,27 @@ Processed materials refined from raw ores and gases.
 
 > Zero-resistance conductor for shield systems.
 
-[View full page](refined_superconductor.md)
+[View full page](superconductor.md)
+
+---
+
+## Synthetic Compound
+
+<table>
+<tr><th colspan="2" style="text-align:center;"><h3>Synthetic Compound</h3></th></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/synthetic_compound.png" alt="Synthetic Compound" width="128"></td></tr>
+<tr><th colspan="2" style="text-align:center;">General</th></tr>
+<tr><td><b>Rarity</b></td><td>common</td></tr>
+<tr><td><b>Size</b></td><td>1</td></tr>
+<tr><td><b>Stackable</b></td><td>Yes</td></tr>
+<tr><td><b>Tradeable</b></td><td>Yes</td></tr>
+<tr><th colspan="2" style="text-align:center;">Market</th></tr>
+<tr><td><b>Base Value</b></td><td>25 cr</td></tr>
+</table>
+
+> Synthetic organic base material for biological processing.
+
+[View full page](synthetic_compound.md)
 
 ---
 
@@ -1449,7 +1449,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Synthetic Diamond</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_synthetic_diamond.png" alt="Synthetic Diamond" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/synthetic_diamond.png" alt="Synthetic Diamond" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1461,7 +1461,7 @@ Processed materials refined from raw ores and gases.
 
 > Lab-grown diamond for cutting tools and heat sinks.
 
-[View full page](refined_synthetic_diamond.md)
+[View full page](synthetic_diamond.md)
 
 ---
 
@@ -1469,7 +1469,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Thermal Ceramic</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_ceramic.png" alt="Thermal Ceramic" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/thermal_ceramic.png" alt="Thermal Ceramic" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>common</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1481,7 +1481,7 @@ Processed materials refined from raw ores and gases.
 
 > Heat-resistant material for engine and weapon components.
 
-[View full page](refined_ceramic.md)
+[View full page](thermal_ceramic.md)
 
 ---
 
@@ -1489,7 +1489,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Titanium Alloy</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_alloy.png" alt="Titanium Alloy" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/titanium_alloy.png" alt="Titanium Alloy" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1501,7 +1501,7 @@ Processed materials refined from raw ores and gases.
 
 > Advanced hull plating material.
 
-[View full page](refined_alloy.md)
+[View full page](titanium_alloy.md)
 
 ---
 
@@ -1509,7 +1509,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Titanium Foam</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_titanium_foam.png" alt="Titanium Foam" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/titanium_foam.png" alt="Titanium Foam" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1521,7 +1521,7 @@ Processed materials refined from raw ores and gases.
 
 > Lightweight titanium structure with internal voids. Excellent strength-to-weight.
 
-[View full page](refined_titanium_foam.md)
+[View full page](titanium_foam.md)
 
 ---
 
@@ -1529,7 +1529,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Titanium Ingot</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_titanium.png" alt="Titanium Ingot" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/titanium_ingot.png" alt="Titanium Ingot" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1541,7 +1541,7 @@ Processed materials refined from raw ores and gases.
 
 > Purified titanium for advanced structural applications.
 
-[View full page](refined_titanium.md)
+[View full page](titanium_ingot.md)
 
 ---
 
@@ -1549,7 +1549,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Trace Exotic Element</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/rare_element.png" alt="Trace Exotic Element" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/trace_exotic_element.png" alt="Trace Exotic Element" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>rare</td></tr>
 <tr><td><b>Size</b></td><td>1</td></tr>
@@ -1561,7 +1561,7 @@ Processed materials refined from raw ores and gases.
 
 > Rare element distilled from nebula gases. Used in stimulant synthesis.
 
-[View full page](rare_element.md)
+[View full page](trace_exotic_element.md)
 
 ---
 
@@ -1569,7 +1569,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Tungsten Rod</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_tungsten_rod.png" alt="Tungsten Rod" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/tungsten_rod.png" alt="Tungsten Rod" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>uncommon</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1581,7 +1581,7 @@ Processed materials refined from raw ores and gases.
 
 > Dense penetrator material for kinetic weapons.
 
-[View full page](refined_tungsten_rod.md)
+[View full page](tungsten_rod.md)
 
 ---
 
@@ -1589,7 +1589,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Void Condensate</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_void_condensate.png" alt="Void Condensate" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/void_condensate.png" alt="Void Condensate" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1601,7 +1601,7 @@ Processed materials refined from raw ores and gases.
 
 > Processed void essence in stable form.
 
-[View full page](refined_void_condensate.md)
+[View full page](void_condensate.md)
 
 ---
 
@@ -1609,7 +1609,7 @@ Processed materials refined from raw ores and gases.
 
 <table>
 <tr><th colspan="2" style="text-align:center;"><h3>Weapons-Grade Plutonium</h3></th></tr>
-<tr><td colspan="2" style="text-align:center;"><img src="../images/refined_plutonium.png" alt="Weapons-Grade Plutonium" width="128"></td></tr>
+<tr><td colspan="2" style="text-align:center;"><img src="../images/weapons_grade_plutonium.png" alt="Weapons-Grade Plutonium" width="128"></td></tr>
 <tr><th colspan="2" style="text-align:center;">General</th></tr>
 <tr><td><b>Rarity</b></td><td>exotic</td></tr>
 <tr><td><b>Size</b></td><td>2</td></tr>
@@ -1621,6 +1621,6 @@ Processed materials refined from raw ores and gases.
 
 > Refined fissile material for warheads and advanced reactors.
 
-[View full page](refined_plutonium.md)
+[View full page](weapons_grade_plutonium.md)
 
 ---

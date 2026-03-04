@@ -28,10 +28,10 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Build Quantum Entanglement Shield | 2 | [Quantum Entanglement Shield](../defense/quantum_entanglement_shield.md) |
-| Build Singularity Core | 3 | [Singularity Core](../component/comp_singularity_core.md) |
-| Build Temporal Stabilizer | 2 | [Temporal Stabilizer](../component/comp_temporal_stabilizer.md) |
-| Manufacture Void Cores | 1 | [Void Core Pack](../consumable/void_standard.md) |
-| Manufacture Entropic Void Cores | 2 | [Entropic Void Core Pack](../consumable/void_entropic.md) |
+| Build Singularity Core | 3 | [Singularity Core](../component/singularity_core.md) |
+| Build Temporal Stabilizer | 2 | [Temporal Stabilizer](../component/temporal_stabilizer.md) |
 | Build Void Laser | 3 | [Void Laser](../weapon/void_laser.md) |
-| Manufacture Null Void Cores | 3 | [Null Void Core Pack](../consumable/void_null.md) |
-| Manufacture Phased Void Cores | 2 | [Phased Void Core Pack](../consumable/void_phased.md) |
+| Manufacture Entropic Void Cores | 2 | [Entropic Void Core Pack](../consumable/entropic_void_core_pack.md) |
+| Manufacture Null Void Cores | 3 | [Null Void Core Pack](../consumable/null_void_core_pack.md) |
+| Manufacture Phased Void Cores | 2 | [Phased Void Core Pack](../consumable/phased_void_core_pack.md) |
+| Manufacture Void Cores | 1 | [Void Core Pack](../consumable/void_core_pack.md) |

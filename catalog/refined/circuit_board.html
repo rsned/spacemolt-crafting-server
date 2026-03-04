@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circuit Board — SpaceMolt Item Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: hsl(213, 16%, 12%);
+  --foreground: hsl(213, 27%, 88%);
+  --primary: hsl(193, 44%, 67%);
+  --card: hsl(217, 16%, 15.5%);
+  --card-header: hsl(217, 16%, 13%);
+  --border: hsl(217, 17%, 28%);
+  --muted-foreground: hsl(213, 12%, 55%);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+nav.breadcrumb {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+}
+nav.breadcrumb a { color: var(--muted-foreground); }
+nav.breadcrumb a:hover { color: var(--primary); }
+h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  margin-bottom: 1.5rem;
+}
+.item-image {
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.item-image img { image-rendering: pixelated; }
+.section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  padding: 0.5rem 0.75rem;
+  background: var(--card-header);
+  border-bottom: 1px solid var(--border);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+}
+td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+tr:last-child td { border-bottom: none; }
+.kv-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  width: 140px;
+}
+.rarity-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid;
+}
+blockquote {
+  border-left: 3px solid var(--border);
+  padding: 0.75rem 1rem;
+  color: var(--muted-foreground);
+  font-style: italic;
+  margin: 1rem 0;
+}
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Catalog</a> / <a href="./">refined</a> / Circuit Board</nav>
+<h1>Circuit Board</h1>
+<div class="card">
+  <div class="item-image">
+    <img src="../images/circuit_board.png" alt="Circuit Board" height="200">
+  </div>
+  <div class="section-label">General</div>
+  <table>
+    <tr><td class="kv-label">Category</td><td><a href="./">refined</a></td></tr>
+    <tr><td class="kv-label">Rarity</td><td><span class="rarity-badge" style="color:#a3be8c;border-color:#a3be8c">common</span></td></tr>
+    <tr><td class="kv-label">Size</td><td>1</td></tr>
+    <tr><td class="kv-label">Stackable</td><td>Yes</td></tr>
+    <tr><td class="kv-label">Tradeable</td><td>Yes</td></tr>
+  </table>
+  <div class="section-label">Market</div>
+  <table>
+    <tr><td class="kv-label">Base Value</td><td>50 cr</td></tr>
+  </table>
+</div>
+<blockquote>Integrated electronic processing boards.</blockquote>
+<div class="card">
+  <div class="section-label">Produced By</div>
+  <table>
+    <tr><th>Recipe</th><th>Qty</th><th>Crafting Time</th><th>Skills</th></tr>
+    <tr><td>Chlorine Circuit Etching</td><td>3</td><td>4 ticks</td><td>Basic Crafting 3, Gas Processing 5</td></tr>
+    <tr><td>Fabricate Circuit Boards</td><td>2</td><td>3 ticks</td><td>Basic Crafting 2</td></tr>
+    <tr><td>Fabricate Silver Circuit Boards</td><td>2</td><td>3 ticks</td><td>Basic Crafting 2</td></tr>
+    <tr><td>Fluorine Nano-Etch Circuits</td><td>5</td><td>6 ticks</td><td>Advanced Crafting 4, Gas Processing 9</td></tr>
+    <tr><td>Reclaim Circuit Boards</td><td>1</td><td>8 ticks</td><td>Salvaging 5</td></tr>
+  </table>
+  <div class="section-label">Used In</div>
+  <table>
+    <tr><th>Recipe</th><th>Qty</th><th>Produces</th></tr>
+    <tr><td>Assemble Advanced Repair Kit</td><td>1</td><td><a href="../consumable/advanced_repair_kit.html">Advanced Repair Kit</a></td></tr>
+    <tr><td>Assemble Armor-Buster Missiles</td><td>2</td><td><a href="../consumable/armor_buster_missiles.html">Armor-Buster Missiles</a></td></tr>
+    <tr><td>Assemble Cluster Missiles</td><td>2</td><td><a href="../consumable/cluster_missiles.html">Cluster Missiles</a></td></tr>
+    <tr><td>Assemble EMP Mines</td><td>1</td><td><a href="../consumable/emp_mines.html">EMP Mines</a></td></tr>
+    <tr><td>Assemble Fragmentation Mines</td><td>1</td><td><a href="../consumable/fragmentation_mines.html">Fragmentation Mines</a></td></tr>
+    <tr><td>Assemble Incendiary Missiles</td><td>1</td><td><a href="../consumable/incendiary_missiles.html">Incendiary Missiles</a></td></tr>
+    <tr><td>Assemble Nuclear Mines</td><td>1</td><td><a href="../consumable/nuclear_mines.html">Nuclear Mines</a></td></tr>
+    <tr><td>Assemble Quantum Stabilizer</td><td>2</td><td><a href="../component/quantum_stabilizer.html">Quantum Stabilizer</a></td></tr>
+    <tr><td>Assemble Standard Mines</td><td>1</td><td><a href="../consumable/standard_mines.html">Standard Mines</a></td></tr>
+    <tr><td>Assemble Standard Missiles</td><td>1</td><td><a href="../consumable/standard_guided_missiles.html">Standard Guided Missiles</a></td></tr>
+    <tr><td>Assemble Standard Torpedoes</td><td>1</td><td><a href="../consumable/standard_torpedoes.html">Standard Torpedoes</a></td></tr>
+    <tr><td>Assemble Swarm Missiles</td><td>2</td><td><a href="../consumable/swarm_missiles.html">Swarm Missiles</a></td></tr>
+    <tr><td>Assemble Warhead Core</td><td>2</td><td><a href="../component/warhead_assembly.html">Warhead Assembly</a></td></tr>
+    <tr><td>Build Ammo Fabricator</td><td>2</td><td><a href="../component/ammo_fabricator.html">Ammo Fabricator</a></td></tr>
+    <tr><td>Build Anchor Beacon</td><td>4</td><td><a href="../consumable/anchor_beacon.html">Anchor Beacon</a></td></tr>
+    <tr><td>Build Anomaly Detector</td><td>3</td><td><a href="../consumable/anomaly_probe.html">Anomaly Probe</a></td></tr>
+    <tr><td>Build Autopilot Core</td><td>3</td><td><a href="../component/autopilot_core.html">Autopilot Core</a></td></tr>
+    <tr><td>Build Basic Autopilot</td><td>3</td><td><a href="../component/autopilot_module.html">Autopilot Module</a></td></tr>
+    <tr><td>Build Combat Drone</td><td>3</td><td><a href="../drone/combat_drone.html">Combat Drone</a></td></tr>
+    <tr><td>Build Cryogenic Pod</td><td>4</td><td><a href="../component/cryogenic_suspension_chamber.html">Cryogenic Suspension Chamber</a></td></tr>
+    <tr><td>Build Decoy Drone</td><td>2</td><td><a href="../consumable/decoy_drone.html">Decoy Drone</a></td></tr>
+    <tr><td>Build Docking Ring</td><td>5</td><td><a href="../component/docking_ring.html">Docking Ring</a></td></tr>
+    <tr><td>Build Drone AI Core</td><td>4</td><td><a href="../component/drone_ai_core.html">Drone AI Core</a></td></tr>
+    <tr><td>Build ECM Burst Device</td><td>2</td><td><a href="../consumable/ecm_jammer_pod.html">ECM Jammer Pod</a></td></tr>
+    <tr><td>Build ECM Drone</td><td>4</td><td><a href="../drone/ecm_drone.html">ECM Drone</a></td></tr>
+    <tr><td>Build ECM Jammer</td><td>6</td><td><a href="../consumable/ecm_jammer_pod.html">ECM Jammer Pod</a></td></tr>
+    <tr><td>Build Jump Calculator</td><td>5</td><td><a href="../component/jump_calculator.html">Jump Calculator</a></td></tr>
+    <tr><td>Build Jump Drive Core</td><td>10</td><td><a href="../component/jump_drive_core.html">Jump Drive Core</a></td></tr>
+    <tr><td>Build Life Support Unit</td><td>3</td><td><a href="../component/life_support_unit.html">Life Support Unit</a></td></tr>
+    <tr><td>Build Logistics Drone</td><td>2</td><td><a href="../drone/logistics_drone.html">Logistics Drone</a></td></tr>
+    <tr><td>Build Mining Drone</td><td>2</td><td><a href="../drone/mining_drone.html">Mining Drone</a></td></tr>
+    <tr><td>Build Mining Survey Probe</td><td>2</td><td><a href="../consumable/mining_survey_probe.html">Mining Survey Probe</a></td></tr>
+    <tr><td>Build Navigation Core</td><td>4</td><td><a href="../component/navigation_core.html">Navigation Core</a></td></tr>
+    <tr><td>Build Neon Signaling Array</td><td>1</td><td><a href="../component/neon_signaling_array.html">Neon Signaling Array</a></td></tr>
+    <tr><td>Build Power Cell</td><td>2</td><td><a href="../component/power_cell.html">Power Cell</a></td></tr>
+    <tr><td>Build Processing Core</td><td>5</td><td><a href="../component/processing_core.html">Processing Core</a></td></tr>
+    <tr><td>Build Railgun Capacitor</td><td>4</td><td><a href="../component/railgun_capacitor.html">Railgun Capacitor</a></td></tr>
+    <tr><td>Build Repair Drone</td><td>3</td><td><a href="../drone/repair_drone.html">Repair Drone</a></td></tr>
+    <tr><td>Build Salvage Drone</td><td>2</td><td><a href="../drone/salvage_drone.html">Salvage Drone</a></td></tr>
+    <tr><td>Build Scan Probe</td><td>1</td><td><a href="../consumable/reconnaissance_probe.html">Reconnaissance Probe</a></td></tr>
+    <tr><td>Build Scout Drone</td><td>2</td><td><a href="../drone/scout_drone.html">Scout Drone</a></td></tr>
+    <tr><td>Build Sensor Booster</td><td>1</td><td><a href="../consumable/sensor_booster.html">Sensor Booster</a></td></tr>
+    <tr><td>Build Sensor Cluster</td><td>2</td><td><a href="../component/sensor_cluster.html">Sensor Cluster</a></td></tr>
+    <tr><td>Build Sensor Jammer</td><td>3</td><td><a href="../consumable/sensor_jammer.html">Sensor Jammer</a></td></tr>
+    <tr><td>Build Sensor Package</td><td>2</td><td><a href="../component/sensor_package.html">Sensor Package</a></td></tr>
+    <tr><td>Build Shield Array</td><td>3</td><td><a href="../component/shield_array.html">Shield Array</a></td></tr>
+    <tr><td>Build Shield Emitter</td><td>2</td><td><a href="../component/shield_emitter.html">Shield Emitter</a></td></tr>
+    <tr><td>Build Silver Power Cell</td><td>2</td><td><a href="../component/power_cell.html">Power Cell</a></td></tr>
+    <tr><td>Build Solarian Logic Matrix</td><td>5</td><td><a href="../component/solarian_logic_matrix.html">Solarian Logic Matrix</a></td></tr>
+    <tr><td>Build Targeting Computer</td><td>4</td><td><a href="../component/targeting_computer.html">Targeting Computer</a></td></tr>
+    <tr><td>Build Tracking System</td><td>3</td><td><a href="../component/tracking_system.html">Tracking System</a></td></tr>
+    <tr><td>Build Universal Nav Core</td><td>1</td><td><a href="../component/universal_nav_core.html">Universal Nav Core</a></td></tr>
+    <tr><td>Build Voidborn Phase Drive</td><td>3</td><td><a href="../component/voidborn_phase_drive.html">Voidborn Phase Drive</a></td></tr>
+    <tr><td>Construct Sensor Array</td><td>3</td><td><a href="../component/sensor_array.html">Sensor Array</a></td></tr>
+    <tr><td>Extract Neural Compounds</td><td>3</td><td><a href="../refined/neural_extract.html">Neural Extract</a></td></tr>
+    <tr><td>Fabricate Overclock Chip</td><td>2</td><td><a href="../consumable/overclock_chip.html">Overclock Chip</a></td></tr>
+    <tr><td>Grow Nebula Sensor Crystal</td><td>2</td><td><a href="../component/sensor_array.html">Sensor Array</a></td></tr>
+    <tr><td>Manufacture Cascade EM Charges</td><td>3</td><td><a href="../consumable/cascade_em_charge_pack.html">Cascade EM Charge Pack</a></td></tr>
+    <tr><td>Manufacture EM Charges</td><td>2</td><td><a href="../consumable/em_charge_pack.html">EM Charge Pack</a></td></tr>
+    <tr><td>Manufacture EMP Rounds</td><td>1</td><td><a href="../consumable/emp_tipped_rounds_box.html">EMP-Tipped Rounds Box</a></td></tr>
+    <tr><td>Manufacture Focused EM Charges</td><td>2</td><td><a href="../consumable/focused_em_charge_pack.html">Focused EM Charge Pack</a></td></tr>
+    <tr><td>Manufacture Ion Charges</td><td>2</td><td><a href="../consumable/ion_charge_pack.html">Ion Charge Pack</a></td></tr>
+    <tr><td>Manufacture Neural EM Charges</td><td>2</td><td><a href="../consumable/neural_disruption_charge_pack.html">Neural Disruption Charge Pack</a></td></tr>
+    <tr><td>Synthesize Metamaterial</td><td>3</td><td><a href="../refined/metamaterial_panel.html">Metamaterial Panel</a></td></tr>
+    <tr><td>Synthesize Pan-Galactic Matrix</td><td>1</td><td><a href="../component/pan_galactic_matrix.html">Pan-Galactic Matrix</a></td></tr>
+  </table>
+</div>
+</body>
+</html>

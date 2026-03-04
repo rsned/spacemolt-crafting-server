@@ -22,6 +22,6 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Field Hull Patch | 6 | [Hull Patch](../consumable/hull_patch.md) |
+| Reclaim Steel from Scrap | 8 | [Steel Plate](../refined/steel_plate.md) |
+| Reforge Hull Plating | 12 | [Hull Plating](../component/hull_plating.md) |
 | Salvager's Repair Kit | 10 | [Repair Kit](../consumable/repair_kit.md) |
-| Reforge Hull Plating | 12 | [Hull Plating](../component/comp_hull_plate.md) |
-| Reclaim Steel from Scrap | 8 | [Steel Plate](../refined/refined_steel.md) |

@@ -27,10 +27,10 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
-| Build Anomaly Detector | 1 | [Anomaly Probe](../consumable/probe_anomaly.md) |
+| Build Anomaly Detector | 1 | [Anomaly Probe](../consumable/anomaly_probe.md) |
 | Build Jump Drive Core | 5 | [Jump Drive Core](../component/jump_drive_core.md) |
 | Build Quantum Entanglement Shield | 4 | [Quantum Entanglement Shield](../defense/quantum_entanglement_shield.md) |
-| Build Quantum Entangler | 2 | [Quantum Entangler](../component/comp_quantum_entangler.md) |
+| Build Quantum Entangler | 2 | [Quantum Entangler](../component/quantum_entangler.md) |
 | Build Void Laser | 5 | [Void Laser](../weapon/void_laser.md) |
-| Forge Adamantite | 2 | [Adamantite Bar](../refined/refined_adamantite.md) |
-| Synthesize Metamaterial | 1 | [Metamaterial Panel](../refined/refined_metamaterial.md) |
+| Forge Adamantite | 2 | [Adamantite Bar](../refined/adamantite_bar.md) |
+| Synthesize Metamaterial | 1 | [Metamaterial Panel](../refined/metamaterial_panel.md) |

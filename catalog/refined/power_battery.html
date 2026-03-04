@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power Battery — SpaceMolt Item Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: hsl(213, 16%, 12%);
+  --foreground: hsl(213, 27%, 88%);
+  --primary: hsl(193, 44%, 67%);
+  --card: hsl(217, 16%, 15.5%);
+  --card-header: hsl(217, 16%, 13%);
+  --border: hsl(217, 17%, 28%);
+  --muted-foreground: hsl(213, 12%, 55%);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+nav.breadcrumb {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+}
+nav.breadcrumb a { color: var(--muted-foreground); }
+nav.breadcrumb a:hover { color: var(--primary); }
+h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  margin-bottom: 1.5rem;
+}
+.item-image {
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.item-image img { image-rendering: pixelated; }
+.section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  padding: 0.5rem 0.75rem;
+  background: var(--card-header);
+  border-bottom: 1px solid var(--border);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+}
+td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+tr:last-child td { border-bottom: none; }
+.kv-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  width: 140px;
+}
+.rarity-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid;
+}
+blockquote {
+  border-left: 3px solid var(--border);
+  padding: 0.75rem 1rem;
+  color: var(--muted-foreground);
+  font-style: italic;
+  margin: 1rem 0;
+}
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Catalog</a> / <a href="./">refined</a> / Power Battery</nav>
+<h1>Power Battery</h1>
+<div class="card">
+  <div class="item-image">
+    <img src="../images/power_battery.png" alt="Power Battery" height="200">
+  </div>
+  <div class="section-label">General</div>
+  <table>
+    <tr><td class="kv-label">Category</td><td><a href="./">refined</a></td></tr>
+    <tr><td class="kv-label">Rarity</td><td><span class="rarity-badge" style="color:#88c0d0;border-color:#88c0d0">uncommon</span></td></tr>
+    <tr><td class="kv-label">Size</td><td>1</td></tr>
+    <tr><td class="kv-label">Stackable</td><td>Yes</td></tr>
+    <tr><td class="kv-label">Tradeable</td><td>Yes</td></tr>
+  </table>
+  <div class="section-label">Market</div>
+  <table>
+    <tr><td class="kv-label">Base Value</td><td>70 cr</td></tr>
+  </table>
+</div>
+<blockquote>High-density lithium energy storage unit.</blockquote>
+<div class="card">
+  <div class="section-label">Produced By</div>
+  <table>
+    <tr><th>Recipe</th><th>Qty</th><th>Crafting Time</th><th>Skills</th></tr>
+    <tr><td>Assemble Power Battery</td><td>1</td><td>4 ticks</td><td>Ore Refinement 2</td></tr>
+  </table>
+  <div class="section-label">Used In</div>
+  <table>
+    <tr><th>Recipe</th><th>Qty</th><th>Produces</th></tr>
+    <tr><td>Assemble Power Core</td><td>1</td><td><a href="../component/power_core.html">Power Core</a></td></tr>
+    <tr><td>Build Weapon Core</td><td>1</td><td><a href="../component/weapon_core.html">Weapon Core</a></td></tr>
+  </table>
+</div>
+</body>
+</html>

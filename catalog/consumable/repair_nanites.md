@@ -21,5 +21,5 @@
 
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
-| Synthesize Repair Nanites | 5 | 8 ticks | Basic Crafting 3 |
 | Reprogrammed Repair Nanites | 4 | 8 ticks | Salvaging 5 |
+| Synthesize Repair Nanites | 5 | 8 ticks | Basic Crafting 3 |
