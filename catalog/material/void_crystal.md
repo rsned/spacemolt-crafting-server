@@ -30,7 +30,10 @@
 | Build Quantum Entanglement Shield | 2 | [Quantum Entanglement Shield](../defense/quantum_entanglement_shield.md) |
 | Build Singularity Core | 3 | [Singularity Core](../component/singularity_core.md) |
 | Build Temporal Stabilizer | 2 | [Temporal Stabilizer](../component/temporal_stabilizer.md) |
+| Build Void Cannon | 2 | [Void Cannon](../weapon/void_cannon.md) |
 | Build Void Laser | 3 | [Void Laser](../weapon/void_laser.md) |
+| Build Void Torpedo Launcher | 3 | [Void Torpedo Launcher](../weapon/void_torpedo_launcher.md) |
+| Build Voidborn Phase Cloak | 2 | [Voidborn Phase Cloak](../utility/voidborn_phase_cloak.md) |
 | Manufacture Entropic Void Cores | 2 | [Entropic Void Core Pack](../consumable/entropic_void_core_pack.md) |
 | Manufacture Null Void Cores | 3 | [Null Void Core Pack](../consumable/null_void_core_pack.md) |
 | Manufacture Phased Void Cores | 2 | [Phased Void Core Pack](../consumable/phased_void_core_pack.md) |

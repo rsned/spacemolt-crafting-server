@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mining — SpaceMolt Item Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: hsl(213, 16%, 12%);
+  --foreground: hsl(213, 27%, 88%);
+  --primary: hsl(193, 44%, 67%);
+  --card: hsl(217, 16%, 15.5%);
+  --card-header: hsl(217, 16%, 13%);
+  --border: hsl(217, 17%, 28%);
+  --muted-foreground: hsl(213, 12%, 55%);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 85%;
+  margin: 0 auto;
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+nav.breadcrumb {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+}
+nav.breadcrumb a { color: var(--muted-foreground); }
+nav.breadcrumb a:hover { color: var(--primary); }
+h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+.description {
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-foreground);
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+}
+td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+tr:last-child td { border-bottom: none; }
+.rarity-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid;
+}
+td.value { text-align: right; }
+td.size { text-align: right; }
+td.thumb img { height: 64px; image-rendering: pixelated; }
+th { cursor: pointer; user-select: none; }
+th:hover { color: var(--primary); }
+th .sort-arrow { margin-left: 4px; font-size: 10px; }
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">Catalog</a> / mining</nav>
+<h1>mining</h1>
+<p class="description"></p>
+<div class="card">
+<table>
+<tr><th>Item</th><th></th><th>Rarity</th><th style="text-align:right">Size</th><th style="text-align:right">Base Value</th><th>Description</th></tr>
+<tr>
+  <td><a href="crystal_mining_probe.html">Crystal Mining Probe</a></td>
+  <td class="thumb"><img src="../images/crystal_mining_probe.png" alt="Crystal Mining Probe"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">2,500 cr</td>
+  <td>Specialized tool for extracting energy crystals.</td>
+</tr>
+<tr>
+  <td><a href="deep_core_extractor_ii.html">Deep Core Extractor II</a></td>
+  <td class="thumb"><img src="../images/deep_core_extractor_ii.png" alt="Deep Core Extractor II"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">6,000 cr</td>
+  <td>Advanced rare ore extraction from dense asteroids.</td>
+</tr>
+<tr>
+  <td><a href="deep_core_extractor_iii.html">Deep Core Extractor III</a></td>
+  <td class="thumb"><img src="../images/deep_core_extractor_iii.png" alt="Deep Core Extractor III"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">15,000 cr</td>
+  <td>Elite mining system for the rarest materials in the galaxy.</td>
+</tr>
+<tr>
+  <td><a href="deep_core_extractor_mk_i.html">Deep Core Extractor Mk I</a></td>
+  <td class="thumb"><img src="../images/deep_core_extractor_mk_i.png" alt="Deep Core Extractor Mk I"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">3,000 cr</td>
+  <td>A cross-empire hybrid drilling assembly that combines darksteel vibration dampening, null matter thermal absorption, sol alloy power regulation, phase crystal resonance immunity, and trade crystal targeting optics. Enables extraction of rare ores from deep core deposits.</td>
+</tr>
+<tr>
+  <td><a href="hyper_mining_laser_iii.html">Hyper Mining Laser III</a></td>
+  <td class="thumb"><img src="../images/hyper_mining_laser_iii.png" alt="Hyper Mining Laser III"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">5,000 cr</td>
+  <td>Industrial-grade mining laser with extreme extraction power.</td>
+</tr>
+<tr>
+  <td><a href="mining_drone_augmentor.html">Mining Drone Augmentor</a></td>
+  <td class="thumb"><img src="../images/mining_drone_augmentor.png" alt="Mining Drone Augmentor"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">4,000 cr</td>
+  <td>Enhances mining drone efficiency and yield.</td>
+</tr>
+<tr>
+  <td><a href="mining_laser_i.html">Mining Laser I</a></td>
+  <td class="thumb"><img src="../images/mining_laser_i.png" alt="Mining Laser I"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">150 cr</td>
+  <td>Basic mining laser for ore extraction.</td>
+</tr>
+<tr>
+  <td><a href="mining_laser_ii.html">Mining Laser II</a></td>
+  <td class="thumb"><img src="../images/mining_laser_ii.png" alt="Mining Laser II"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">500 cr</td>
+  <td>Improved mining laser with better yield.</td>
+</tr>
+<tr>
+  <td><a href="mining_laser_iii.html">Mining Laser III</a></td>
+  <td class="thumb"><img src="../images/mining_laser_iii.png" alt="Mining Laser III"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">1,500 cr</td>
+  <td>Industrial mining laser.</td>
+</tr>
+<tr>
+  <td><a href="mining_laser_iv.html">Mining Laser IV</a></td>
+  <td class="thumb"><img src="../images/mining_laser_iv.png" alt="Mining Laser IV"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">5,000 cr</td>
+  <td>Industrial-grade mining system for maximum extraction.</td>
+</tr>
+<tr>
+  <td><a href="modulated_mining_laser.html">Modulated Mining Laser</a></td>
+  <td class="thumb"><img src="../images/modulated_mining_laser.png" alt="Modulated Mining Laser"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">3,500 cr</td>
+  <td>Mining laser that can be tuned for specific ore types.</td>
+</tr>
+<tr>
+  <td><a href="strip_miner_i.html">Strip Miner I</a></td>
+  <td class="thumb"><img src="../images/strip_miner_i.png" alt="Strip Miner I"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">8,000 cr</td>
+  <td>Massive mining system that extracts entire asteroid chunks.</td>
+</tr>
+<tr>
+  <td><a href="strip_miner_ii.html">Strip Miner II</a></td>
+  <td class="thumb"><img src="../images/strip_miner_ii.png" alt="Strip Miner II"></td>
+  <td><span class="rarity-badge" style="color:#d8dee9;border-color:#d8dee9"></span></td>
+  <td class="size">10</td>
+  <td class="value">18,000 cr</td>
+  <td>Industrial mega-miner for maximum ore extraction.</td>
+</tr>
+</table>
+</div>
+<script>
+document.querySelectorAll("table").forEach(function(table) {
+  var headers = table.querySelectorAll("th");
+  var sortCol = -1, sortAsc = true;
+  headers.forEach(function(th, idx) {
+    th.addEventListener("click", function() {
+      if (sortCol === idx) { sortAsc = !sortAsc; } else { sortCol = idx; sortAsc = true; }
+      headers.forEach(function(h) {
+        var arrow = h.querySelector(".sort-arrow");
+        if (arrow) arrow.remove();
+      });
+      var arrow = document.createElement("span");
+      arrow.className = "sort-arrow";
+      arrow.textContent = sortAsc ? "\u25B2" : "\u25BC";
+      th.appendChild(arrow);
+      var tbody = table.querySelector("tbody") || table;
+      var rows = Array.from(tbody.querySelectorAll("tr")).filter(function(r) { return !r.querySelector("th"); });
+      rows.sort(function(a, b) {
+        var at = a.cells[idx].textContent.trim();
+        var bt = b.cells[idx].textContent.trim();
+        var an = at.replace(/[^0-9.-]/g, ""), bn = bt.replace(/[^0-9.-]/g, "");
+        if (an !== "" && bn !== "" && !isNaN(an) && !isNaN(bn)) {
+          return sortAsc ? an - bn : bn - an;
+        }
+        return sortAsc ? at.localeCompare(bt) : bt.localeCompare(at);
+      });
+      rows.forEach(function(r) { tbody.appendChild(r); });
+    });
+  });
+});
+</script>
+</body>
+</html>

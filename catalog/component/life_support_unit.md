@@ -31,3 +31,4 @@
 | Build Frontier Survival Kit | 1 | [Frontier Survival Kit](../component/frontier_survival_kit.md) |
 | Build Habitation Module | 1 | [Habitation Module](../component/habitation_module.md) |
 | Build Life Support Array | 1 | [Life Support Array](../component/life_support_array.md) |
+| Build Nebula Bio-Regenerator | 1 | [Nebula Bio-Regenerator](../defense/nebula_bio_regenerator.md) |

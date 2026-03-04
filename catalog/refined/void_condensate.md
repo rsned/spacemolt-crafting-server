@@ -27,6 +27,9 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Entropy Beam | 3 | [Entropy Beam](../weapon/entropy_beam.md) |
+| Build Phase Disruptor | 2 | [Phase Disruptor](../weapon/phase_disruptor.md) |
+| Build Void Lance I | 3 | [Void Lance I](../weapon/void_lance_i.md) |
 | Crystallize Void Essence | 2 | [Void Crystal](../material/void_crystal.md) |
 | Manufacture Entropic Void Cores | 1 | [Entropic Void Core Pack](../consumable/entropic_void_core_pack.md) |
 | Manufacture Null Void Cores | 2 | [Null Void Core Pack](../consumable/null_void_core_pack.md) |

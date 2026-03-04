@@ -27,4 +27,9 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Focused Beam III | 3 | [Focused Beam III](../weapon/focused_beam_iii.md) |
+| Build Heavy Pulse Laser | 2 | [Heavy Pulse Laser](../weapon/heavy_pulse_laser.md) |
+| Build Solar Lance | 3 | [Solar Lance](../weapon/solar_lance.md) |
+| Build Solarian Solar Collector | 2 | [Solarian Solar Collector](../utility/solarian_solar_collector.md) |
+| Build Void Lance I | 2 | [Void Lance I](../weapon/void_lance_i.md) |
 | Synthesize Metamaterial | 2 | [Metamaterial Panel](../refined/metamaterial_panel.md) |

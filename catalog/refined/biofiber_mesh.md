@@ -27,5 +27,7 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Armor Repairer II | 1 | [Armor Repairer II](../defense/armor_repairer_ii.md) |
 | Build Habitation Module | 2 | [Habitation Module](../component/habitation_module.md) |
+| Build Nebula Bio-Regenerator | 3 | [Nebula Bio-Regenerator](../defense/nebula_bio_regenerator.md) |
 | Synthesize Regeneration Serum | 1 | [Regeneration Serum](../consumable/regeneration_serum.md) |

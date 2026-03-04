@@ -21,6 +21,7 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Advanced Tow Rig | 2 | [Advanced Tow Rig](../utility/advanced_tow_rig.md) |
 | Drain Fuel Reserves | 5 | [Fuel Cell](../consumable/fuel_cell.md) |
 | Rebuild Power Cells | 3 | [Power Cell](../component/power_cell.md) |
 | Reclaim Circuit Boards | 5 | [Circuit Board](../refined/circuit_board.md) |

@@ -27,4 +27,5 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Nebula Bio-Regenerator | 2 | [Nebula Bio-Regenerator](../defense/nebula_bio_regenerator.md) |
 | Synthesize Focus Enhancer | 1 | [Focus Stim](../consumable/focus_stim.md) |

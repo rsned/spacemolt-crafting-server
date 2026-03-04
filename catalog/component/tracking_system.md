@@ -29,3 +29,18 @@
 |--------|-----|----------|
 | Assemble Cluster Missiles | 1 | [Cluster Missiles](../consumable/cluster_missiles.md) |
 | Assemble EMP Missiles | 1 | [EMP Missiles](../consumable/emp_missiles.md) |
+| Build Explosive Smartbomb | 1 | [Explosive Smartbomb](../weapon/explosive_smartbomb.md) |
+| Build Flak Cannon I | 1 | [Flak Cannon I](../weapon/flak_cannon_i.md) |
+| Build Flak Cannon II | 1 | [Flak Cannon II](../weapon/flak_cannon_ii.md) |
+| Build Flak Cannon III | 2 | [Flak Cannon III](../weapon/flak_cannon_iii.md) |
+| Build Heavy Torpedo Launcher | 1 | [Heavy Torpedo](../weapon/heavy_torpedo.md) |
+| Build Missile Launcher II | 1 | [Missile Launcher II](../weapon/missile_launcher_ii.md) |
+| Build Plasma Torpedo Launcher | 1 | [Plasma Torpedo Launcher](../weapon/plasma_torpedo_launcher.md) |
+| Build Point Defense I | 1 | [Point Defense I](../defense/point_defense_i.md) |
+| Build Point Defense II | 2 | [Point Defense II](../defense/point_defense_ii.md) |
+| Build Probe Launcher II | 1 | [Probe Launcher II](../utility/probe_launcher_ii.md) |
+| Build Proximity Mine Launcher | 1 | [Proximity Mine Launcher](../weapon/proximity_mine_launcher.md) |
+| Build Tracking Computer I | 1 | [Tracking Computer I](../utility/tracking_computer_i.md) |
+| Build Tracking Computer II | 2 | [Tracking Computer II](../utility/tracking_computer_ii.md) |
+| Build Tracking Mine Launcher | 2 | [Tracking Mine Launcher](../weapon/tracking_mine_launcher.md) |
+| Build Void Torpedo Launcher | 1 | [Void Torpedo Launcher](../weapon/void_torpedo_launcher.md) |

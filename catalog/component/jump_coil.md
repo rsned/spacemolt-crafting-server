@@ -28,4 +28,5 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Build Emergency Warp Device | 1 | [Emergency Warp Device](../consumable/emergency_warp_device.md) |
+| Build Emergency Warp Stabilizer | 1 | [Emergency Warp Stabilizer](../defense/emergency_warp_stabilizer.md) |
 | Build Phase Drive | 1 | [Phase Drive](../component/phase_drive.md) |

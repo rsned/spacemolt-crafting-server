@@ -28,9 +28,13 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Build Anomaly Detector | 1 | [Anomaly Probe](../consumable/anomaly_probe.md) |
+| Build Cloaking Device II | 2 | [Cloaking Device II](../utility/cloaking_device_ii.md) |
 | Build Jump Drive Core | 5 | [Jump Drive Core](../component/jump_drive_core.md) |
+| Build Plasma Cannon IV | 1 | [Plasma Cannon IV](../weapon/plasma_cannon_iv.md) |
 | Build Quantum Entanglement Shield | 4 | [Quantum Entanglement Shield](../defense/quantum_entanglement_shield.md) |
 | Build Quantum Entangler | 2 | [Quantum Entangler](../component/quantum_entangler.md) |
+| Build Quantum Shield IV | 2 | [Quantum Shield IV](../defense/quantum_shield_iv.md) |
 | Build Void Laser | 5 | [Void Laser](../weapon/void_laser.md) |
 | Forge Adamantite | 2 | [Adamantite Bar](../refined/adamantite_bar.md) |
 | Synthesize Metamaterial | 1 | [Metamaterial Panel](../refined/metamaterial_panel.md) |
+| Upgrade Deep Core Extractor | 3 | [Deep Core Extractor II](../mining/deep_core_extractor_ii.md) |

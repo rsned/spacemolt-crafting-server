@@ -39,4 +39,11 @@
 | Assemble Standard Mines | 1 | [Standard Mines](../consumable/standard_mines.md) |
 | Assemble Standard Torpedoes | 1 | [Standard Torpedoes](../consumable/standard_torpedoes.md) |
 | Assemble Swarm Missiles | 1 | [Swarm Missiles](../consumable/swarm_missiles.md) |
+| Build Explosive Smartbomb | 2 | [Explosive Smartbomb](../weapon/explosive_smartbomb.md) |
+| Build Heavy Torpedo Launcher | 2 | [Heavy Torpedo](../weapon/heavy_torpedo.md) |
+| Build Kinetic Smartbomb | 2 | [Kinetic Smartbomb](../weapon/kinetic_smartbomb.md) |
+| Build Mine Launcher I | 1 | [Mine Launcher I](../weapon/mine_launcher_i.md) |
+| Build Mine Launcher II | 2 | [Mine Launcher II](../weapon/mine_launcher_ii.md) |
+| Build Proximity Mine Launcher | 1 | [Proximity Mine Launcher](../weapon/proximity_mine_launcher.md) |
+| Build Tracking Mine Launcher | 2 | [Tracking Mine Launcher](../weapon/tracking_mine_launcher.md) |
 | Manufacture Shaped Charge Slugs | 1 | [Shaped Charge Slug Case](../consumable/shaped_charge_slug_case.md) |

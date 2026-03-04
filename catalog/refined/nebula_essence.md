@@ -27,4 +27,5 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Storm Lance | 2 | [Storm Lance](../weapon/storm_lance.md) |
 | Grow Nebula Sensor Crystal | 2 | [Sensor Array](../component/sensor_array.md) |

@@ -29,4 +29,5 @@
 |--------|-----|----------|
 | Build Drone Chassis | 2 | [Drone Chassis](../component/drone_chassis.md) |
 | Build Logistics Drone | 2 | [Logistics Drone](../drone/logistics_drone.md) |
+| Build Outer Rim Salvage Array | 3 | [Outer Rim Salvage Array](../utility/outer_rim_salvage_array.md) |
 | Weave Biofiber | 2 | [Biofiber Mesh](../refined/biofiber_mesh.md) |

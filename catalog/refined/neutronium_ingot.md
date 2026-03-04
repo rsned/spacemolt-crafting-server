@@ -27,6 +27,7 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Siege Railgun | 2 | [Siege Railgun](../weapon/siege_railgun.md) |
 | Build Singularity Core | 2 | [Singularity Core](../component/singularity_core.md) |
 | Build Station Reactor Core | 5 | [Station Reactor Core](../component/station_reactor_core.md) |
 | Forge Adamantite | 1 | [Adamantite Bar](../refined/adamantite_bar.md) |

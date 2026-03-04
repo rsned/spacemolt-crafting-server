@@ -22,3 +22,9 @@
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
 | Forge Adamantite | 1 | 45 ticks | Advanced Crafting 7, Ore Refinement 9 |
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Build Mass Driver | 2 | [Mass Driver](../weapon/mass_driver.md) |

@@ -27,5 +27,6 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Thermal Hull Hardener | 2 | [Thermal Hull Hardener](../defense/thermal_hull_hardener.md) |
 | Culture Repair Nanites | 1 | [Repair Nanite Container](../component/repair_nanite_container.md) |
 | Manufacture Cryo Slugs | 2 | [Cryo Slug Case](../consumable/cryo_slug_case.md) |

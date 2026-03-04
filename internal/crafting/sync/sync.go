@@ -37,14 +37,22 @@ func unwrapItems(data []byte) (json.RawMessage, error) {
 // ItemImport represents the expected format of item data from SpaceMolt.
 type ItemImport struct {
 	ID          string `json:"id"`
+	TypeID      string `json:"type_id,omitempty"` // Fallback for ID
 	Name        string `json:"name"`
 	Description string `json:"description,omitempty"`
 	Category    string `json:"category,omitempty"`
+	Type        string `json:"type,omitempty"` // Fallback for category
 	Rarity      string `json:"rarity,omitempty"`
 	Size        int    `json:"size,omitempty"`
 	BaseValue   int    `json:"base_value,omitempty"`
 	Stackable   bool   `json:"stackable,omitempty"`
 	Tradeable   bool   `json:"tradeable,omitempty"`
+
+	// Non-standard fields to ignore
+	CPUUsage    int    `json:"cpu_usage,omitempty"`
+	PowerUsage  int    `json:"power_usage,omitempty"`
+	ShieldBonus int    `json:"shield_bonus,omitempty"`
+	Special     string `json:"special,omitempty"`
 }
 
 // RecipeImport represents the expected format of recipe data from SpaceMolt.
@@ -147,14 +155,29 @@ func (s *Syncer) ImportItemsFromFile(ctx context.Context, path string) error {
 
 	items := make([]crafting.Item, 0, len(imports))
 	for _, imp := range imports {
-		if imp.ID == "" {
-			continue
+		// Use type_id as fallback for empty id
+		id := imp.ID
+		if id == "" {
+			id = imp.TypeID
 		}
+		if id == "" {
+			continue // Still no id, skip this entry
+		}
+
+		// Use type as fallback for empty category, default to "module"
+		category := imp.Category
+		if category == "" {
+			category = imp.Type
+		}
+		if category == "" {
+			category = "module"
+		}
+
 		items = append(items, crafting.Item{
-			ID:          imp.ID,
+			ID:          id,
 			Name:        imp.Name,
 			Description: imp.Description,
-			Category:    imp.Category,
+			Category:    category,
 			Rarity:      imp.Rarity,
 			Size:        imp.Size,
 			BaseValue:   imp.BaseValue,

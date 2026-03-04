@@ -22,3 +22,9 @@
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
 | Weave Void Shield Matrix | 1 | 10 ticks | Ore Refinement 5 |
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Upgrade Deep Core Extractor | 2 | [Deep Core Extractor II](../mining/deep_core_extractor_ii.md) |

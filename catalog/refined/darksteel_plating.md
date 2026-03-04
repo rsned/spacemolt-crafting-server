@@ -22,3 +22,11 @@
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
 | Forge Darksteel Plating | 1 | 8 ticks | Ore Refinement 4 |
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Build Blood Reaver | 3 | [Blood Reaver](../weapon/blood_reaver.md) |
+| Build Entropy Beam | 2 | [Entropy Beam](../weapon/entropy_beam.md) |
+| Build Mass Driver | 4 | [Mass Driver](../weapon/mass_driver.md) |

@@ -29,4 +29,5 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Build Quantum Entanglement Shield | 5 | [Quantum Entanglement Shield](../defense/quantum_entanglement_shield.md) |
+| Build Quantum Shield IV | 3 | [Quantum Shield IV](../defense/quantum_shield_iv.md) |
 | Build Voidborn Null Matrix | 1 | [Voidborn Null Matrix](../component/voidborn_null_matrix.md) |

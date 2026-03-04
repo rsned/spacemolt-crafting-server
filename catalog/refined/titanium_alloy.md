@@ -35,17 +35,35 @@
 | Assemble Premium Fuel Cells | 1 | [Premium Fuel Cell](../consumable/premium_fuel_cell.md) |
 | Assemble Standard Missiles | 1 | [Standard Guided Missiles](../consumable/standard_guided_missiles.md) |
 | Assemble Swarm Missiles | 1 | [Swarm Missiles](../consumable/swarm_missiles.md) |
+| Build Advanced Drone Bay | 4 | [Advanced Drone Bay](../utility/advanced_drone_bay.md) |
+| Build Advanced Tow Rig | 3 | [Advanced Tow Rig](../utility/advanced_tow_rig.md) |
+| Build Afterburner I | 2 | [Afterburner I](../utility/afterburner_i.md) |
 | Build Capital Ship Frame | 10 | [Capital Ship Frame](../component/capital_ship_frame.md) |
 | Build Combat Scanner Probe | 1 | [Tactical Probe](../consumable/tactical_probe.md) |
 | Build Deep Space Probe | 2 | [Deep Space Probe](../consumable/deep_space_probe.md) |
 | Build Docking Ring | 8 | [Docking Ring](../component/docking_ring.md) |
+| Build Drone Bay | 3 | [Combat Drone Bay](../utility/combat_drone_bay.md) |
 | Build Drone Chassis | 3 | [Drone Chassis](../component/drone_chassis.md) |
+| Build Explosive Smartbomb | 4 | [Explosive Smartbomb](../weapon/explosive_smartbomb.md) |
 | Build Fuel Tank | 1 | [Fuel Tank](../component/fuel_tank.md) |
+| Build Gas Harvester I | 2 | [Gas Harvester I](../utility/gas_harvester_i.md) |
 | Build Ion Thruster | 1 | [Thruster Nozzle](../component/thruster_nozzle.md) |
 | Build Micro Thruster | 2 | [Micro-Thruster Array](../component/micro_thruster_array.md) |
+| Build Mine Launcher I | 4 | [Mine Launcher I](../weapon/mine_launcher_i.md) |
+| Build Mine Launcher II | 5 | [Mine Launcher II](../weapon/mine_launcher_ii.md) |
+| Build Mining Laser II | 3 | [Mining Laser II](../mining/mining_laser_ii.md) |
 | Build Mining Survey Probe | 1 | [Mining Survey Probe](../consumable/mining_survey_probe.md) |
+| Build Missile Launcher I | 2 | [Missile Launcher I](../weapon/missile_launcher_i.md) |
+| Build Missile Launcher II | 4 | [Missile Launcher II](../weapon/missile_launcher_ii.md) |
+| Build Point Defense Turret | 3 | [Point Defense Turret](../defense/point_defense_turret.md) |
+| Build Probe Launcher I | 2 | [Probe Launcher I](../utility/probe_launcher_i.md) |
+| Build Proximity Mine Launcher | 4 | [Proximity Mine Launcher](../weapon/proximity_mine_launcher.md) |
 | Build Scan Probe | 1 | [Reconnaissance Probe](../consumable/reconnaissance_probe.md) |
+| Build Shield Booster I | 2 | [Shield Booster I](../defense/shield_booster_i.md) |
+| Build Shield Booster II | 3 | [Shield Booster II](../defense/shield_booster_ii.md) |
+| Build Shield Recharger I | 2 | [Shield Recharger I](../defense/shield_recharger_i.md) |
 | Build Thruster Assembly | 3 | [Thruster Assembly](../component/thruster_assembly.md) |
+| Build Tracking Mine Launcher | 5 | [Tracking Mine Launcher](../weapon/tracking_mine_launcher.md) |
 | Create Ceramite Plating | 2 | [Ceramite Plating](../refined/ceramite_plating.md) |
 | Fabricate Weapon Housing | 2 | [Weapon Housing](../component/weapon_housing.md) |
 | Forge Hull Plating | 1 | [Hull Plating](../component/hull_plating.md) |

@@ -28,7 +28,9 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Build Ammo Fabricator | 1 | [Ammo Fabricator](../component/ammo_fabricator.md) |
+| Build Blood Reaver | 3 | [Blood Reaver](../weapon/blood_reaver.md) |
 | Build Combat Drone | 1 | [Combat Drone](../drone/combat_drone.md) |
 | Build Crimson Ordnance Bay | 2 | [Crimson Ordnance Bay](../component/crimson_ordnance_bay.md) |
 | Build Heavy Combat Drone | 2 | [Heavy Combat Drone](../drone/heavy_combat_drone.md) |
+| Build Plasma Cannon IV | 3 | [Plasma Cannon IV](../weapon/plasma_cannon_iv.md) |
 | Build Weapon Battery | 1 | [Weapon Battery](../component/weapon_battery.md) |

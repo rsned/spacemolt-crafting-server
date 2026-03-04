@@ -14,3 +14,11 @@
 </table>
 
 > A specialized optical component tuned to detect deep core mineral signatures. Essential for crafting advanced survey equipment. Awarded by the Deep Core Prospector quest chain.
+
+## Crafting
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Craft Deep Core Survey Scanner | 1 | [Deep Core Survey Scanner](../utility/deep_core_survey_scanner.md) |

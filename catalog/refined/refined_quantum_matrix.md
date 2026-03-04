@@ -27,11 +27,15 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Adaptive Shield II | 1 | [Adaptive Shield II](../defense/adaptive_shield_ii.md) |
+| Build Cloaking Device II | 1 | [Cloaking Device II](../utility/cloaking_device_ii.md) |
 | Build Jump Calculator | 1 | [Jump Calculator](../component/jump_calculator.md) |
 | Build Jump Drive Core | 3 | [Jump Drive Core](../component/jump_drive_core.md) |
+| Build Phase Cloaking Device | 2 | [Phase Cloaking Device](../utility/phase_cloaking_device.md) |
 | Build Phase Drive | 2 | [Phase Drive](../component/phase_drive.md) |
 | Build Quantum Entanglement Shield | 6 | [Quantum Entanglement Shield](../defense/quantum_entanglement_shield.md) |
 | Build Quantum Entangler | 4 | [Quantum Entangler](../component/quantum_entangler.md) |
+| Build Quantum Shield IV | 2 | [Quantum Shield IV](../defense/quantum_shield_iv.md) |
 | Build Swarm Controller | 1 | [Swarm Controller](../component/swarm_controller.md) |
 | Build Temporal Stabilizer | 3 | [Temporal Stabilizer](../component/temporal_stabilizer.md) |
 | Build Void Laser | 4 | [Void Laser](../weapon/void_laser.md) |

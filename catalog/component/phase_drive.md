@@ -22,3 +22,10 @@
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
 | Build Phase Drive | 1 | 50 ticks | Advanced Crafting 7, Jump Drive Operation 6 |
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Build Void Torpedo Launcher | 1 | [Void Torpedo Launcher](../weapon/void_torpedo_launcher.md) |
+| Build Voidborn Phase Cloak | 1 | [Voidborn Phase Cloak](../utility/voidborn_phase_cloak.md) |

@@ -27,5 +27,6 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Neural Disruptor | 2 | [Neural Disruptor](../weapon/neural_disruptor.md) |
 | Culture Repair Nanites | 2 | [Repair Nanite Container](../component/repair_nanite_container.md) |
 | Manufacture Neural EM Charges | 1 | [Neural Disruption Charge Pack](../consumable/neural_disruption_charge_pack.md) |

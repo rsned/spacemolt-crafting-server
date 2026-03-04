@@ -28,6 +28,7 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Build Solar Collector Array | 1 | [Solar Collector Array](../component/solar_collector_array.md) |
+| Build Solar Lance | 3 | [Solar Lance](../weapon/solar_lance.md) |
 | Build Solarian Logic Matrix | 1 | [Solarian Logic Matrix](../component/solarian_logic_matrix.md) |
 | Fuse Galactic Standard Alloy | 1 | [Galactic Standard Alloy](../component/galactic_standard_alloy.md) |
 | Grind Precision Optic | 1 | [Precision Optic](../component/precision_optic.md) |

@@ -27,6 +27,7 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Nebula Bio-Regenerator | 4 | [Nebula Bio-Regenerator](../defense/nebula_bio_regenerator.md) |
 | Synthesize Endurance Booster | 3 | [Endurance Booster](../consumable/endurance_booster.md) |
 | Synthesize Focus Enhancer | 2 | [Focus Stim](../consumable/focus_stim.md) |
 | Synthesize Reflex Enhancer | 2 | [Reflex Enhancer](../consumable/reflex_enhancer.md) |

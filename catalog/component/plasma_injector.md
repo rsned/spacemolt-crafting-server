@@ -22,3 +22,15 @@
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
 | Build Plasma Injector | 1 | 12 ticks | Basic Crafting 4, Weapon Crafting 3 |
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Build Plasma Cannon I | 1 | [Plasma Cannon I](../weapon/plasma_cannon_i.md) |
+| Build Plasma Cannon II | 2 | [Plasma Cannon II](../weapon/plasma_cannon_ii.md) |
+| Build Plasma Cannon III | 3 | [Plasma Cannon III](../weapon/plasma_cannon_iii.md) |
+| Build Plasma Repeater I | 1 | [Plasma Repeater I](../weapon/plasma_repeater_i.md) |
+| Build Plasma Repeater II | 2 | [Plasma Repeater II](../weapon/plasma_repeater_ii.md) |
+| Build Plasma Torpedo Launcher | 2 | [Plasma Torpedo Launcher](../weapon/plasma_torpedo_launcher.md) |
+| Build Thermal Smartbomb | 2 | [Thermal Smartbomb](../weapon/thermal_smartbomb.md) |

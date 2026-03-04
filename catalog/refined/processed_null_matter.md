@@ -28,6 +28,7 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Assemble Quantum Stabilizer | 1 | [Quantum Stabilizer](../component/quantum_stabilizer.md) |
+| Build Phase Disruptor | 3 | [Phase Disruptor](../weapon/phase_disruptor.md) |
 | Build Void Capacitor | 5 | [Void Capacitor](../component/void_capacitor.md) |
 | Build Voidborn Null Matrix | 5 | [Voidborn Null Matrix](../component/voidborn_null_matrix.md) |
 | Build Voidborn Phase Drive | 5 | [Voidborn Phase Drive](../component/voidborn_phase_drive.md) |

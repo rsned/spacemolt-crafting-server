@@ -30,4 +30,5 @@
 | Build Drone Command Module | 1 | [Drone Command Module](../component/drone_command_module.md) |
 | Build ECM Drone | 1 | [ECM Drone](../drone/ecm_drone.md) |
 | Build Heavy Combat Drone | 1 | [Heavy Combat Drone](../drone/heavy_combat_drone.md) |
+| Build Point Defense Turret | 1 | [Point Defense Turret](../defense/point_defense_turret.md) |
 | Build Swarm Controller | 2 | [Swarm Controller](../component/swarm_controller.md) |

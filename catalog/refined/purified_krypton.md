@@ -27,5 +27,6 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Gas Harvester III | 1 | [Gas Harvester III](../utility/gas_harvester_iii.md) |
 | Build Precision Optics | 2 | [Sensor Array](../component/sensor_array.md) |
 | Synthesize Cloaking Dust | 1 | [Cloaking Dust](../consumable/cloaking_dust.md) |

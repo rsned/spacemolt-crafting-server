@@ -27,6 +27,9 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Afterburner I | 1 | [Afterburner I](../utility/afterburner_i.md) |
+| Build Autocannon II | 1 | [Autocannon II](../weapon/autocannon_ii.md) |
 | Build Dark Matter Thruster | 1 | [Dark Matter Thruster](../component/dark_matter_thruster.md) |
+| Build Navigation Command Link | 2 | [Navigation Command Link](../utility/navigation_command_link.md) |
 | Build Thruster Assembly | 1 | [Thruster Assembly](../component/thruster_assembly.md) |
 | Build Voidborn Phase Drive | 1 | [Voidborn Phase Drive](../component/voidborn_phase_drive.md) |

@@ -36,16 +36,31 @@
 | Assemble Repair Kit | 3 | [Repair Kit](../consumable/repair_kit.md) |
 | Assemble Standard Mines | 1 | [Standard Mines](../consumable/standard_mines.md) |
 | Build Ammo Fabricator | 4 | [Ammo Fabricator](../component/ammo_fabricator.md) |
+| Build Armor Plate I | 4 | [Armor Plate I](../defense/armor_plate_i.md) |
+| Build Armor Repairer I | 3 | [Armor Repairer I](../defense/armor_repairer_i.md) |
+| Build Autocannon I | 5 | [Autocannon I](../weapon/autocannon_i.md) |
+| Build Autocannon II | 8 | [Autocannon II](../weapon/autocannon_ii.md) |
+| Build Basic Tow Rig | 5 | [Basic Tow Rig](../utility/basic_tow_rig.md) |
 | Build Capital Armor Plate | 30 | [Capital Armor Plate](../component/capital_armor_plate.md) |
 | Build Cargo Container | 5 | [Cargo Container](../component/cargo_container.md) |
+| Build Cargo Expander I | 4 | [Cargo Expander I](../utility/cargo_expander_i.md) |
 | Build Cargo Superstructure | 10 | [Cargo Superstructure](../component/cargo_superstructure.md) |
 | Build Chaff Pod | 1 | [Chaff Bundle](../consumable/chaff_bundle.md) |
 | Build Environmental Control Unit | 3 | [Environmental Control Unit](../component/environmental_control_unit.md) |
+| Build Flak Cannon I | 4 | [Flak Cannon I](../weapon/flak_cannon_i.md) |
 | Build Fuel Tank | 3 | [Fuel Tank](../component/fuel_tank.md) |
 | Build Habitation Module | 15 | [Habitation Module](../component/habitation_module.md) |
+| Build Ice Harvester I | 4 | [Ice Harvester I](../utility/ice_harvester_i.md) |
+| Build Jury-Rigged Cannon | 12 | [Jury-Rigged Cannon](../weapon/jury_rigged_cannon.md) |
+| Build Kinetic Hull Hardener | 2 | [Kinetic Hull Hardener](../defense/kinetic_hull_hardener.md) |
 | Build Life Support Unit | 2 | [Life Support Unit](../component/life_support_unit.md) |
 | Build Mining Drone | 3 | [Mining Drone](../drone/mining_drone.md) |
+| Build Mining Laser I | 5 | [Mining Laser I](../mining/mining_laser_i.md) |
+| Build Point Defense I | 3 | [Point Defense I](../defense/point_defense_i.md) |
+| Build Pulse Laser I | 3 | [Pulse Laser I](../weapon/pulse_laser_i.md) |
+| Build Pulse Laser II | 4 | [Pulse Laser II](../weapon/pulse_laser_ii.md) |
 | Build Salvage Drone | 2 | [Salvage Drone](../drone/salvage_drone.md) |
+| Build Scrapgun | 8 | [Scrapgun](../weapon/scrapgun.md) |
 | Build Water Recycler | 2 | [Water Recycler](../component/water_recycler.md) |
 | Build Weapon Core | 2 | [Weapon Core](../component/weapon_core.md) |
 | Forge Armor Plate | 1 | [Armor Plate](../component/armor_plate.md) |

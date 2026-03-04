@@ -22,3 +22,14 @@
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
 | Recover Heat Sinks | 1 | 4 ticks | Salvaging 3 |
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Build Blood Reaver | 2 | [Blood Reaver](../weapon/blood_reaver.md) |
+| Build Jury-Rigged Cannon | 3 | [Jury-Rigged Cannon](../weapon/jury_rigged_cannon.md) |
+| Build Plasma Cannon III | 3 | [Plasma Cannon III](../weapon/plasma_cannon_iii.md) |
+| Build Plasma Repeater II | 2 | [Plasma Repeater II](../weapon/plasma_repeater_ii.md) |
+| Build Scrapgun | 1 | [Scrapgun](../weapon/scrapgun.md) |
+| Build Thermal Smartbomb | 2 | [Thermal Smartbomb](../weapon/thermal_smartbomb.md) |

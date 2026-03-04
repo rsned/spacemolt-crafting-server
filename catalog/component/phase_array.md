@@ -22,3 +22,10 @@
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
 | Build Phase Array | 1 | 10 ticks | Cloaking 3, Engineering 2 |
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Build Cloaking Device II | 2 | [Cloaking Device II](../utility/cloaking_device_ii.md) |
+| Build Phase Cloaking Device | 3 | [Phase Cloaking Device](../utility/phase_cloaking_device.md) |

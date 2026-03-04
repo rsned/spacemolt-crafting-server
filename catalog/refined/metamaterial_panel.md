@@ -27,4 +27,10 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Adaptive Shield I | 1 | [Adaptive Shield I](../defense/adaptive_shield_i.md) |
+| Build Adaptive Shield II | 2 | [Adaptive Shield II](../defense/adaptive_shield_ii.md) |
 | Build Cloak Charge | 1 | [Cloaking Charge](../consumable/cloaking_charge.md) |
+| Build EMP Pulse III | 2 | [EMP Pulse III](../weapon/emp_pulse_iii.md) |
+| Build Flak Cannon III | 1 | [Flak Cannon III](../weapon/flak_cannon_iii.md) |
+| Build Graviton Beam II | 2 | [Graviton Beam II](../weapon/graviton_beam_ii.md) |
+| Build Voidborn Phase Cloak | 2 | [Voidborn Phase Cloak](../utility/voidborn_phase_cloak.md) |

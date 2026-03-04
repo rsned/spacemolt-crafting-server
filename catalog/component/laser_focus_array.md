@@ -27,4 +27,13 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Entropy Beam | 2 | [Entropy Beam](../weapon/entropy_beam.md) |
+| Build Focused Beam I | 1 | [Focused Beam I](../weapon/focused_beam_i.md) |
+| Build Focused Beam II | 2 | [Focused Beam II](../weapon/focused_beam_ii.md) |
+| Build Focused Beam III | 3 | [Focused Beam III](../weapon/focused_beam_iii.md) |
+| Build Heavy Pulse Laser | 3 | [Heavy Pulse Laser](../weapon/heavy_pulse_laser.md) |
+| Build Hyper Mining Laser III | 4 | [Hyper Mining Laser III](../mining/hyper_mining_laser_iii.md) |
 | Build Mining Drone | 1 | [Mining Drone](../drone/mining_drone.md) |
+| Build Pulse Laser II | 1 | [Pulse Laser II](../weapon/pulse_laser_ii.md) |
+| Build Pulse Laser III | 2 | [Pulse Laser III](../weapon/pulse_laser_iii.md) |
+| Build Solar Lance | 3 | [Solar Lance](../weapon/solar_lance.md) |

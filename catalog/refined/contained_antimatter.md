@@ -28,3 +28,4 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Build Singularity Core | 2 | [Singularity Core](../component/singularity_core.md) |
+| Build Void Torpedo Launcher | 1 | [Void Torpedo Launcher](../weapon/void_torpedo_launcher.md) |

@@ -28,7 +28,15 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Assemble Plasma Torpedoes | 2 | [Plasma Torpedoes](../consumable/plasma_torpedoes.md) |
+| Build Gas Harvester II | 2 | [Gas Harvester II](../utility/gas_harvester_ii.md) |
+| Build Ice Harvester II | 2 | [Ice Harvester II](../utility/ice_harvester_ii.md) |
+| Build Plasma Cannon I | 2 | [Plasma Cannon I](../weapon/plasma_cannon_i.md) |
+| Build Plasma Cannon II | 3 | [Plasma Cannon II](../weapon/plasma_cannon_ii.md) |
+| Build Plasma Cannon III | 5 | [Plasma Cannon III](../weapon/plasma_cannon_iii.md) |
 | Build Plasma Injector | 2 | [Plasma Injector](../component/plasma_injector.md) |
+| Build Plasma Repeater I | 2 | [Plasma Repeater I](../weapon/plasma_repeater_i.md) |
+| Build Plasma Repeater II | 4 | [Plasma Repeater II](../weapon/plasma_repeater_ii.md) |
+| Build Thermal Smartbomb | 4 | [Thermal Smartbomb](../weapon/thermal_smartbomb.md) |
 | Manufacture Dispersal Plasma Cells | 1 | [Dispersal Plasma Cell Pack](../consumable/dispersal_plasma_cell_pack.md) |
 | Manufacture Focused Plasma Cells | 1 | [Focused Plasma Cell Pack](../consumable/focused_plasma_cell_pack.md) |
 | Manufacture Overcharged Plasma Cells | 1 | [Overcharged Plasma Cell Pack](../consumable/overcharged_plasma_cell_pack.md) |

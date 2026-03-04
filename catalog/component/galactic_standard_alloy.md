@@ -22,3 +22,9 @@
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
 | Fuse Galactic Standard Alloy | 1 | 10 ticks | Ore Refinement 5 |
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Upgrade Deep Core Extractor | 2 | [Deep Core Extractor II](../mining/deep_core_extractor_ii.md) |

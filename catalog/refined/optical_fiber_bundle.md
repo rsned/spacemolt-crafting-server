@@ -28,7 +28,13 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Assemble Laser Focus Array | 2 | [Laser Focus Array](../component/laser_focus_array.md) |
+| Build Advanced Drone Bay | 1 | [Advanced Drone Bay](../utility/advanced_drone_bay.md) |
+| Build Cloaking Device I | 2 | [Cloaking Device I](../utility/cloaking_device_i.md) |
+| Build Focused Beam II | 3 | [Focused Beam II](../weapon/focused_beam_ii.md) |
+| Build Focused Beam III | 4 | [Focused Beam III](../weapon/focused_beam_iii.md) |
 | Build Phase Array | 1 | [Phase Array](../component/phase_array.md) |
 | Build Solar Collector Array | 2 | [Solar Collector Array](../component/solar_collector_array.md) |
+| Build Target Painter II | 2 | [Target Painter II](../utility/target_painter_ii.md) |
+| Build Tracking Computer II | 1 | [Tracking Computer II](../utility/tracking_computer_ii.md) |
 | Extract Neural Compounds | 1 | [Neural Extract](../refined/neural_extract.md) |
 | Synthesize Neural Gel | 1 | [Neural Interface Gel](../refined/neural_interface_gel.md) |

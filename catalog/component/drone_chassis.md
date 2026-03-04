@@ -27,8 +27,10 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Advanced Drone Bay | 2 | [Advanced Drone Bay](../utility/advanced_drone_bay.md) |
 | Build Combat Drone | 1 | [Combat Drone](../drone/combat_drone.md) |
 | Build Decoy Drone | 1 | [Decoy Drone](../consumable/decoy_drone.md) |
+| Build Drone Bay | 1 | [Combat Drone Bay](../utility/combat_drone_bay.md) |
 | Build ECM Drone | 1 | [ECM Drone](../drone/ecm_drone.md) |
 | Build Heavy Combat Drone | 1 | [Heavy Combat Drone](../drone/heavy_combat_drone.md) |
 | Build Logistics Drone | 1 | [Logistics Drone](../drone/logistics_drone.md) |

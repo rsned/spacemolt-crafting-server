@@ -27,7 +27,9 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Blood Reaver | 4 | [Blood Reaver](../weapon/blood_reaver.md) |
 | Build Crimson Ordnance Bay | 1 | [Crimson Ordnance Bay](../component/crimson_ordnance_bay.md) |
+| Build Plasma Cannon III | 2 | [Plasma Cannon III](../weapon/plasma_cannon_iii.md) |
 | Forge Crimson Siege Plating | 1 | [Crimson Siege Plating](../component/crimson_siege_plating.md) |
 | Forge Fury-Tempered Plating | 1 | [Fury-Tempered Plating](../component/fury_tempered_plating.md) |
 | Fuse Galactic Standard Alloy | 1 | [Galactic Standard Alloy](../component/galactic_standard_alloy.md) |

@@ -27,6 +27,7 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Crimson Berserker Core | 1 | [Crimson Berserker Core](../utility/crimson_berserker_core.md) |
 | Build Drone AI Core | 1 | [Drone AI Core](../component/drone_ai_core.md) |
 | Synthesize Berserker Compound | 1 | [Berserker Compound](../consumable/berserker_compound.md) |
 | Synthesize Reflex Enhancer | 1 | [Reflex Enhancer](../consumable/reflex_enhancer.md) |

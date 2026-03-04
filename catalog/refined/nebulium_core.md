@@ -22,3 +22,9 @@
 | Recipe | Qty | Crafting Time | Skills Required |
 |--------|-----|---------------|-----------------|
 | Process Nebulium Core | 1 | 10 ticks | Advanced Crafting 3, Ore Refinement 6 |
+
+### Used In
+
+| Recipe | Qty | Produces |
+|--------|-----|----------|
+| Build Storm Lance | 3 | [Storm Lance](../weapon/storm_lance.md) |

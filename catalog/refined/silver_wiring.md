@@ -27,6 +27,7 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Cloaking Device I | 2 | [Cloaking Device I](../utility/cloaking_device_i.md) |
 | Build Silver Power Cell | 1 | [Power Cell](../component/power_cell.md) |
 | Create Silver Superconductor | 2 | [Superconductor](../refined/superconductor.md) |
 | Fabricate Silver Circuit Boards | 2 | [Circuit Board](../refined/circuit_board.md) |

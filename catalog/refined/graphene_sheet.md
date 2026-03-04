@@ -27,5 +27,10 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Armor Plate III | 2 | [Armor Plate III](../defense/armor_plate_iii.md) |
+| Build Graviton Beam I | 3 | [Graviton Beam I](../weapon/graviton_beam_i.md) |
+| Build Graviton Beam II | 4 | [Graviton Beam II](../weapon/graviton_beam_ii.md) |
+| Build Navigation Command Link | 2 | [Navigation Command Link](../utility/navigation_command_link.md) |
+| Build Regenerative Armor I | 2 | [Regenerative Armor I](../defense/regenerative_armor_i.md) |
 | Construct Electrum Shield Matrix | 2 | [Shield Matrix](../component/shield_matrix.md) |
 | Construct Shield Matrix | 2 | [Shield Matrix](../component/shield_matrix.md) |

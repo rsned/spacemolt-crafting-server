@@ -28,4 +28,5 @@
 | Recipe | Qty | Produces |
 |--------|-----|----------|
 | Build Cryogenic Pod | 5 | [Cryogenic Suspension Chamber](../component/cryogenic_suspension_chamber.md) |
+| Build Ice Harvester II | 3 | [Ice Harvester II](../utility/ice_harvester_ii.md) |
 | Enrich Uranium | 2 | [Enriched Uranium Rod](../refined/enriched_uranium_rod.md) |

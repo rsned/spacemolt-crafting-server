@@ -29,7 +29,9 @@
 |--------|-----|----------|
 | Assemble Plasma Mines | 1 | [Plasma Mines](../consumable/plasma_mines.md) |
 | Assemble Plasma Torpedoes | 1 | [Plasma Torpedoes](../consumable/plasma_torpedoes.md) |
+| Build Crimson Berserker Core | 2 | [Crimson Berserker Core](../utility/crimson_berserker_core.md) |
 | Build Overcharge Cell | 1 | [Overcharge Cell](../consumable/overcharge_cell.md) |
+| Build Plasma Cannon IV | 2 | [Plasma Cannon IV](../weapon/plasma_cannon_iv.md) |
 | Build Plasma Injector | 1 | [Plasma Injector](../component/plasma_injector.md) |
 | Build Weapon Overload Capacitor | 1 | [Weapon Overload Capacitor](../consumable/weapon_overload_capacitor.md) |
 | Manufacture Focused Plasma Cells | 2 | [Focused Plasma Cell Pack](../consumable/focused_plasma_cell_pack.md) |

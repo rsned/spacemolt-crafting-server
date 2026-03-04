@@ -27,6 +27,7 @@
 
 | Recipe | Qty | Produces |
 |--------|-----|----------|
+| Build Railgun II | 3 | [Railgun II](../weapon/railgun_ii.md) |
 | Build Weapon Core | 2 | [Weapon Core](../component/weapon_core.md) |
 | Forge Armor Plate | 2 | [Armor Plate](../component/armor_plate.md) |
 | Manufacture DU Rounds | 1 | [Depleted Uranium Rounds Box](../consumable/depleted_uranium_rounds_box.md) |

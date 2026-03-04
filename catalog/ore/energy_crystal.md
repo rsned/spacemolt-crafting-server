@@ -28,7 +28,10 @@
 | Assemble Standard Missiles | 2 | [Standard Guided Missiles](../consumable/standard_guided_missiles.md) |
 | Attune Phase Matrix | 1 | [Phase Matrix](../refined/phase_matrix.md) |
 | Build Flare Pod | 2 | [Thermal Flare](../consumable/thermal_flare.md) |
+| Build Mining Laser I | 3 | [Mining Laser I](../mining/mining_laser_i.md) |
 | Build Power Cell | 3 | [Power Cell](../component/power_cell.md) |
+| Build Shield Booster I | 3 | [Shield Booster I](../defense/shield_booster_i.md) |
+| Build Shield Recharger I | 2 | [Shield Recharger I](../defense/shield_recharger_i.md) |
 | Build Silver Power Cell | 3 | [Power Cell](../component/power_cell.md) |
 | Compress Synthetic Diamond | 1 | [Synthetic Diamond](../refined/synthetic_diamond.md) |
 | Condense Void Essence | 1 | [Void Condensate](../refined/void_condensate.md) |
