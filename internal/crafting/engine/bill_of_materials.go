@@ -27,6 +27,11 @@ func (e *Engine) BillOfMaterials(ctx context.Context, req crafting.BillOfMateria
 		return nil, fmt.Errorf("recipe not found: %s", req.RecipeID)
 	}
 
+	// Enrich target recipe with illegal status
+	if err := e.enrichRecipeWithIllegalStatus(ctx, targetRecipe); err != nil {
+		return nil, fmt.Errorf("enriching illegal status: %w", err)
+	}
+
 	// Load all recipes to build reverse index
 	allRecipes, err := e.recipes.GetAllRecipes(ctx)
 	if err != nil {
