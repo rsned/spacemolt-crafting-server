@@ -2,6 +2,7 @@ package engine
 
 import (
 	"context"
+	"fmt"
 	"sort"
 
 	"github.com/rsned/spacemolt-crafting-server/pkg/crafting"
@@ -91,6 +92,11 @@ func (e *Engine) RecipeLookup(ctx context.Context, req crafting.RecipeLookupRequ
 		usedIn = append(usedIn, recipeID)
 	}
 	resp.UsedInRecipes = usedIn
-	
+
+	// Enrich with illegal status before returning
+	if err := e.enrichRecipeWithIllegalStatus(ctx, resp.Recipe); err != nil {
+		return nil, fmt.Errorf("checking illegal status: %w", err)
+	}
+
 	return resp, nil
 }
