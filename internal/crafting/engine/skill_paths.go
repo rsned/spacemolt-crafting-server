@@ -2,6 +2,7 @@ package engine
 
 import (
 	"context"
+	"fmt"
 	"sort"
 
 	"github.com/rsned/spacemolt-crafting-server/pkg/crafting"
@@ -64,13 +65,32 @@ func (e *Engine) SkillCraftPaths(ctx context.Context, req crafting.SkillCraftPat
 			continue // Already maxed
 		}
 
-		recipesAtNext, err := e.skills.FindRecipesUnlockedAtLevel(ctx, skillID, nextLevel)
+		recipeIDsAtNext, err := e.skills.FindRecipesUnlockedAtLevel(ctx, skillID, nextLevel)
 		if err != nil {
 			return nil, err
 		}
 
-		if len(recipesAtNext) == 0 {
+		if len(recipeIDsAtNext) == 0 {
 			continue // No recipes unlock at next level
+		}
+
+		// Fetch full recipe details and enrich with illegal status
+		var recipesAtNext []crafting.Recipe
+		for _, recipeID := range recipeIDsAtNext {
+			recipe, err := e.recipes.GetRecipe(ctx, recipeID)
+			if err != nil {
+				return nil, fmt.Errorf("getting recipe %s: %w", recipeID, err)
+			}
+			if recipe == nil {
+				continue
+			}
+
+			// Enrich with illegal status
+			if err := e.enrichRecipeWithIllegalStatus(ctx, recipe); err != nil {
+				return nil, fmt.Errorf("enriching illegal status: %w", err)
+			}
+
+			recipesAtNext = append(recipesAtNext, *recipe)
 		}
 
 		// Calculate XP to next level
@@ -108,13 +128,8 @@ func (e *Engine) SkillCraftPaths(ctx context.Context, req crafting.SkillCraftPat
 	// Sort each skill's unlocked recipes by category tier
 	for i := range paths {
 		sort.Slice(paths[i].RecipesUnlocked, func(j, k int) bool {
-			// Need to look up recipe categories from the recipe store
-			recipeJ, errJ := e.recipes.GetRecipe(ctx, paths[i].RecipesUnlocked[j])
-			recipeK, errK := e.recipes.GetRecipe(ctx, paths[i].RecipesUnlocked[k])
-			if errJ != nil || errK != nil || recipeJ == nil || recipeK == nil {
-				// If we can't get recipe info, compare by recipe ID
-				return paths[i].RecipesUnlocked[j] < paths[i].RecipesUnlocked[k]
-			}
+			recipeJ := &paths[i].RecipesUnlocked[j]
+			recipeK := &paths[i].RecipesUnlocked[k]
 
 			tierJ := e.getCategoryTier(recipeJ.Category)
 			tierK := e.getCategoryTier(recipeK.Category)

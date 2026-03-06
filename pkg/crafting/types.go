@@ -238,7 +238,7 @@ type SkillUnlockPath struct {
 	Skill           Skill    `json:"skill"`
 	CurrentLevel    int      `json:"current_level"`
 	XPToNextLevel   int      `json:"xp_to_next_level"`
-	RecipesUnlocked []string `json:"recipes_unlocked_at_next"`
+	RecipesUnlocked []Recipe `json:"recipes_unlocked_at_next"`
 }
 
 // ============================================
