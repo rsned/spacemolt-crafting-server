@@ -12,7 +12,3 @@ CREATE TABLE IF NOT EXISTS illegal_recipes (
 
 CREATE INDEX IF NOT EXISTS idx_illegal_recipes_recipe_id
   ON illegal_recipes(recipe_id);
-
--- Record migration
-INSERT INTO schema_migrations (migration_id, applied_at)
-  VALUES ('007_illegal_recipes', datetime('now'));

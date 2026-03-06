@@ -2,6 +2,7 @@ package engine
 
 import (
 	"context"
+	"fmt"
 	"sort"
 	"time"
 
@@ -103,14 +104,21 @@ func (e *Engine) CraftQuery(ctx context.Context, req crafting.CraftQueryRequest)
 		// Categorize result
 		if matchRatio == 1.0 && skillsReady {
 			// Fully craftable
-			craftable = append(craftable, crafting.CraftableMatch{
+			result := crafting.CraftableMatch{
 				Recipe:           *recipe,
 				CanCraftQuantity: canCraft,
 				ProfitAnalysis:   profitAnalysis,
-			})
+			}
+
+			// Enrich with illegal status
+			if err := e.enrichRecipeWithIllegalStatus(ctx, &result.Recipe); err != nil {
+				return nil, fmt.Errorf("enriching illegal status: %w", err)
+			}
+
+			craftable = append(craftable, result)
 		} else if matchRatio == 1.0 && !skillsReady {
 			// Have inputs but blocked by skills
-			blockedBySkills = append(blockedBySkills, crafting.PartialComponentMatch{
+			result := crafting.PartialComponentMatch{
 				Recipe:         *recipe,
 				InputsHave:     have,
 				InputsMissing:  missing,
@@ -118,10 +126,17 @@ func (e *Engine) CraftQuery(ctx context.Context, req crafting.CraftQueryRequest)
 				SkillsReady:    false,
 				SkillsMissing:  skillGaps,
 				ProfitAnalysis: profitAnalysis,
-			})
+			}
+
+			// Enrich with illegal status
+			if err := e.enrichRecipeWithIllegalStatus(ctx, &result.Recipe); err != nil {
+				return nil, fmt.Errorf("enriching illegal status: %w", err)
+			}
+
+			blockedBySkills = append(blockedBySkills, result)
 		} else if req.IncludePartial && matchRatio >= req.MinMatchRatio {
 			// Partial input match
-			partialComponents = append(partialComponents, crafting.PartialComponentMatch{
+			result := crafting.PartialComponentMatch{
 				Recipe:         *recipe,
 				InputsHave:     have,
 				InputsMissing:  missing,
@@ -129,7 +144,14 @@ func (e *Engine) CraftQuery(ctx context.Context, req crafting.CraftQueryRequest)
 				SkillsReady:    skillsReady,
 				SkillsMissing:  skillGaps,
 				ProfitAnalysis: profitAnalysis,
-			})
+			}
+
+			// Enrich with illegal status
+			if err := e.enrichRecipeWithIllegalStatus(ctx, &result.Recipe); err != nil {
+				return nil, fmt.Errorf("enriching illegal status: %w", err)
+			}
+
+			partialComponents = append(partialComponents, result)
 		}
 	}
 
