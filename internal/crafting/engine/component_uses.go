@@ -2,6 +2,7 @@ package engine
 
 import (
 	"context"
+	"fmt"
 	"sort"
 
 	"github.com/rsned/spacemolt-crafting-server/pkg/crafting"
@@ -72,6 +73,11 @@ func (e *Engine) ComponentUses(ctx context.Context, req crafting.ComponentUsesRe
 			if err != nil {
 				return nil, err
 			}
+		}
+
+		// Enrich with illegal status
+		if err := e.enrichRecipeWithIllegalStatus(ctx, recipe); err != nil {
+			return nil, fmt.Errorf("enriching illegal status: %w", err)
 		}
 
 		uses = append(uses, crafting.ComponentUseInfo{
