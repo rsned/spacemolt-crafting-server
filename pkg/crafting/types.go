@@ -88,6 +88,7 @@ type Recipe struct {
 	Inputs          []RecipeInput       `json:"inputs"`
 	Outputs         []RecipeOutput      `json:"outputs"`
 	SkillsRequired  []SkillRequirement  `json:"skills_required"`
+	IllegalStatus   *IllegalStatus      `json:"illegal_status,omitempty"`
 }
 
 // RecipeInput represents a required input item for a recipe.
@@ -107,6 +108,13 @@ type RecipeOutput struct {
 	ItemID     string `json:"item_id"`
 	Quantity   int    `json:"quantity"`
 	QualityMod bool   `json:"quality_mod"`
+}
+
+// IllegalStatus indicates a recipe cannot be crafted privately.
+type IllegalStatus struct {
+	IsIllegal     bool   `json:"is_illegal"`
+	BanReason     string `json:"ban_reason,omitempty"`
+	LegalLocation string `json:"legal_location,omitempty"`
 }
 
 // ============================================
