@@ -398,6 +398,7 @@ type RecipeMarketProfit struct {
 	InputUsesMSRP    bool   `json:"input_uses_msrp"`    // true if any input used MSRP
 	Profit          int    `json:"profit"`
 	ProfitMarginPct float64 `json:"profit_margin_pct"`
+	Illegal         bool   `json:"illegal"`            // true if recipe is illegal
 }
 
 // RecipeMarketProfitabilityResponse is the output for the recipe_market_profitability tool.

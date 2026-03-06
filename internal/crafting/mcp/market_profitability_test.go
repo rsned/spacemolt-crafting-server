@@ -26,6 +26,10 @@ func TestRecipeMarketProfitability(t *testing.T) {
 		t.Fatalf("applying migration 005: %v", err)
 	}
 
+	if err := db.ApplyMigration007(ctx, database); err != nil {
+		t.Fatalf("applying migration 007: %v", err)
+	}
+
 	// Add test items
 	_, err = database.ExecContext(ctx, `
 		INSERT INTO items (id, name, base_value, category) VALUES

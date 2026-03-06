@@ -351,6 +351,11 @@ func (e *Engine) RecipeMarketProfitability(ctx context.Context, stationID, empir
 		}
 		primaryOutput := recipe.Outputs[0]
 
+		// Enrich with illegal status
+		if err := e.enrichRecipeWithIllegalStatus(ctx, &recipe); err != nil {
+			return nil, fmt.Errorf("enriching illegal status: %w", err)
+		}
+
 		// Calculate output price
 		var outputSellPrice, outputMSRP int
 		var outputUsesMSRP bool
@@ -450,6 +455,7 @@ func (e *Engine) RecipeMarketProfitability(ctx context.Context, stationID, empir
 			InputUsesMSRP:   inputUsesMSRP,
 			Profit:         profit,
 			ProfitMarginPct: marginPct,
+			Illegal:        recipe.IllegalStatus != nil && recipe.IllegalStatus.IsIllegal,
 		})
 	}
 
