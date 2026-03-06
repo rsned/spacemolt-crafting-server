@@ -223,13 +223,14 @@ type CraftStepInput struct {
 
 // MaterialRequirement represents an item needed for crafting.
 type MaterialRequirement struct {
-	ItemID             string   `json:"item_id"`
-	QuantityNeeded     int      `json:"quantity_needed"`
-	QuantityHave       int      `json:"quantity_have"`
-	QuantityToAcquire  int      `json:"quantity_to_acquire"`
-	AcquisitionMethods []string `json:"acquisition_methods,omitempty"`
-	IsCraftable        bool     `json:"is_craftable"`
-	CraftRecipeID      string   `json:"craft_recipe_id,omitempty"`
+	ItemID             string        `json:"item_id"`
+	QuantityNeeded     int           `json:"quantity_needed"`
+	QuantityHave       int           `json:"quantity_have"`
+	QuantityToAcquire  int           `json:"quantity_to_acquire"`
+	AcquisitionMethods []string      `json:"acquisition_methods,omitempty"`
+	IsCraftable        bool          `json:"is_craftable"`
+	CraftRecipeID      string        `json:"craft_recipe_id,omitempty"`
+	CraftIllegalStatus *IllegalStatus `json:"craft_illegal_status,omitempty"`
 }
 
 // SkillUnlockPath represents a skill that would unlock recipes if leveled.
@@ -295,9 +296,10 @@ type CraftPathResponse struct {
 
 // CraftPathTarget identifies the target recipe for a craft path query.
 type CraftPathTarget struct {
-	RecipeID   string `json:"recipe_id"`
-	RecipeName string `json:"recipe_name"`
-	Quantity   int    `json:"quantity"`
+	RecipeID      string         `json:"recipe_id"`
+	RecipeName    string         `json:"recipe_name"`
+	Quantity      int            `json:"quantity"`
+	IllegalStatus *IllegalStatus `json:"illegal_status,omitempty"`
 }
 
 // CraftPathSummary provides aggregate info about a craft path.

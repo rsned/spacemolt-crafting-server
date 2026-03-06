@@ -2,6 +2,7 @@ package engine
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/rsned/spacemolt-crafting-server/pkg/crafting"
 )
@@ -31,7 +32,12 @@ func (e *Engine) CraftPathTo(ctx context.Context, req crafting.CraftPathRequest)
 			Feasible: false,
 		}, nil
 	}
-	
+
+	// Enrich target recipe with illegal status
+	if err := e.enrichRecipeWithIllegalStatus(ctx, recipe); err != nil {
+		return nil, fmt.Errorf("enriching illegal status: %w", err)
+	}
+
 	// Build inventory map
 	inventory := buildInventoryMap(req.CurrentInventory)
 	
@@ -61,9 +67,10 @@ func (e *Engine) CraftPathTo(ctx context.Context, req crafting.CraftPathRequest)
 	
 	return &crafting.CraftPathResponse{
 		Target: crafting.CraftPathTarget{
-			RecipeID:   recipe.ID,
-			RecipeName: recipe.Name,
-			Quantity:   req.TargetQuantity,
+			RecipeID:      recipe.ID,
+			RecipeName:    recipe.Name,
+			Quantity:      req.TargetQuantity,
+			IllegalStatus: recipe.IllegalStatus,
 		},
 		Feasible:        feasible,
 		SkillReady:      skillsReady,
@@ -107,6 +114,18 @@ func (e *Engine) calculateMaterialsNeeded(
 		if len(craftRecipes) > 0 {
 			mat.IsCraftable = true
 			mat.CraftRecipeID = craftRecipes[0] // Use first recipe
+
+			// Enrich with illegal status
+			craftRecipe, err := e.recipes.GetRecipe(ctx, mat.CraftRecipeID)
+			if err != nil {
+				return nil, fmt.Errorf("getting craft recipe: %w", err)
+			}
+			if craftRecipe != nil {
+				if err := e.enrichRecipeWithIllegalStatus(ctx, craftRecipe); err != nil {
+					return nil, fmt.Errorf("enriching illegal status: %w", err)
+				}
+				mat.CraftIllegalStatus = craftRecipe.IllegalStatus
+			}
 		}
 
 		// Add acquisition methods
