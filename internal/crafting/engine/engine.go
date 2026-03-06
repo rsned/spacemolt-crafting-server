@@ -3,6 +3,7 @@ package engine
 
 import (
 	"context"
+	"fmt"
 	"log"
 
 	"github.com/rsned/spacemolt-crafting-server/internal/crafting/db"
@@ -16,6 +17,7 @@ type Engine struct {
 	skills    *db.SkillStore
 	market    *db.MarketStore
 	catPri    *db.CategoryPriorityStore
+	illegalStore *db.IllegalRecipesStore
 
 	// Cached priority map for fast lookups
 	categoryPriorities map[string]int
@@ -37,6 +39,7 @@ func New(database *db.DB) *Engine {
 		skills:             db.NewSkillStore(database),
 		market:             db.NewMarketStore(database),
 		catPri:             database.CategoryPriorities(),
+		illegalStore:       db.NewIllegalRecipesStore(database),
 		categoryPriorities: priorities,
 	}
 }
@@ -299,6 +302,27 @@ func buildInventoryMap(components []crafting.Component) map[string]int {
 		m[c.ID] = c.Quantity
 	}
 	return m
+}
+
+// enrichRecipeWithIllegalStatus adds illegal status to recipe results
+func (e *Engine) enrichRecipeWithIllegalStatus(
+	ctx context.Context,
+	recipe *crafting.Recipe,
+) error {
+	isIllegal, illegalInfo, err := e.illegalStore.IsIllegal(ctx, recipe.ID)
+	if err != nil {
+		return fmt.Errorf("checking illegal status: %w", err)
+	}
+
+	if isIllegal {
+		recipe.IllegalStatus = &crafting.IllegalStatus{
+			IsIllegal:     true,
+			BanReason:     illegalInfo.BanReason,
+			LegalLocation: illegalInfo.LegalLocation,
+		}
+	}
+
+	return nil
 }
 
 // RecipeMarketProfitability calculates market profitability for all recipes.
