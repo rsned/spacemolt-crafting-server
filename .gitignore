@@ -1,8 +1,11 @@
 # Compiled binaries
 bin/
+/crafting-server
 
-# Database backups
+# Database
+*.db
 *.db.backup
+*.db.backup.*
 database/backups/
 
 # Editor swap files
@@ -11,3 +14,11 @@ database/backups/
 # Working docs
 docs/
 temp/
+
+# Image archives
+images.tar
+*.tar
+
+# Temporary scripts
+scripts/rename_images*.sh
+scripts/temp_*.sh
