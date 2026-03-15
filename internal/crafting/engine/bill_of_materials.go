@@ -9,6 +9,7 @@ import (
 	"github.com/rsned/spacemolt-crafting-server/pkg/crafting"
 )
 
+
 // BillOfMaterials executes the bill_of_materials tool logic.
 // It performs recursive dependency resolution, accounting for output quantities
 // and returning a complete breakdown of raw materials, intermediates, and craft steps.
@@ -38,53 +39,45 @@ func (e *Engine) BillOfMaterials(ctx context.Context, req crafting.BillOfMateria
 		return nil, fmt.Errorf("loading all recipes: %w", err)
 	}
 
-	// Build output -> recipe map with deterministic selection
+	// Build output -> candidate recipes map, then select the best non-cyclic one.
 	// When multiple recipes produce the same output, prefer:
 	// 1. Shortest craft time
 	// 2. Highest total output quantity (better efficiency)
 	// 3. Lexicographically first recipe_id (for determinism)
 	//
-	// IMPORTANT: This map is used consistently throughout the entire dependency tree,
-	// so diamond dependencies (multiple paths to the same item) will always use the
-	// same recipe. This ensures consistency - we don't use recipe A on one branch
-	// and recipe B on another branch for the same intermediate item.
-	//
-	// For multi-output recipes, we consider all outputs when building this map.
-	outputToRecipe := make(map[string]*crafting.Recipe)
+	// Wrap/unwrap recipe pairs (e.g. wrap_liquid_tritium / unwrap_liquid_tritium)
+	// create inherent cycles since unwrapping X requires contained_X which is made
+	// by wrapping X. We detect and skip these by checking if a recipe's input chain
+	// would require its own output.
+	outputCandidates := make(map[string][]*crafting.Recipe)
 	for i := range allRecipes {
-		// For each output in the recipe, determine if this recipe should be preferred
 		for _, output := range allRecipes[i].Outputs {
-			existing, exists := outputToRecipe[output.ItemID]
-			if !exists {
-				outputToRecipe[output.ItemID] = &allRecipes[i]
-				continue
+			outputCandidates[output.ItemID] = append(outputCandidates[output.ItemID], &allRecipes[i])
+		}
+	}
+
+	outputToRecipe := make(map[string]*crafting.Recipe)
+	for itemID, candidates := range outputCandidates {
+		// Sort candidates by preference (craft time, output qty, id)
+		sort.Slice(candidates, func(i, j int) bool {
+			a, b := candidates[i], candidates[j]
+			if a.CraftingTime != b.CraftingTime {
+				return a.CraftingTime < b.CraftingTime
 			}
-
-			// Compare and pick better recipe
-			newRecipe := &allRecipes[i]
-			replace := false
-
-			// Calculate total output quantity for comparison
-			newTotalQty := totalOutputQuantity(newRecipe)
-			existingTotalQty := totalOutputQuantity(existing)
-
-			// Prefer shorter craft time
-			if newRecipe.CraftingTime < existing.CraftingTime {
-				replace = true
-			} else if newRecipe.CraftingTime == existing.CraftingTime {
-				// If same time, prefer higher total output quantity (more efficient)
-				if newTotalQty > existingTotalQty {
-					replace = true
-				} else if newTotalQty == existingTotalQty {
-					// If still tied, use recipe_id for determinism
-					if newRecipe.ID < existing.ID {
-						replace = true
-					}
-				}
+			aq, bq := totalOutputQuantity(a), totalOutputQuantity(b)
+			if aq != bq {
+				return aq > bq
 			}
+			return a.ID < b.ID
+		})
 
-			if replace {
-				outputToRecipe[output.ItemID] = newRecipe
+		// Pick the first candidate that doesn't create a cycle.
+		// A recipe creates a cycle if any of its inputs can only be produced
+		// by a recipe that requires the output item (wrap/unwrap pattern).
+		for _, candidate := range candidates {
+			if !wouldCreateCycle(candidate, itemID, outputCandidates) {
+				outputToRecipe[itemID] = candidate
+				break
 			}
 		}
 	}
@@ -262,6 +255,39 @@ func (e *Engine) BillOfMaterials(ctx context.Context, req crafting.BillOfMateria
 		CraftSteps:     craftSteps,
 		TotalCraftTime: totalTime,
 	}, nil
+}
+
+// wouldCreateCycle checks if using a recipe to produce itemID would create a
+// cycle. This detects wrap/unwrap patterns where unwrap_X needs contained_X,
+// which is produced by wrap_X, which needs X — a circular dependency.
+// We check up to 3 levels deep to catch these short cycles.
+func wouldCreateCycle(recipe *crafting.Recipe, outputItemID string, allCandidates map[string][]*crafting.Recipe) bool {
+	// Check if any input's production chain circles back to outputItemID
+	visited := map[string]bool{outputItemID: true}
+	return inputsRequire(recipe, outputItemID, allCandidates, visited, 3)
+}
+
+// inputsRequire checks if resolving a recipe's inputs would eventually require targetItemID.
+func inputsRequire(recipe *crafting.Recipe, targetItemID string, allCandidates map[string][]*crafting.Recipe, visited map[string]bool, depth int) bool {
+	if depth <= 0 {
+		return false
+	}
+	for _, inp := range recipe.Inputs {
+		if inp.ItemID == targetItemID {
+			return true
+		}
+		if visited[inp.ItemID] {
+			continue
+		}
+		visited[inp.ItemID] = true
+		// Check all candidate recipes for this input
+		for _, candidate := range allCandidates[inp.ItemID] {
+			if inputsRequire(candidate, targetItemID, allCandidates, visited, depth-1) {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 // totalOutputQuantity calculates the total output quantity for a recipe.
