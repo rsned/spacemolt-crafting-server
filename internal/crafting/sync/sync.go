@@ -458,13 +458,49 @@ func transformSkill(imp SkillImport) crafting.Skill {
 	return skill
 }
 
+// viewMarketResponse represents the view_market API response format.
+type viewMarketResponse struct {
+	Action string `json:"action"`
+	Base   string `json:"base"`
+	Items  []struct {
+		ItemID     string `json:"item_id"`
+		ItemName   string `json:"item_name"`
+		Category   string `json:"category"`
+		BuyOrders  []struct {
+			PriceEach int    `json:"price_each"`
+			Quantity  int    `json:"quantity"`
+			Source    string `json:"source,omitempty"`
+		} `json:"buy_orders"`
+		SellOrders []struct {
+			PriceEach int    `json:"price_each"`
+			Quantity  int    `json:"quantity"`
+			Source    string `json:"source,omitempty"`
+		} `json:"sell_orders"`
+		BestSell     int `json:"best_sell"`
+		BestBuy      int `json:"best_buy"`
+		SellQuantity int `json:"sell_quantity"`
+		SellPrice    int `json:"sell_price"`
+		BuyQuantity  int `json:"buy_quantity"`
+		BuyPrice     int `json:"buy_price"`
+	} `json:"items"`
+}
+
 // ImportMarketDataFromFile imports market data from a JSON file.
+// Supports both the view_market API format (nested order books) and
+// the legacy flat array format.
 func (s *Syncer) ImportMarketDataFromFile(ctx context.Context, path string) error {
 	data, err := os.ReadFile(path)
 	if err != nil {
 		return fmt.Errorf("reading file: %w", err)
 	}
 
+	// Try view_market format first (has "action" field)
+	var viewMarket viewMarketResponse
+	if err := json.Unmarshal(data, &viewMarket); err == nil && viewMarket.Action == "view_market" {
+		return s.importViewMarketData(ctx, viewMarket)
+	}
+
+	// Fall back to legacy flat array format
 	var imports []struct {
 		ComponentID string    `json:"component_id"` // legacy support
 		ItemID      string    `json:"item_id"`      // new field
@@ -514,6 +550,85 @@ func (s *Syncer) ImportMarketDataFromFile(ctx context.Context, path string) erro
 
 	// Update metadata
 	if err := s.db.SetSyncMetadata(ctx, "market_last_sync", time.Now().Format(time.RFC3339)); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// importViewMarketData imports market data from the view_market API format
+// into both the order book and legacy market_prices tables.
+func (s *Syncer) importViewMarketData(ctx context.Context, viewMarket viewMarketResponse) error {
+	stationID := viewMarket.Base
+	batchID := fmt.Sprintf("import_%s", time.Now().Format("20060102_150405"))
+	recordedAt := time.Now().Format(time.RFC3339)
+
+	marketStore := db.NewMarketStore(s.db)
+
+	// Import individual orders into market_order_book
+	totalOrders := 0
+	for _, item := range viewMarket.Items {
+		for _, order := range item.BuyOrders {
+			if err := s.db.InsertOrderBookEntry(ctx, batchID, item.ItemID, stationID, "buy", order.PriceEach, order.Quantity, order.Source, recordedAt); err != nil {
+				return fmt.Errorf("inserting buy order for %s: %w", item.ItemID, err)
+			}
+			totalOrders++
+		}
+
+		for _, order := range item.SellOrders {
+			if err := s.db.InsertOrderBookEntry(ctx, batchID, item.ItemID, stationID, "sell", order.PriceEach, order.Quantity, order.Source, recordedAt); err != nil {
+				return fmt.Errorf("inserting sell order for %s: %w", item.ItemID, err)
+			}
+			totalOrders++
+		}
+	}
+
+	// Also import summary prices into legacy market_prices for compatibility
+	points := make([]db.MarketDataPoint, 0, len(viewMarket.Items))
+	for _, item := range viewMarket.Items {
+		sellVolume := 0
+		for _, o := range item.SellOrders {
+			sellVolume += o.Quantity
+		}
+		buyVolume := 0
+		for _, o := range item.BuyOrders {
+			buyVolume += o.Quantity
+		}
+
+		points = append(points, db.MarketDataPoint{
+			ItemID:    item.ItemID,
+			StationID: stationID,
+			BuyPrice:  item.BestBuy,
+			SellPrice: item.BestSell,
+			Volume24h: sellVolume + buyVolume,
+			Timestamp: time.Now(),
+		})
+	}
+
+	if err := marketStore.ImportMarketData(ctx, points); err != nil {
+		return fmt.Errorf("importing summary market data: %w", err)
+	}
+
+	// Recalculate stats from order book
+	for _, item := range viewMarket.Items {
+		if err := marketStore.RecalculatePriceStats(ctx, item.ItemID, stationID); err != nil {
+			return fmt.Errorf("recalculating stats for %s: %w", item.ItemID, err)
+		}
+	}
+
+	// Refresh summaries
+	if err := marketStore.RefreshPriceSummaries(ctx); err != nil {
+		return fmt.Errorf("refreshing summaries: %w", err)
+	}
+
+	// Update metadata
+	if err := s.db.SetSyncMetadata(ctx, "market_last_sync", time.Now().Format(time.RFC3339)); err != nil {
+		return err
+	}
+	if err := s.db.SetSyncMetadata(ctx, "market_station", stationID); err != nil {
+		return err
+	}
+	if err := s.db.SetSyncMetadata(ctx, "market_orders_count", fmt.Sprintf("%d", totalOrders)); err != nil {
 		return err
 	}
 

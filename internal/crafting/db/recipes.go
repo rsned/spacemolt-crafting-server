@@ -398,6 +398,77 @@ func (s *RecipeStore) GetRecipesUsingOutput(ctx context.Context, itemID string) 
 // BulkInsertRecipes inserts multiple recipes in a transaction.
 func (s *RecipeStore) BulkInsertRecipes(ctx context.Context, recipes []crafting.Recipe) error {
 	return s.db.InTransaction(ctx, func(tx *sql.Tx) error {
+		// Remove recipes that are no longer in the import set.
+		// Collect imported IDs to delete stale recipes afterward.
+		importedIDs := make(map[string]struct{}, len(recipes))
+		for _, r := range recipes {
+			importedIDs[r.ID] = struct{}{}
+		}
+
+		// Fetch current recipe IDs to find ones to delete.
+		rows, err := tx.QueryContext(ctx, `SELECT id FROM recipes`)
+		if err != nil {
+			return fmt.Errorf("querying existing recipes: %w", err)
+		}
+		var staleIDs []string
+		for rows.Next() {
+			var id string
+			if err := rows.Scan(&id); err != nil {
+				_ = rows.Close()
+				return fmt.Errorf("scanning recipe id: %w", err)
+			}
+			if _, ok := importedIDs[id]; !ok {
+				staleIDs = append(staleIDs, id)
+			}
+		}
+		_ = rows.Close()
+		if err := rows.Err(); err != nil {
+			return fmt.Errorf("iterating existing recipes: %w", err)
+		}
+
+		// Delete stale recipes and their child rows explicitly
+		// (CASCADE may not fire if foreign_keys pragma is off).
+		if len(staleIDs) > 0 {
+			delRecipeStmt, err := tx.PrepareContext(ctx, `DELETE FROM recipes WHERE id = ?`)
+			if err != nil {
+				return fmt.Errorf("preparing delete statement: %w", err)
+			}
+			defer func() { _ = delRecipeStmt.Close() }()
+
+			delStaleInputs, err := tx.PrepareContext(ctx, `DELETE FROM recipe_inputs WHERE recipe_id = ?`)
+			if err != nil {
+				return fmt.Errorf("preparing delete stale inputs: %w", err)
+			}
+			defer func() { _ = delStaleInputs.Close() }()
+
+			delStaleOutputs, err := tx.PrepareContext(ctx, `DELETE FROM recipe_outputs WHERE recipe_id = ?`)
+			if err != nil {
+				return fmt.Errorf("preparing delete stale outputs: %w", err)
+			}
+			defer func() { _ = delStaleOutputs.Close() }()
+
+			delStaleSkills, err := tx.PrepareContext(ctx, `DELETE FROM recipe_skills WHERE recipe_id = ?`)
+			if err != nil {
+				return fmt.Errorf("preparing delete stale skills: %w", err)
+			}
+			defer func() { _ = delStaleSkills.Close() }()
+
+			for _, id := range staleIDs {
+				if _, err := delStaleInputs.ExecContext(ctx, id); err != nil {
+					return fmt.Errorf("deleting stale inputs for %s: %w", id, err)
+				}
+				if _, err := delStaleOutputs.ExecContext(ctx, id); err != nil {
+					return fmt.Errorf("deleting stale outputs for %s: %w", id, err)
+				}
+				if _, err := delStaleSkills.ExecContext(ctx, id); err != nil {
+					return fmt.Errorf("deleting stale skills for %s: %w", id, err)
+				}
+				if _, err := delRecipeStmt.ExecContext(ctx, id); err != nil {
+					return fmt.Errorf("deleting stale recipe %s: %w", id, err)
+				}
+			}
+		}
+
 		// Prepare statements
 		recipeStmt, err := tx.PrepareContext(ctx, `
 			INSERT OR REPLACE INTO recipes
@@ -409,8 +480,27 @@ func (s *RecipeStore) BulkInsertRecipes(ctx context.Context, recipes []crafting.
 		}
 		defer func() { _ = recipeStmt.Close() }()
 
+		// Prepare delete statements to clear old child rows before re-inserting.
+		delInputsStmt, err := tx.PrepareContext(ctx, `DELETE FROM recipe_inputs WHERE recipe_id = ?`)
+		if err != nil {
+			return fmt.Errorf("preparing delete inputs statement: %w", err)
+		}
+		defer func() { _ = delInputsStmt.Close() }()
+
+		delOutputsStmt, err := tx.PrepareContext(ctx, `DELETE FROM recipe_outputs WHERE recipe_id = ?`)
+		if err != nil {
+			return fmt.Errorf("preparing delete outputs statement: %w", err)
+		}
+		defer func() { _ = delOutputsStmt.Close() }()
+
+		delSkillsStmt, err := tx.PrepareContext(ctx, `DELETE FROM recipe_skills WHERE recipe_id = ?`)
+		if err != nil {
+			return fmt.Errorf("preparing delete skills statement: %w", err)
+		}
+		defer func() { _ = delSkillsStmt.Close() }()
+
 		inputStmt, err := tx.PrepareContext(ctx, `
-			INSERT OR REPLACE INTO recipe_inputs (recipe_id, item_id, quantity)
+			INSERT INTO recipe_inputs (recipe_id, item_id, quantity)
 			VALUES (?, ?, ?)
 		`)
 		if err != nil {
@@ -419,7 +509,7 @@ func (s *RecipeStore) BulkInsertRecipes(ctx context.Context, recipes []crafting.
 		defer func() { _ = inputStmt.Close() }()
 
 		outputStmt, err := tx.PrepareContext(ctx, `
-			INSERT OR REPLACE INTO recipe_outputs (recipe_id, item_id, quantity, quality_mod)
+			INSERT INTO recipe_outputs (recipe_id, item_id, quantity, quality_mod)
 			VALUES (?, ?, ?, ?)
 		`)
 		if err != nil {
@@ -428,7 +518,7 @@ func (s *RecipeStore) BulkInsertRecipes(ctx context.Context, recipes []crafting.
 		defer func() { _ = outputStmt.Close() }()
 
 		skillStmt, err := tx.PrepareContext(ctx, `
-			INSERT OR REPLACE INTO recipe_skills (recipe_id, skill_id, level_required)
+			INSERT INTO recipe_skills (recipe_id, skill_id, level_required)
 			VALUES (?, ?, ?)
 		`)
 		if err != nil {
@@ -454,6 +544,17 @@ func (s *RecipeStore) BulkInsertRecipes(ctx context.Context, recipes []crafting.
 			)
 			if err != nil {
 				return fmt.Errorf("inserting recipe %s: %w", r.ID, err)
+			}
+
+			// Clear old child rows before inserting current ones.
+			if _, err := delInputsStmt.ExecContext(ctx, r.ID); err != nil {
+				return fmt.Errorf("clearing inputs for %s: %w", r.ID, err)
+			}
+			if _, err := delOutputsStmt.ExecContext(ctx, r.ID); err != nil {
+				return fmt.Errorf("clearing outputs for %s: %w", r.ID, err)
+			}
+			if _, err := delSkillsStmt.ExecContext(ctx, r.ID); err != nil {
+				return fmt.Errorf("clearing skills for %s: %w", r.ID, err)
 			}
 
 			for _, inp := range r.Inputs {

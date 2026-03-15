@@ -86,6 +86,19 @@ func (db *DB) InTransaction(ctx context.Context, fn func(tx *sql.Tx) error) erro
 	return nil
 }
 
+// InsertOrderBookEntry inserts a single order into the market_order_book table.
+func (db *DB) InsertOrderBookEntry(ctx context.Context, batchID, itemID, stationID, orderType string, price, volume int, source, recordedAt string) error {
+	_, err := db.ExecContext(ctx, `
+		INSERT INTO market_order_book
+		(batch_id, item_id, station_id, empire_id, order_type, price_per_unit, volume_available, player_stall_name, recorded_at)
+		VALUES (?, ?, ?, NULL, ?, ?, ?, ?, ?)
+	`, batchID, itemID, stationID, orderType, price, volume, source, recordedAt)
+	if err != nil {
+		return fmt.Errorf("inserting order book entry: %w", err)
+	}
+	return nil
+}
+
 // GetSyncMetadata retrieves a metadata value by key.
 func (db *DB) GetSyncMetadata(ctx context.Context, key string) (string, error) {
 	var value string
