@@ -2,7 +2,7 @@
 
 A comprehensive server for SpaceMolt crafting queries with **market data integration** and **intelligent pricing**. Supports both MCP (Model Context Protocol) and HTTP API modes for AI agents and web services.
 
-- Last rebuilt and repopulated the database against Server version: **v0.226.0**
+- Last rebuilt and repopulated the database against Server version: **0.271.3**
 - Market data submission and sophisticated pricing calculations
 - HTTP API for real-time market data integration
 
@@ -146,7 +146,7 @@ The catalog JSON files use a `{"items": [...]}` envelope format, which the impor
 ./bin/crafting-server -db crafting.db -import-skills catalog_skills.json
 
 # Set game version (optional, tracks which server version the data came from)
-./bin/crafting-server -db crafting.db -game-version v0.226.0 -import-items catalog_items.json
+./bin/crafting-server -db crafting.db -game-version 0.271.3 -import-items catalog_items.json
 
 # (Optional) Import market data for profit calculations
 ./bin/crafting-server -db crafting.db -import-market market.json
@@ -162,9 +162,9 @@ To see which game server version the database was built from:
 
 Output:
 ```
-Game Version: v0.226.0
+Game Version: 0.271.3
 Imported At: 2026-03-15 15:35:35 PDT
-Updated At:  2026-03-15 15:35:35 PDT
+Updated At:  2026-04-24 14:59:37 PDT
 ```
 
 #### Verifying the Import
@@ -183,7 +183,7 @@ sqlite3 crafting.db "
 "
 ```
 
-Expected counts: ~476 items, ~472 recipes, ~28 skills, plus populated junction tables.
+Expected counts: ~527 items, ~531 recipes, ~28 skills, plus populated junction tables.
 
 ## Claude Code Integration
 
@@ -217,8 +217,8 @@ After updating the configuration, restart Claude Code to load the MCP server. Th
 
 The server uses SQLite for fast, efficient recipe and skill queries:
 
-- **Items:** 476 item definitions from the game catalog
-- **Recipes:** 472 recipes from SpaceMolt
+- **Items:** 527 item definitions from the game catalog
+- **Recipes:** 531 recipes from SpaceMolt
 - **Skills:** 28 skill definitions
 - **Database Size:** ~500KB (base) + variable for market data
 - **Query Performance:** 1-5ms typical
@@ -417,7 +417,7 @@ Get market profitability for all recipes, sorted by profit. Shows which items ar
       "profit_margin_pct": 312.1
     }
   ],
-  "total_recipes": 472
+  "total_recipes": 531
 }
 ```
 
@@ -572,7 +572,7 @@ Command-line options:
 -import-market string
     Import market data from JSON file
 -game-version string
-    Set game server version (e.g., "v0.226.0")
+    Set game server version (e.g., "0.271.3")
 -version
     Show database version information and exit
 -verbose
@@ -657,7 +657,7 @@ The importer accepts both flat JSON arrays and catalog envelope format (`{"items
 
 - **Query Speed:** 1-5ms for typical queries
 - **Database Size:** ~500KB (base) + variable for market data
-  - Base: 476 items, 472 recipes, 28 skills
+  - Base: 527 items, 531 recipes, 28 skills
   - Market data: ~1KB per order (7-day retention)
 - **Binary Size:** ~10MB
 - **Memory Usage:** ~5MB typical (MCP mode), ~10MB (HTTP mode)
