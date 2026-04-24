@@ -1,3 +1,5 @@
+# DEPRECATED: This workflow has been migrated to /home/robert/spacemolt/kb/
+# See DEPRECATED.md for details. This workflow will be removed in a future version.
 name: Deploy Catalog
 
 on:

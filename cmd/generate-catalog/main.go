@@ -1,3 +1,6 @@
+// DEPRECATED: This command has been migrated to /home/robert/spacemolt/kb/
+// See DEPRECATED.md for details. This code will be removed in a future version.
+//
 // Command generate-catalog reads the crafting database and produces one
 // markdown file per item in the catalog output directory.
 package main
