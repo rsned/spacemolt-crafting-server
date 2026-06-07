@@ -81,6 +81,12 @@ func (e *Engine) CraftQuery(ctx context.Context, req crafting.CraftQueryRequest)
 			continue
 		}
 
+		// Filter out facility-only recipes unless explicitly included; they
+		// cannot be crafted aboard a ship from inventory.
+		if !req.IncludeFacilityOnly && recipe.FacilityOnly {
+			continue
+		}
+
 		// Calculate input match
 		have, missing, canCraft := e.calculateInputMatch(recipe, inventory)
 		matchRatio := calculateMatchRatio(len(have), len(recipe.Inputs))

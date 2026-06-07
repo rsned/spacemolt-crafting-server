@@ -1,0 +1,16 @@
+-- Migration 009: Add catalog fields introduced after game version 0.271.3.
+--
+-- Adds recipe flags (facility_only, no_recycle, fuel_output), the skill
+-- empire_restriction field, and an items.attributes JSON blob for catalog
+-- fields not modeled as first-class columns.
+--
+-- NOTE: The actual column additions are performed by ApplyMigration009 in
+-- migrations.go, which guards each ALTER with a column-existence check so the
+-- migration is safe on both fresh (schema.sql already has the columns) and
+-- existing databases. This file documents the intended schema changes.
+
+-- ALTER TABLE recipes ADD COLUMN facility_only BOOLEAN DEFAULT 0;
+-- ALTER TABLE recipes ADD COLUMN no_recycle    BOOLEAN DEFAULT 0;
+-- ALTER TABLE recipes ADD COLUMN fuel_output   INTEGER DEFAULT 0;
+-- ALTER TABLE skills  ADD COLUMN empire_restriction TEXT;
+-- ALTER TABLE items   ADD COLUMN attributes    TEXT DEFAULT '{}';

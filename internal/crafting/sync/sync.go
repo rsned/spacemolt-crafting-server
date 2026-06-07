@@ -34,6 +34,35 @@ func unwrapItems(data []byte) (json.RawMessage, error) {
 	return data, nil
 }
 
+// itemCoreFields are the catalog keys that map to first-class item columns and
+// are therefore excluded from the items.attributes JSON blob.
+var itemCoreFields = map[string]struct{}{
+	"id": {}, "type_id": {}, "name": {}, "description": {},
+	"category": {}, "type": {}, "rarity": {}, "size": {},
+	"base_value": {}, "stackable": {}, "tradeable": {},
+}
+
+// extractItemAttributes returns the non-core catalog fields of an item as a
+// JSON object, preserving values verbatim. It returns nil when there are no
+// extra fields. Map marshaling produces deterministic, key-sorted output.
+func extractItemAttributes(raw map[string]json.RawMessage) json.RawMessage {
+	extra := make(map[string]json.RawMessage, len(raw))
+	for k, v := range raw {
+		if _, ok := itemCoreFields[k]; ok {
+			continue
+		}
+		extra[k] = v
+	}
+	if len(extra) == 0 {
+		return nil
+	}
+	encoded, err := json.Marshal(extra)
+	if err != nil {
+		return nil
+	}
+	return encoded
+}
+
 // ItemImport represents the expected format of item data from SpaceMolt.
 type ItemImport struct {
 	ID          string `json:"id"`
@@ -62,6 +91,11 @@ type RecipeImport struct {
 	Description  string `json:"description,omitempty"`
 	Category     string `json:"category,omitempty"`
 	CraftingTime int    `json:"crafting_time,omitempty"`
+
+	// Catalog fields added after game version 0.271.3.
+	FacilityOnly bool `json:"facility_only,omitempty"`
+	NoRecycle    bool `json:"no_recycle,omitempty"`
+	FuelOutput   int  `json:"fuel_output,omitempty"`
 
 	// Inputs (was components)
 	Inputs []struct {
@@ -102,9 +136,10 @@ type SkillImport struct {
 	Category       string          `json:"category,omitempty"`
 	MaxLevel       int             `json:"max_level,omitempty"`
 	TrainingSource string          `json:"training_source,omitempty"`
-	XPPerLevel     json.RawMessage `json:"xp_per_level,omitempty"`
-	BonusPerLevel  json.RawMessage `json:"bonus_per_level,omitempty"`
-	RequiredSkills json.RawMessage `json:"required_skills,omitempty"`
+	XPPerLevel        json.RawMessage `json:"xp_per_level,omitempty"`
+	BonusPerLevel     json.RawMessage `json:"bonus_per_level,omitempty"`
+	RequiredSkills    json.RawMessage `json:"required_skills,omitempty"`
+	EmpireRestriction string          `json:"empire_restriction,omitempty"`
 
 	Prerequisites []struct {
 		SkillID string `json:"skill_id,omitempty"`
@@ -139,8 +174,16 @@ func (s *Syncer) ImportItemsFromFile(ctx context.Context, path string) error {
 		return fmt.Errorf("parsing JSON: %w", err)
 	}
 
+	// Parse a second time as raw maps so we can preserve catalog fields that are
+	// not modeled as first-class columns (slot, effect, required_skills, the
+	// various stat/bonus fields, etc.) in the items.attributes JSON blob.
+	var rawItems []map[string]json.RawMessage
+	if err := json.Unmarshal(itemsData, &rawItems); err != nil {
+		return fmt.Errorf("parsing JSON attributes: %w", err)
+	}
+
 	items := make([]crafting.Item, 0, len(imports))
-	for _, imp := range imports {
+	for i, imp := range imports {
 		// Use type_id as fallback for empty id
 		id := imp.ID
 		if id == "" {
@@ -159,6 +202,11 @@ func (s *Syncer) ImportItemsFromFile(ctx context.Context, path string) error {
 			category = "module"
 		}
 
+		var attributes json.RawMessage
+		if i < len(rawItems) {
+			attributes = extractItemAttributes(rawItems[i])
+		}
+
 		items = append(items, crafting.Item{
 			ID:          id,
 			Name:        imp.Name,
@@ -169,6 +217,7 @@ func (s *Syncer) ImportItemsFromFile(ctx context.Context, path string) error {
 			BaseValue:   imp.BaseValue,
 			Stackable:   imp.Stackable,
 			Tradeable:   imp.Tradeable,
+			Attributes:  attributes,
 		})
 	}
 
@@ -273,6 +322,9 @@ func transformRecipe(imp RecipeImport) crafting.Recipe {
 		Description:  imp.Description,
 		Category:     imp.Category,
 		CraftingTime: imp.CraftingTime,
+		FacilityOnly: imp.FacilityOnly,
+		NoRecycle:    imp.NoRecycle,
+		FuelOutput:   imp.FuelOutput,
 	}
 
 	// Handle inputs - try both "inputs" and "components" fields
@@ -350,9 +402,10 @@ func transformSkill(imp SkillImport) crafting.Skill {
 		Category:       imp.Category,
 		MaxLevel:       imp.MaxLevel,
 		TrainingSource: imp.TrainingSource,
-		XPPerLevel:     imp.XPPerLevel,
-		BonusPerLevel:  imp.BonusPerLevel,
-		RequiredSkills: imp.RequiredSkills,
+		XPPerLevel:        imp.XPPerLevel,
+		BonusPerLevel:     imp.BonusPerLevel,
+		RequiredSkills:    imp.RequiredSkills,
+		EmpireRestriction: imp.EmpireRestriction,
 	}
 	if skill.MaxLevel == 0 {
 		skill.MaxLevel = 10

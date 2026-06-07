@@ -311,6 +311,51 @@ func ApplyMigration008(ctx context.Context, db *DB) error {
 	})
 }
 
+// ApplyMigration009 applies migration 009 (catalog fields added after game
+// version 0.271.3). It adds recipe flags, the skill empire_restriction column,
+// and the items.attributes JSON blob. Each column addition is guarded so the
+// migration is safe on both fresh and existing databases.
+func ApplyMigration009(ctx context.Context, db *DB) error {
+	tracker := NewMigrationTracker(db)
+	applied, err := tracker.IsApplied(ctx, "009_add_catalog_fields")
+	if err != nil {
+		return err
+	}
+	if applied {
+		return nil
+	}
+
+	type colAdd struct {
+		table  string
+		column string
+		ddl    string
+	}
+	additions := []colAdd{
+		{"recipes", "facility_only", `ALTER TABLE recipes ADD COLUMN facility_only BOOLEAN DEFAULT 0`},
+		{"recipes", "no_recycle", `ALTER TABLE recipes ADD COLUMN no_recycle BOOLEAN DEFAULT 0`},
+		{"recipes", "fuel_output", `ALTER TABLE recipes ADD COLUMN fuel_output INTEGER DEFAULT 0`},
+		{"skills", "empire_restriction", `ALTER TABLE skills ADD COLUMN empire_restriction TEXT`},
+		{"items", "attributes", `ALTER TABLE items ADD COLUMN attributes TEXT DEFAULT '{}'`},
+	}
+
+	return db.InTransaction(ctx, func(tx *sql.Tx) error {
+		for _, a := range additions {
+			if hasColumn(ctx, tx, a.table, a.column) {
+				continue
+			}
+			if _, err := tx.ExecContext(ctx, a.ddl); err != nil {
+				return fmt.Errorf("adding %s.%s: %w", a.table, a.column, err)
+			}
+		}
+
+		_, err := tx.ExecContext(ctx,
+			`INSERT INTO schema_migrations (migration_id, applied_at) VALUES (?, datetime('now'))`,
+			"009_add_catalog_fields",
+		)
+		return err
+	})
+}
+
 // hasColumn checks if a table has a specific column.
 func hasColumn(ctx context.Context, tx *sql.Tx, table, column string) bool {
 	rows, err := tx.QueryContext(ctx, fmt.Sprintf(`PRAGMA table_info(%s)`, table))

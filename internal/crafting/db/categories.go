@@ -76,6 +76,7 @@ func (s *CategoryPriorityStore) InitializeDefaultPriorities(ctx context.Context)
 		"Equipment":          2,
 		"Components":         2,
 		"Refining":           2,
+		"Fuel Production":    2,
 		"Weapons":            3,
 		"Drones":             3,
 		"Electronic Warfare": 3,

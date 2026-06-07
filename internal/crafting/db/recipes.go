@@ -24,13 +24,16 @@ func (s *RecipeStore) GetRecipe(ctx context.Context, id string) (*crafting.Recip
 	recipe := &crafting.Recipe{ID: id}
 
 	err := s.db.QueryRowContext(ctx, `
-		SELECT name, description, category, crafting_time
+		SELECT name, description, category, crafting_time, facility_only, no_recycle, fuel_output
 		FROM recipes WHERE id = ?
 	`, id).Scan(
 		&recipe.Name,
 		&recipe.Description,
 		&recipe.Category,
 		&recipe.CraftingTime,
+		&recipe.FacilityOnly,
+		&recipe.NoRecycle,
+		&recipe.FuelOutput,
 	)
 	if err == sql.ErrNoRows {
 		return nil, nil
@@ -245,7 +248,7 @@ func (s *RecipeStore) CountRecipes(ctx context.Context) (int, error) {
 // GetAllRecipes retrieves all recipes with their inputs and outputs.
 func (s *RecipeStore) GetAllRecipes(ctx context.Context) ([]crafting.Recipe, error) {
 	rows, err := s.db.QueryContext(ctx, `
-		SELECT id, name, description, category, crafting_time
+		SELECT id, name, description, category, crafting_time, facility_only, no_recycle, fuel_output
 		FROM recipes
 	`)
 	if err != nil {
@@ -262,6 +265,9 @@ func (s *RecipeStore) GetAllRecipes(ctx context.Context) ([]crafting.Recipe, err
 			&r.Description,
 			&r.Category,
 			&r.CraftingTime,
+			&r.FacilityOnly,
+			&r.NoRecycle,
+			&r.FuelOutput,
 		); err != nil {
 			return nil, fmt.Errorf("scanning recipe: %w", err)
 		}
@@ -381,8 +387,8 @@ func (s *RecipeStore) BulkInsertRecipes(ctx context.Context, recipes []crafting.
 		// Prepare statements
 		recipeStmt, err := tx.PrepareContext(ctx, `
 			INSERT OR REPLACE INTO recipes
-			(id, name, description, category, crafting_time, last_updated_tick)
-			VALUES (?, ?, ?, ?, ?, ?)
+			(id, name, description, category, crafting_time, facility_only, no_recycle, fuel_output, last_updated_tick)
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
 		`)
 		if err != nil {
 			return fmt.Errorf("preparing recipe statement: %w", err)
@@ -423,7 +429,8 @@ func (s *RecipeStore) BulkInsertRecipes(ctx context.Context, recipes []crafting.
 		for _, r := range recipes {
 			_, err := recipeStmt.ExecContext(ctx,
 				r.ID, r.Name, r.Description, r.Category,
-				r.CraftingTime, 0, // last_updated_tick defaults to 0
+				r.CraftingTime, r.FacilityOnly, r.NoRecycle, r.FuelOutput,
+				0, // last_updated_tick defaults to 0
 			)
 			if err != nil {
 				return fmt.Errorf("inserting recipe %s: %w", r.ID, err)

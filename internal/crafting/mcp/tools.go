@@ -102,6 +102,11 @@ func craftQueryTool() ToolDefinition {
 					Description: "Include ammunition recipes in results",
 					Default:     false,
 				},
+				"include_facility_only": {
+					Type:        "boolean",
+					Description: "Include facility-only recipes (cannot be crafted aboard a ship) in results",
+					Default:     false,
+				},
 				"limit": {
 					Type:        "integer",
 					Description: "Max results per section",

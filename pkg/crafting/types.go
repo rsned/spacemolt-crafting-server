@@ -18,6 +18,12 @@ type Item struct {
 	BaseValue   int    `json:"base_value,omitempty"`
 	Stackable   bool   `json:"stackable,omitempty"`
 	Tradeable   bool   `json:"tradeable,omitempty"`
+
+	// Attributes holds the catalog fields that are not modeled as first-class
+	// columns (e.g. slot, effect, required_skills, and the various stat/bonus
+	// fields). It is stored verbatim as a JSON object so new catalog fields are
+	// captured without schema churn. Empty when the item has no extra fields.
+	Attributes json.RawMessage `json:"attributes,omitempty"`
 }
 
 // ============================================
@@ -76,6 +82,16 @@ type Recipe struct {
 	Inputs        []RecipeInput  `json:"inputs"`
 	Outputs       []RecipeOutput `json:"outputs"`
 	IllegalStatus *IllegalStatus `json:"illegal_status,omitempty"`
+
+	// FacilityOnly indicates the recipe can only be crafted at a facility,
+	// not aboard a ship from inventory.
+	FacilityOnly bool `json:"facility_only,omitempty"`
+	// NoRecycle indicates the recipe's output cannot be recycled back into
+	// its inputs.
+	NoRecycle bool `json:"no_recycle,omitempty"`
+	// FuelOutput is the amount of ship fuel produced directly by the recipe
+	// (e.g. onboard fuel synthesis), separate from item outputs.
+	FuelOutput int `json:"fuel_output,omitempty"`
 }
 
 // RecipeInput represents a required input item for a recipe.
@@ -120,6 +136,9 @@ type Skill struct {
 	RequiredSkills json.RawMessage    `json:"required_skills_json,omitempty"`
 	Prerequisites  []SkillRequirement `json:"prerequisites,omitempty"`
 	XPThresholds   []int              `json:"xp_thresholds"`
+	// EmpireRestriction names the empire a skill is restricted to (e.g.
+	// "crimson", "nebula"). Empty for unrestricted skills.
+	EmpireRestriction string `json:"empire_restriction,omitempty"`
 }
 
 // ============================================
@@ -215,6 +234,7 @@ type CraftQueryRequest struct {
 	Components         []Component          `json:"components"`
 	IncludePartial     bool                 `json:"include_partial"`
 	IncludeAmmunition  bool                 `json:"include_ammunition"`
+	IncludeFacilityOnly bool                `json:"include_facility_only"`
 	MinMatchRatio      float64              `json:"min_match_ratio"`
 	Strategy           OptimizationStrategy `json:"optimization_strategy"`
 	StationID          string               `json:"station_id,omitempty"`

@@ -25,9 +25,10 @@ func (s *SkillStore) GetSkill(ctx context.Context, id string) (*crafting.Skill, 
 
 	var trainingSource sql.NullString
 	var xpPerLevel, bonusPerLevel, requiredSkills sql.NullString
+	var empireRestriction sql.NullString
 
 	err := s.db.QueryRowContext(ctx, `
-		SELECT name, description, category, max_level, training_source, xp_per_level, bonus_per_level, required_skills
+		SELECT name, description, category, max_level, training_source, xp_per_level, bonus_per_level, required_skills, empire_restriction
 		FROM skills WHERE id = ?
 	`, id).Scan(
 		&skill.Name,
@@ -38,6 +39,7 @@ func (s *SkillStore) GetSkill(ctx context.Context, id string) (*crafting.Skill, 
 		&xpPerLevel,
 		&bonusPerLevel,
 		&requiredSkills,
+		&empireRestriction,
 	)
 	if err == sql.ErrNoRows {
 		return nil, nil
@@ -58,7 +60,10 @@ func (s *SkillStore) GetSkill(ctx context.Context, id string) (*crafting.Skill, 
 	if requiredSkills.Valid && requiredSkills.String != "{}" {
 		skill.RequiredSkills = json.RawMessage(requiredSkills.String)
 	}
-	
+	if empireRestriction.Valid {
+		skill.EmpireRestriction = empireRestriction.String
+	}
+
 	// Get prerequisites
 	prereqs, err := s.getSkillPrerequisites(ctx, id)
 	if err != nil {
@@ -201,8 +206,8 @@ func (s *SkillStore) GetAllSkillIDs(ctx context.Context) ([]string, error) {
 func (s *SkillStore) BulkInsertSkills(ctx context.Context, skills []crafting.Skill) error {
 	return s.db.InTransaction(ctx, func(tx *sql.Tx) error {
 		skillStmt, err := tx.PrepareContext(ctx, `
-			INSERT OR REPLACE INTO skills (id, name, description, category, max_level, training_source, xp_per_level, bonus_per_level, required_skills)
-			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+			INSERT OR REPLACE INTO skills (id, name, description, category, max_level, training_source, xp_per_level, bonus_per_level, required_skills, empire_restriction)
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 		`)
 		if err != nil {
 			return fmt.Errorf("preparing skill statement: %w", err)
@@ -240,10 +245,14 @@ func (s *SkillStore) BulkInsertSkills(ctx context.Context, skills []crafting.Ski
 			if len(sk.RequiredSkills) > 0 {
 				requiredSkills = string(sk.RequiredSkills)
 			}
+			var empireRestriction any
+			if sk.EmpireRestriction != "" {
+				empireRestriction = sk.EmpireRestriction
+			}
 
 			_, err := skillStmt.ExecContext(ctx,
 				sk.ID, sk.Name, sk.Description, sk.Category, sk.MaxLevel,
-				sk.TrainingSource, xpPerLevel, bonusPerLevel, requiredSkills,
+				sk.TrainingSource, xpPerLevel, bonusPerLevel, requiredSkills, empireRestriction,
 			)
 			if err != nil {
 				return fmt.Errorf("inserting skill %s: %w", sk.ID, err)

@@ -11,6 +11,9 @@ CREATE TABLE IF NOT EXISTS recipes (
     description     TEXT,
     category        TEXT,
     crafting_time   INTEGER DEFAULT 0,
+    facility_only   BOOLEAN DEFAULT 0,
+    no_recycle      BOOLEAN DEFAULT 0,
+    fuel_output     INTEGER DEFAULT 0,
     last_updated_tick INTEGER DEFAULT 0
 );
 
@@ -49,6 +52,7 @@ CREATE TABLE IF NOT EXISTS skills (
     xp_per_level    TEXT DEFAULT '[]',
     bonus_per_level TEXT DEFAULT '{}',
     required_skills TEXT DEFAULT '{}',
+    empire_restriction TEXT,
     last_updated_tick INTEGER DEFAULT 0
 );
 
@@ -156,6 +160,7 @@ CREATE TABLE IF NOT EXISTS items (
     base_value      INTEGER DEFAULT 0,
     stackable       BOOLEAN DEFAULT 0,
     tradeable       BOOLEAN DEFAULT 0,
+    attributes      TEXT DEFAULT '{}',
     last_updated_tick INTEGER DEFAULT 0
 );
 

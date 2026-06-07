@@ -2,7 +2,7 @@
 
 A comprehensive server for SpaceMolt crafting queries with **market data integration** and **intelligent pricing**. Supports both MCP (Model Context Protocol) and HTTP API modes for AI agents and web services.
 
-- Last rebuilt and repopulated the database against Server version: **0.271.3**
+- Last rebuilt and repopulated the database against Server version: **0.364.1**
 - Market data submission and sophisticated pricing calculations
 - HTTP API for real-time market data integration
 
@@ -60,12 +60,12 @@ The crafting server uses a rough priority ordering when returning recipes to try
 
 | Tier | Categories | Recipe Count |
 |------|------------|--------------|
-| 1 (Highest) | Shipbuilding, Legendary | 25 |
-| 2 | Refining, Modules, Gas Processing, Equipment, Components, Mining, Ice Refining | 201 |
-| 3 | Weapons, Stealth, Ship Passive, Drones, Defense, Electronic Warfare | 108 |
-| 4 | Utility | 23 |
+| 1 (Highest) | Shipbuilding, Legendary | 26 |
+| 2 | Refining, Modules, Gas Processing, Equipment, Components, Mining, Ice Refining, Fuel Production | 245 |
+| 3 | Weapons, Stealth, Ship Passive, Drones, Defense, Electronic Warfare | 129 |
+| 4 | Utility | 29 |
 | 5 | Ammunition | 0 |
-| 6 (Lowest) | Consumables, Facility Only, Biological Refining | 115 |
+| 6 (Lowest) | Consumables, Facility Only, Biological Refining | 113 |
 
 ## Quick Start
 
@@ -146,7 +146,7 @@ The catalog JSON files use a `{"items": [...]}` envelope format, which the impor
 ./bin/crafting-server -db crafting.db -import-skills catalog_skills.json
 
 # Set game version (optional, tracks which server version the data came from)
-./bin/crafting-server -db crafting.db -game-version 0.271.3 -import-items catalog_items.json
+./bin/crafting-server -db crafting.db -game-version 0.364.1 -import-items catalog_items.json
 
 # (Optional) Import market data for profit calculations
 ./bin/crafting-server -db crafting.db -import-market market.json
@@ -162,9 +162,9 @@ To see which game server version the database was built from:
 
 Output:
 ```
-Game Version: 0.271.3
+Game Version: 0.364.1
 Imported At: 2026-03-15 15:35:35 PDT
-Updated At:  2026-04-24 14:59:37 PDT
+Updated At:  2026-06-07 13:47:50 PDT
 ```
 
 #### Verifying the Import
@@ -183,7 +183,7 @@ sqlite3 crafting.db "
 "
 ```
 
-Expected counts: ~527 items, ~531 recipes, ~28 skills, plus populated junction tables.
+Expected counts: ~541 items, ~542 recipes, ~29 skills, plus populated junction tables.
 
 ## Claude Code Integration
 
@@ -217,9 +217,9 @@ After updating the configuration, restart Claude Code to load the MCP server. Th
 
 The server uses SQLite for fast, efficient recipe and skill queries:
 
-- **Items:** 527 item definitions from the game catalog
-- **Recipes:** 531 recipes from SpaceMolt
-- **Skills:** 28 skill definitions
+- **Items:** 541 item definitions from the game catalog
+- **Recipes:** 542 recipes from SpaceMolt
+- **Skills:** 29 skill definitions
 - **Database Size:** ~500KB (base) + variable for market data
 - **Query Performance:** 1-5ms typical
 
@@ -572,7 +572,7 @@ Command-line options:
 -import-market string
     Import market data from JSON file
 -game-version string
-    Set game server version (e.g., "0.271.3")
+    Set game server version (e.g., "0.364.1")
 -version
     Show database version information and exit
 -verbose
@@ -610,6 +610,11 @@ The importer accepts both flat JSON arrays and catalog envelope format (`{"items
 }
 ```
 
+Any catalog fields beyond the columns above (e.g. `slot`, `effect`, `required_skills`,
+and the various stat/bonus fields like `damage` or `shield_bonus`) are preserved
+verbatim in the `items.attributes` JSON column, so new fields are captured without
+schema changes.
+
 ### Recipe JSON (Catalog Format)
 
 ```json
@@ -621,6 +626,9 @@ The importer accepts both flat JSON arrays and catalog envelope format (`{"items
       "description": "Build propulsion system cores.",
       "category": "Components",
       "crafting_time": 10,
+      "facility_only": false,
+      "no_recycle": false,
+      "fuel_output": 0,
       "inputs": [
         {"item_id": "refined_alloy", "quantity": 3},
         {"item_id": "ore_cobalt", "quantity": 4}
@@ -632,6 +640,11 @@ The importer accepts both flat JSON arrays and catalog envelope format (`{"items
   ]
 }
 ```
+
+Recipe flags: `facility_only` recipes can only be crafted at a facility (not aboard
+a ship) and are excluded from `craft_query` unless `include_facility_only` is set;
+`no_recycle` marks outputs that cannot be recycled back into inputs; `fuel_output`
+is ship fuel produced directly by the recipe (e.g. onboard fuel synthesis).
 
 ### Skill JSON (Catalog Format)
 
@@ -647,17 +660,22 @@ The importer accepts both flat JSON arrays and catalog envelope format (`{"items
       "training_source": "Take hull damage in combat.",
       "required_skills": {"armor": 5},
       "xp_per_level": [500, 1500, 3000, 5000, 8000, 12000, 17000, 23000, 30000, 40000],
-      "bonus_per_level": {"armorEffectiveness": 2, "hullHP": 3}
+      "bonus_per_level": {"armorEffectiveness": 2, "hullHP": 3},
+      "empire_restriction": "crimson"
     }
   ]
 }
 ```
 
+`empire_restriction` (optional) names the empire a skill is restricted to (e.g.
+`crimson`, `nebula`, `outer_rim`, `solarian`, `voidborn`); omit or leave empty for
+unrestricted skills.
+
 ## Performance
 
 - **Query Speed:** 1-5ms for typical queries
 - **Database Size:** ~500KB (base) + variable for market data
-  - Base: 527 items, 531 recipes, 28 skills
+  - Base: 541 items, 542 recipes, 29 skills
   - Market data: ~1KB per order (7-day retention)
 - **Binary Size:** ~10MB
 - **Memory Usage:** ~5MB typical (MCP mode), ~10MB (HTTP mode)
@@ -670,6 +688,7 @@ The importer accepts both flat JSON arrays and catalog envelope format (`{"items
 The server uses automatic database migrations to manage schema updates:
 
 - **Migration 005:** Enhanced market tables (order book, price stats)
+- **Migration 009:** Catalog fields added after v0.271.3 (recipe `facility_only`/`no_recycle`/`fuel_output`, skill `empire_restriction`, item `attributes` JSON blob)
 - Migrations run automatically on server startup
 - Migration status tracked in `schema_migrations` table
 - Backward compatible with existing databases

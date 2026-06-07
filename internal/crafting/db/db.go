@@ -61,6 +61,11 @@ func OpenAndInit(ctx context.Context, path string) (*DB, error) {
 		return nil, fmt.Errorf("applying migration 008: %w", err)
 	}
 
+	if err := ApplyMigration009(ctx, db); err != nil {
+		_ = db.Close()
+		return nil, fmt.Errorf("applying migration 009: %w", err)
+	}
+
 	return db, nil
 }
 
