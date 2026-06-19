@@ -90,7 +90,7 @@ type RecipeImport struct {
 	Name         string `json:"name"`
 	Description  string `json:"description,omitempty"`
 	Category     string `json:"category,omitempty"`
-	CraftingTime int    `json:"crafting_time,omitempty"`
+	CraftingTime float64 `json:"crafting_time,omitempty"`
 
 	// Catalog fields added after game version 0.271.3.
 	FacilityOnly bool `json:"facility_only,omitempty"`

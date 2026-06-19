@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS recipes (
     name            TEXT NOT NULL,
     description     TEXT,
     category        TEXT,
-    crafting_time   INTEGER DEFAULT 0,
+    crafting_time   REAL DEFAULT 0,
     facility_only   BOOLEAN DEFAULT 0,
     no_recycle      BOOLEAN DEFAULT 0,
     fuel_output     INTEGER DEFAULT 0,

@@ -68,7 +68,7 @@ func (e *Engine) CraftPathTo(ctx context.Context, req crafting.CraftPathRequest)
 		},
 		Feasible:        feasible,
 		MaterialsNeeded: materials,
-		CraftingTime:    recipe.CraftingTime * req.TargetQuantity,
+		CraftingTime:    recipe.CraftingTime * float64(req.TargetQuantity),
 		Summary:         summary,
 	}, nil
 }

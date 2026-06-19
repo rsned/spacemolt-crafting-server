@@ -28,6 +28,23 @@ func TestTransformRecipeNewFields(t *testing.T) {
 	}
 }
 
+// TestTransformRecipeFractionalCraftingTime verifies that a fractional
+// crafting_time (the game server changed this field from int to float64 in
+// v0.37x) unmarshals from the catalog JSON and is preserved by transformRecipe.
+func TestTransformRecipeFractionalCraftingTime(t *testing.T) {
+	var imp RecipeImport
+	if err := json.Unmarshal([]byte(`{"id":"refine_x","name":"Refine X","crafting_time":0.27}`), &imp); err != nil {
+		t.Fatalf("unmarshal fractional crafting_time: %v", err)
+	}
+	if imp.CraftingTime != 0.27 {
+		t.Errorf("imp.CraftingTime = %v, want 0.27", imp.CraftingTime)
+	}
+	r := transformRecipe(imp)
+	if r.CraftingTime != 0.27 {
+		t.Errorf("r.CraftingTime = %v, want 0.27", r.CraftingTime)
+	}
+}
+
 // TestTransformSkillEmpireRestriction verifies empire_restriction is mapped.
 func TestTransformSkillEmpireRestriction(t *testing.T) {
 	imp := SkillImport{ID: "crimson_fury", Name: "Crimson Fury", EmpireRestriction: "crimson"}

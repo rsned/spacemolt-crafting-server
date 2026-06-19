@@ -42,7 +42,7 @@ type ProducedBy struct {
 	RecipeID     string
 	RecipeName   string
 	Quantity     int
-	CraftingTime int
+	CraftingTime float64
 	Skills       []SkillReq
 }
 
@@ -262,7 +262,8 @@ func loadProducedBy(db *sql.DB, items map[string]*Item) error {
 
 	for rows.Next() {
 		var itemID, recipeID, recipeName string
-		var qty, craftTime int
+		var qty int
+		var craftTime float64
 		if err := rows.Scan(&itemID, &recipeID, &recipeName, &qty, &craftTime); err != nil {
 			return err
 		}

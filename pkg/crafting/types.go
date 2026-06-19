@@ -78,7 +78,7 @@ type Recipe struct {
 	Name          string         `json:"name"`
 	Description   string         `json:"description,omitempty"`
 	Category      string         `json:"category,omitempty"`
-	CraftingTime  int            `json:"crafting_time,omitempty"`
+	CraftingTime  float64        `json:"crafting_time,omitempty"`
 	Inputs        []RecipeInput  `json:"inputs"`
 	Outputs       []RecipeOutput `json:"outputs"`
 	IllegalStatus *IllegalStatus `json:"illegal_status,omitempty"`
@@ -270,7 +270,7 @@ type CraftPathResponse struct {
 	Target          CraftPathTarget       `json:"target"`
 	Feasible        bool                  `json:"feasible"`
 	MaterialsNeeded []MaterialRequirement `json:"materials_needed"`
-	CraftingTime    int                   `json:"crafting_time"`
+	CraftingTime    float64               `json:"crafting_time"`
 	Summary         CraftPathSummary      `json:"summary"`
 }
 
@@ -376,7 +376,7 @@ type BillOfMaterialsResponse struct {
 	RawMaterials   []BOMItem         `json:"raw_materials"`
 	Intermediates  []BOMIntermediate `json:"intermediates"`
 	CraftSteps     []BOMCraftStep    `json:"craft_steps"`
-	TotalCraftTime int               `json:"total_craft_time_sec"`
+	TotalCraftTime float64           `json:"total_craft_time_sec"`
 }
 
 // BOMItem represents a raw material requirement.

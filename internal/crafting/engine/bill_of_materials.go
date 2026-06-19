@@ -239,10 +239,10 @@ func (e *Engine) BillOfMaterials(ctx context.Context, req crafting.BillOfMateria
 	}
 
 	// Calculate total craft time
-	totalTime := 0
+	totalTime := 0.0
 	for itemID, runs := range craftRuns {
 		recipe := craftableItems[itemID]
-		totalTime += recipe.CraftingTime * runs
+		totalTime += recipe.CraftingTime * float64(runs)
 	}
 
 	return &crafting.BillOfMaterialsResponse{
