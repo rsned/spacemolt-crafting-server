@@ -6,6 +6,7 @@ bin/
 *.db
 *.db.backup
 *.db.backup.*
+*.db.bak-*
 database/backups/
 
 # Editor swap files
